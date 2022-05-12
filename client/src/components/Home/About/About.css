@@ -1,0 +1,30 @@
+.container{
+    text-align: center;
+    align-items: center;
+  }
+
+  .firstpara{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .secondpara{
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-right: 4vw;
+  }
+
+  .para{
+      margin-top: 5vh;
+      text-align: justify;
+  }
+
+  .secondpara .image{
+      margin-right: 5vw;
+  }
+
+  .para h2{
+      margin-bottom: 5vh;
+  }

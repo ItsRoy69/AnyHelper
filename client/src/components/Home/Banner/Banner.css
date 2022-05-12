@@ -1,0 +1,27 @@
+.carousel-item{
+    padding-top: 8vh;
+    width: 100vw;
+    height: 100vh;    
+}
+
+.carousel-caption{
+    width: 594px;
+    height: 300px;
+    align-items: center;
+    text-align: center;
+    margin-left: 12vw;
+    border-radius: 20px;
+    color: #ffff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.caption{
+    margin-top: 10vh;
+}
+
+.caption h1, .caption p{
+    font-weight: bold;
+    color: #ffff;
+    margin-bottom: 0;
+    opacity: 2;
+}

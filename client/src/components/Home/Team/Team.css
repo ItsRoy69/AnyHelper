@@ -1,0 +1,114 @@
+
+
+.teammidbanner{    
+    text-align: center;
+    align-items: center;
+  }
+  
+  .badge h1{
+    margin-top:10vh;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #2A4C90;
+    text-align: center;
+    text-align: center;
+  }
+  
+  .teammidbannerpicdetailshead p{
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #8C8C99;
+    margin-top: 25px;
+    width: 500px;
+  }
+  
+  .teammidbannerpic{
+    margin-left: -10vw;
+    margin-top: -25px
+  }
+  
+  .teammidbannerpic img{
+    width: 600px;
+    height: 300px;
+  }
+  
+  .teamcards{
+    margin-top: 20vh;
+    margin-left: 2vw;
+    background-color: #FCFFF9
+  }
+  
+  .teampiccards{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-left: 50px;
+    margin-bottom: 10vh;
+  }
+
+  .teampiccardss{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-left: 100px;
+    margin-bottom: 10vh;
+  }
+  
+  .teamdetailcardinfo{
+    text-align: center;
+    align-items: center;
+    background-color: #ffff;
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    box-shadow: 2px 4px 4px 0px #00000040;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    border-width: 1px;
+    border-color: #F8F386;
+    border-style: solid;
+    border-top: 0px;
+  }
+  
+  .teamdetailaboutpic img{
+    width: 100px;
+    height: 100px;
+    position: static;
+    align-items: center;
+    text-align: center;
+    margin-top: -100px;
+  }
+  
+  .teamdetailabout{
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .teamdetailabout h4{
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #2D3D0F;
+    margin-bottom: 10px;
+  }
+  
+  .teamdetailabout p{
+    color: #6A6A78
+  }
+  
+  .icon{
+    border-radius: 360%;
+    border-width: 1px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    margin-top: 10px;
+    border-color: #C4C4C4;
+    color: #0A142F;
+  }
+  
+  .icon:hover{
+    border-color: #688F24;
+    color: #688F24;
+  }

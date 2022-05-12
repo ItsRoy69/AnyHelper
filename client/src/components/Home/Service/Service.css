@@ -1,0 +1,40 @@
+.badge h1{
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #2A4C90;
+    text-align: center;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+  
+  .container{
+    text-align: center;
+    align-items: center;
+  }
+  
+  .card img{
+    width: 100px;
+    height: 80px;
+  }
+  
+  .row{
+    text-align: center;
+    align-items: center;
+    margin-left: 5vw;
+  }
+  .card{
+    height: 400px;
+    width: 300px;
+    border-radius: 50px;
+    align-items: center;
+    box-shadow: 2px 4px 4px 0px #00000040;
+  }
+  
+  .btn {
+    margin-top: 10vh;
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    background: #DCC02F;
+    box-shadow: 3px 5px 4px 0px #00000040;  
+  }
