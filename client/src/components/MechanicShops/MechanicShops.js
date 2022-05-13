@@ -18,7 +18,7 @@ export default function ElectricalShops(){
         <Navbar />
           <div className="container">
             <div className="banner">
-              <h1>Electrical Shops</h1>
+              <h1>Mechanic Shops</h1>
             </div>
             <button
                 type="button"

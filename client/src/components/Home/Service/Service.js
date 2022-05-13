@@ -96,7 +96,7 @@ export default function Service({ customerDetails }) {
                   Find the worker you need to make your work done
                 </span>
                 <div className="d-block mt-3">
-                  <Link to="/CustomerSignin">
+                  <Link to="/workers">
                     <button className="btn">
                       Workers
                     </button>
