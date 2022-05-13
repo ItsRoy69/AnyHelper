@@ -14,6 +14,7 @@ import ShopJoin from "./components/ShopJoin/ShopJoin";
 import ShopSignIn from "./components/ShopSignIn/ShopSignIn";
 import WorkerJoin from "./components/WorkerJoin/WorkerJoin";
 import WorkerSignIn from "./components/WorkerSignIn/WorkerSignIn";
+import Message from "./components/Message/Message";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/shopsignin" exact element={<ShopSignIn />} />
             <Route path="/workerjoin" exact element={<WorkerJoin />} />
             <Route path="/workersignin" exact element={<WorkerSignIn />} />
+            <Route path="/message" exact element={<Message />} />
         </Routes> 
       </Router>     
     </div>
