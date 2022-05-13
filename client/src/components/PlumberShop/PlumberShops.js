@@ -1,25 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCity } from '@fortawesome/free-solid-svg-icons';
 
-import workers1 from "./../../assets/eshop1.jpg";
-import workers2 from "./../../assets/eshop2.jpg";
-import workers3 from "./../../assets/eshop3.jpg";
+import pshop1 from "./../../assets/eshop1.jpg";
+import pshop2 from "./../../assets/eshop2.jpg";
+import pshop3 from "./../../assets/eshop3.jpg";
 import user from "./../../assets/user.webp";
 
-import "./Workers.css";
+import "./PlumberShops.css";
 
-export default function ElectricalShops(){
+export default function PlumberShops(){
   return (
     <>
         <Navbar />
           <div className="container">
             <div className="banner">
-              <h1>Workers</h1>
+              <h1>Plumber Shops</h1>
             </div>
             <button
                 type="button"
@@ -37,31 +36,29 @@ export default function ElectricalShops(){
           <div className="containers">
 
             <div className="cards">
-              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${workers1})`}} >
+              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${pshop1})`}} >
                 <div className="card-img-overlay d-flex flex-column">
                   <div className="card-body">
-                    <h3>workers.name</h3>
+                    <h3>pshop.name</h3>
                     <div className="card-title mt-0 ">
-                      <h5>workers.plumber</h5>
+                      <h5>pshop.plumber</h5>
                     </div>                    
                       <h5 className="text">
                         <FontAwesomeIcon icon={faCity}/>
                         &nbsp;
-                        workers.city
+                        pshop.city
                       </h5>
                   </div>
                   <div className="card-footer">
                     <div className="media">
                       <img src={user} alt="user" />
                         <div className="media-body">
-                          <h6>Phone : workers.phoneNo</h6>
-                          <h6>workers.address</h6>
-                          <h6>workers.distance km</h6>
-                          <Link to="/signup">
-                            <button type="button" className="boxbutton">
-                                Message
-                            </button>
-                          </Link>
+                          <h6>Phone : pshop.phoneNo</h6>
+                          <h6>pshop.address</h6>
+                          <h6>pshop.distance km</h6>
+                          <button type="button" className="boxbutton">
+                              Items
+                          </button>
                         </div>
                     </div>
                   </div>
@@ -70,31 +67,29 @@ export default function ElectricalShops(){
             </div>
 
             <div className="cards">
-              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${workers2})`}} >
+              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${pshop2})`}} >
                 <div className="card-img-overlay d-flex flex-column">
                   <div className="card-body">
-                    <h3>workers.name</h3>
+                    <h3>pshop.name</h3>
                     <div className="card-title mt-0 ">
-                      <h5>workers.mechanic</h5>
+                      <h5>pshop.mechanic</h5>
                     </div>                    
                       <h5 className="text">
                         <FontAwesomeIcon icon={faCity}/>
                         &nbsp;
-                        workers.city
+                        pshop.city
                       </h5>
                   </div>
                   <div className="card-footer">
                     <div className="media">
                       <img src={user} alt="user" />
                         <div className="media-body">
-                          <h6>Phone : workers.phoneNo</h6>
-                          <h6>workers.address</h6>
-                          <h6>workers.distance km</h6>
-                          <Link to="/signup">
-                            <button type="button" className="boxbutton">
-                                Message
-                            </button>
-                          </Link>
+                          <h6>Phone : pshop.phoneNo</h6>
+                          <h6>pshop.address</h6>
+                          <h6>pshop.distance km</h6>
+                          <button type="button" className="boxbutton">
+                              Items
+                          </button>
                         </div>
                     </div>
                   </div>
@@ -103,31 +98,29 @@ export default function ElectricalShops(){
             </div>
             
             <div className="cards">
-              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${workers3})`}} >
+              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${pshop3})`}} >
                 <div className="card-img-overlay d-flex flex-column">
                   <div className="card-body">
-                    <h3>workers.name</h3>
+                    <h3>pshop.name</h3>
                     <div className="card-title mt-0 ">
-                      <h5>workers.electrecian</h5>
+                      <h5>pshop.electrecian</h5>
                     </div>                    
                       <h5 className="text">
                         <FontAwesomeIcon icon={faCity}/>
                         &nbsp;
-                        workers.city
+                        pshop.city
                       </h5>
                   </div>
                   <div className="card-footer">
                     <div className="media">
                       <img src={user} alt="user" />
                         <div className="media-body">
-                          <h6>Phone : workers.phoneNo</h6>
-                          <h6>workers.address</h6>
-                          <h6>workers.distance km</h6>
-                          <Link to="/signup">
-                            <button type="button" className="boxbutton">
-                                Message
-                            </button>
-                          </Link>                          
+                          <h6>Phone : pshop.phoneNo</h6>
+                          <h6>pshop.address</h6>
+                          <h6>pshop.distance km</h6>
+                          <button type="button" className="boxbutton">
+                              Items
+                          </button>
                         </div>
                     </div>
                   </div>
