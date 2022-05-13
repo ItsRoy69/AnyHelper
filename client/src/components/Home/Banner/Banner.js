@@ -1,5 +1,4 @@
 import React from "react";
-import Slider from "react-slick";
 import banner1 from "../../../assets/banner1.jpg";
 import banner2 from "../../../assets/banner2.png";
 import banner3 from "../../../assets/banner3.jpg";
@@ -39,7 +38,7 @@ export default function Features() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={banner1} className="d-block w-100" />
+            <img src={banner1} className="d-block w-100" alt="banner1"/>
             <div className="carousel-caption d-none d-md-block">
               <div className="caption">
                 <h1>
@@ -52,7 +51,7 @@ export default function Features() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={banner2} className="d-block w-100" />
+            <img src={banner2} className="d-block w-100" alt="banner2" />
             <div className="carousel-caption d-none d-md-block">
               <div className="caption">
                 <h1>
@@ -65,7 +64,7 @@ export default function Features() {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={banner3} className="d-block w-100" />
+            <img src={banner3} className="d-block w-100" alt="banner3" />
               <div className="carousel-caption d-none d-md-block">
                 <div className="caption">
                   <h1>

@@ -99,11 +99,7 @@
   
   .icon{
     border-radius: 360%;
-    border-width: 1px;
-    width: 25px;
-    height: 25px;
     margin-right: 5px;
-    margin-top: 10px;
     border-color: #C4C4C4;
     color: #0A142F;
   }
