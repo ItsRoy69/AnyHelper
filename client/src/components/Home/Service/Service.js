@@ -30,7 +30,7 @@ export default function Service({ customerDetails }) {
                   Find the nearest electrical shops Near your place
                 </span>
                 <div className="d-block mt-3">
-                  <Link to="/Eshops">
+                  <Link to="/electricalshops">
                     <button className="btn">
                       Shops
                     </button>

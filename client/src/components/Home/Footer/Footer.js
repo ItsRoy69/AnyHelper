@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>    
-        <footer className="new_footer_area bg_color">
+        <footer className="new_footer_area bg_color" id='footer'>
             <div className="new_footer_top">
                 <div className="container">
                     <div className="footerbox">

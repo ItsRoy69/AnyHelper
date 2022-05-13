@@ -27,6 +27,9 @@ export default function Navbar() {
               <li>
                 <a href="#team">Team</a>
               </li>
+              <li>
+                <a href="#footer">Footer</a>
+              </li>
             </ul>
           </nav>
         </div>
