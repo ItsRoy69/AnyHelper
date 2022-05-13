@@ -29,3 +29,8 @@
     width: 176px;
     height: 56px;
   }
+  .locationbutton:hover{
+    background-color: #2A4C90;
+    color: white;
+  }
+

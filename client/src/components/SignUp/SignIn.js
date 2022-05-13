@@ -5,7 +5,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
@@ -64,10 +63,7 @@ const SignUp = () => {
                       <img src={signup} alt=""  />
                     </Grid>
                   )}
-                  <div className="registrationFormContainer" style={{ flex: "6" }}>
-                    <Typography component="h1" variant="h5" sx={{ mb: "20" }}>
-                      SIGN IN
-                    </Typography>
+                  <div className="registrationFormContainer" style={{ flex: "6" }}>                    
 
                     <Grid container spacing={2}  >
                       <Grid item md={12} xs={8}>

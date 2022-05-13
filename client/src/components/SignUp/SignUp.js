@@ -5,10 +5,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useMediaQuery } from "@mui/material";
 import { withStyles } from "@mui/styles";
 
 import Navbar from '../Navbar/Navbar';
@@ -42,7 +40,7 @@ const CssTextField = withStyles({
 
 const SignUp = () => {
 
-  const mediaLessthanmd = useMediaQuery(theme.breakpoints.down("md")); 
+  
   
   return (
     <>
@@ -57,57 +55,50 @@ const SignUp = () => {
               <CssBaseline />
 
               <form style={{ marginTop: "5vh" }}>
-                <div className="registrationForm" style={{ display: "flex" }}>
-                  {!mediaLessthanmd && (
+                <div className="registrationForm" style={{ display: "flex" }}>                  
                     <Grid container style={{ flex: "6" }}>
                       <img src={signup} alt=""  />
                     </Grid>
-                  )}
                   <div className="registrationFormContainer" style={{ flex: "6" }}>
-                    <Typography component="h1" variant="h5" sx={{ mb: "20" }}>
-                      SIGN UP
-                    </Typography>
-
+                    
                     <Grid container spacing={2}  >
                       <Grid item md={12} xs={8}>
-                        <CssTextField label="Username" variant="outlined" fullWidth required autoFocus 
+                        <CssTextField label="Username*" variant="outlined" fullWidth autoFocus 
                           InputProps={{ style: {color: "black"}}}
                           type="text"
                         />
                       </Grid>
 
                       <Grid item md={12} xs={8}>
-                        <CssTextField label="Email" variant="outlined" fullWidth required autoFocus 
+                        <CssTextField label="Email*" variant="outlined" fullWidth autoFocus 
                           InputProps={{ style: {color: "black"}}}
                           type="email"
                         />
                       </Grid>
 
                       <Grid className="location" item md={11} xs={8}>
-                        <CssTextField label="Latitude" variant="outlined" fullWidth required autoFocus
+                        <CssTextField label="Latitude*" variant="outlined" fullWidth autoFocus
                           InputProps={{ style: {color: "black"}}}
                           type="latitude"
                         />
-                        <CssTextField label="Longitude" variant="outlined" fullWidth required autoFocus style={{ marginLeft: "10px" }}
+                        <CssTextField label="Longitude*" variant="outlined" fullWidth  autoFocus style={{ marginLeft: "10px" }}
                           InputProps={{ style: {color: "black"}}}
                           type="longitude"
                         />
-                        <Link href="https://gps-coordinates.org/">
-                          <Button type="location"  className='locationbutton' variant="contained" style={{ marginLeft: "30px" }}>
-                            Location
-                          </Button>
-                        </Link>
+                        <Button type="location"  className='locationbutton' href="https://gps-coordinates.org/" variant="contained" style={{ marginLeft: "30px" }}>
+                          Location
+                        </Button>
                       </Grid>
 
                       <Grid item md={12} xs={8}>
-                        <CssTextField label="Password" variant="outlined" fullWidth required autoFocus 
+                        <CssTextField label="Password*" variant="outlined" fullWidth  autoFocus 
                           InputProps={{ style: {color: "black"}}}
                           type="password"
                         />
                       </Grid>
 
                       <Grid item md={12} xs={8}>
-                        <CssTextField label="Confirm Password" variant="outlined" fullWidth required autoFocus 
+                        <CssTextField label="Confirm Password*" variant="outlined" fullWidth  autoFocus 
                           InputProps={{ style: {color: "black"}}}
                           type="confirm password"
                         />

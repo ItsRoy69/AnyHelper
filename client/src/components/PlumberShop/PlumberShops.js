@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCity } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 import pshop1 from "./../../assets/eshop1.jpg";
 import pshop2 from "./../../assets/eshop2.jpg";
@@ -56,9 +57,11 @@ export default function PlumberShops(){
                           <h6>Phone : pshop.phoneNo</h6>
                           <h6>pshop.address</h6>
                           <h6>pshop.distance km</h6>
-                          <button type="button" className="boxbutton">
-                              Items
-                          </button>
+                          <Link to="/items">
+                            <button type="button" className="boxbutton">
+                                Items
+                            </button>
+                          </Link>
                         </div>
                     </div>
                   </div>
@@ -87,9 +90,11 @@ export default function PlumberShops(){
                           <h6>Phone : pshop.phoneNo</h6>
                           <h6>pshop.address</h6>
                           <h6>pshop.distance km</h6>
-                          <button type="button" className="boxbutton">
-                              Items
-                          </button>
+                          <Link to="/items">
+                            <button type="button" className="boxbutton">
+                                Items
+                            </button>
+                          </Link>
                         </div>
                     </div>
                   </div>
@@ -118,9 +123,11 @@ export default function PlumberShops(){
                           <h6>Phone : pshop.phoneNo</h6>
                           <h6>pshop.address</h6>
                           <h6>pshop.distance km</h6>
-                          <button type="button" className="boxbutton">
-                              Items
-                          </button>
+                          <Link to="/items">
+                            <button type="button" className="boxbutton">
+                                Items
+                            </button>
+                          </Link>
                         </div>
                     </div>
                   </div>
