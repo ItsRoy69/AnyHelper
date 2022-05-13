@@ -119,7 +119,7 @@ export default function Service({ customerDetails }) {
                 </span>
                 <br />
                 <div className="d-block mt-3">
-                  <Link to="/ShopJoin">
+                  <Link to="/shopjoin">
                     <button
                       className=" btn"
                       data-inline="true"
@@ -127,7 +127,7 @@ export default function Service({ customerDetails }) {
                       Add Shop
                     </button>
                   </Link>
-                  <Link to="/ShopSignin">
+                  <Link to="/shopsignin">
                     <button
                       className="btn"
                       data-inline="true"
@@ -158,7 +158,7 @@ export default function Service({ customerDetails }) {
                       Join
                     </button>
                   </Link>
-                  <Link to="/WorkerSignin">
+                  <Link to="/workersignin">
                     <button
                       className="btn"
                       data-inline="true"

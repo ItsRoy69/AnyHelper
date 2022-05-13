@@ -10,6 +10,10 @@ import Workers from "./components/Workers/Workers";
 import Items from "./components/Items/Items";
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignUp/SignIn";
+import ShopJoin from "./components/ShopJoin/ShopJoin";
+import ShopSignIn from "./components/ShopSignIn/ShopSignIn";
+import WorkerJoin from "./components/WorkerJoin/WorkerJoin";
+import WorkerSignIn from "./components/WorkerSignIn/WorkerSignIn";
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
             <Route path="/items" exact element={<Items />} />
             <Route path="/signup" exact element={<SignUp />} />
             <Route path="/signin" exact element={<SignIn />} />
+            <Route path="/shopjoin" exact element={<ShopJoin />} />
+            <Route path="/shopsignin" exact element={<ShopSignIn />} />
+            <Route path="/workerjoin" exact element={<WorkerJoin />} />
+            <Route path="/workersignin" exact element={<WorkerSignIn />} />
         </Routes> 
       </Router>     
     </div>

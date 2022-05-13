@@ -13,7 +13,7 @@ import user from "./../../assets/user.webp";
 
 import "./Workers.css";
 
-export default function ElectricalShops(){
+export default function Workers(){
   return (
     <>
         <Navbar />
