@@ -59,7 +59,7 @@ const ShopSignIn = () => {
               <form style={{ marginTop: "5vh" }}>
                 <div className="registrationForm" style={{ display: "flex" }}>
                   {!mediaLessthanmd && (
-                    <Grid container style={{ flex: "6" }}>
+                    <Grid container style={{ flex: "5" }}>
                       <img src={signup} alt=""  />
                     </Grid>
                   )}

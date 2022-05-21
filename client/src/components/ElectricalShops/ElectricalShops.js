@@ -101,6 +101,38 @@ export default function ElectricalShops(){
                 </div>
               </div>   
             </div>
+            <div className="cards">
+              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${eshop2})`}} >
+                <div className="card-img-overlay d-flex flex-column">
+                  <div className="card-body">
+                    <h3>eshop.name</h3>
+                    <div className="card-title mt-0 ">
+                      <h5>eshop.mechanic</h5>
+                    </div>                    
+                      <h5 className="text">
+                        <FontAwesomeIcon icon={faCity}/>
+                        &nbsp;
+                        eshop.city
+                      </h5>
+                  </div>
+                  <div className="card-footer">
+                    <div className="media">
+                      <img src={user} alt="user" />
+                        <div className="media-body">
+                          <h6>Phone : eshop.phoneNo</h6>
+                          <h6>eshop.address</h6>
+                          <h6>eshop.distance km</h6>
+                          <Link to="/items">
+                            <button type="button" className="boxbutton">
+                                Items
+                            </button>
+                          </Link>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </div>
             
             <div className="cards">
               <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${eshop3})`}} >

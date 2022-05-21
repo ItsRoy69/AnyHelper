@@ -8,10 +8,10 @@
   }
 
   .registrationForm img{
-    height:350px;
-    width: 480px;
+    height:500px;
+    width: 300px;
     background-size: cover;
-    opacity: 1
+    opacity: 2
   }
 
   .registrationFormContainer Grid{
