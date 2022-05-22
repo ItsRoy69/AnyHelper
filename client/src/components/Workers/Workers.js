@@ -54,7 +54,6 @@ export default function Workers(){
                     <div className="media">
                       <img src={user} alt="user" />
                         <div className="media-body">
-                          <h6>Phone : workers.phoneNo</h6>
                           <h6>workers.address</h6>
                           <h6>workers.distance km</h6>
                           <Link to="/signup">
@@ -87,7 +86,6 @@ export default function Workers(){
                     <div className="media">
                       <img src={user} alt="user" />
                         <div className="media-body">
-                          <h6>Phone : workers.phoneNo</h6>
                           <h6>workers.address</h6>
                           <h6>workers.distance km</h6>
                           <Link to="/signup">
@@ -120,7 +118,6 @@ export default function Workers(){
                     <div className="media">
                       <img src={user} alt="user" />
                         <div className="media-body">
-                          <h6>Phone : workers.phoneNo</h6>
                           <h6>workers.address</h6>
                           <h6>workers.distance km</h6>
                           <Link to="/signup">

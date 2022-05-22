@@ -60,12 +60,12 @@
     width: 250px;
     height: 250px;
     border-radius: 25px;
-    box-shadow: 2px 4px 4px 0px #00000040;
+    box-shadow: 2px 4px 4px 0px #2A4C90;
     align-items: center;
     text-align: center;
     padding-top: 50px;
     border-width: 1px;
-    border-color: #F8F386;
+    border-color: #2A4C90;
     border-style: solid;
     border-top: 0px;
   }
@@ -105,6 +105,6 @@
   }
   
   .icon:hover{
-    border-color: #688F24;
-    color: #688F24;
+    border-color: #2A4C90;
+    color: #2A4C90;
   }
