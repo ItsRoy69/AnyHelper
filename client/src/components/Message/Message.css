@@ -1,0 +1,152 @@
+
+.messagebox{
+    height: 80vh;
+    width: 82vw;
+    margin-top: 5vw;
+    background-color: #D6DFF0;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.messagenamebox{
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 5vw;
+    padding-top: 5vh;
+}
+
+.messagenamesearchbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 230px;
+    background-color: #2A4C90;
+    border-radius: 8px;
+}
+
+.search-box{
+    padding-right: 6px;    
+}
+
+.search{
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.searchbtn{
+    color: #D6DFF0;
+}
+
+.names {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid #E4E6E7;
+}
+  
+.names img {
+    width: 50px;
+    border-radius: 100%;
+    margin: 8px 0px 8px 20px;
+}
+
+.names h3{
+    font-size: 20px;
+}
+
+.name-box {
+    border-radius: 12px;
+    border: 1px #AEB4B7;
+    margin: 20px 20px 20px -20px;
+    text-align: center;
+    height: 60vh;
+    align-items: center;
+    box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 20vw;
+  }
+
+  div::-webkit-scrollbar {
+    display: none;
+  }
+
+  .messagechatbox{
+    border-radius: 12px;
+    border: 1px #AEB4B7;
+    margin: 20px 20px 20px 0vw;
+    height: 60vh;
+    box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 55vw;
+  }
+
+  .messagechatbox .message {
+    height: auto;
+    padding: 10px;
+    height: auto;
+    align-self: flex-end;
+ }
+
+  .message .message-content {
+    min-height: 40px;
+    max-width: 150px;
+    width: 100%;
+    height: 100%;
+    background-color: #2A4C90;
+    border-radius: 12px;
+    color: white;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 15px;
+}
+  
+.message .message-meta {
+    display: flex;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.message-meta #author {
+    margin-left: 10px;
+}
+
+.chat-section{
+    position: absolute;
+    margin-left: 26vw;
+    margin-top: 66vh;
+    display: flex;
+    width: 50vw;
+}
+
+.chat-input{
+    border-radius: 8px;
+    width: 50vw;
+    border: 1px #AEB4B7;
+    height: 6vh;
+    box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.25);
+    padding-left: 10px;
+}
+
+
+.chat-section button {
+    border: 0;
+    display: grid;
+    place-items: center;
+    outline: none;
+    font-size: 25px;
+    background-color: #92B4EC;
+    color: #2A4C90;
+    border-radius: 8px;
+    margin-left: 10px;
+    padding: 0px 0px 0px 0px;
+    width: 5vw;
+  }
+  
+  .chat-section button:hover {
+    color: #16003B;
+  }
