@@ -12,136 +12,147 @@ import service6 from "../../../assets/service6.png";
 export default function Service({ customerDetails }) {
   return (
     <>
-      <div className="servicecontainer" id="services">
-        <div className="badge">
-          <h1>Our Services</h1>
+      <div className="container servicecontainer" id="services">
+        <h1 className="serviceheader">Our Services</h1>
+
+        <div className="cards_parent">
+
+          <div className="card workcard">
+            <div className=" workcard_body">
+              <img
+                src={service1}
+                alt="Electrical Shops"
+
+              />
+              <h3 className="  text-truncate workname">
+                Electrical Shops
+              </h3>
+              <span className="text justify-content  ">
+                Find the nearest electrical shops Near your place
+              </span>
+              <div className="d-block  ">
+                <Link to="/electricalshops">
+                  <button className=" btn service_btn btn-warning">Shops</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div className="card workcard">
+            <div className=" workcard_body">
+              <img src={service2} width={30} alt="Mechanic shops" />
+              <h3 className="  text-truncate workname">Mechanic shops</h3>
+              <span className="text justify-content  ">
+                Find the nearest Mechanic shops Near your place
+              </span>
+              <div className="d-block  ">
+                <Link to="/mechanicshops">
+                  <button className=" btn service_btn btn-warning">Shops</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="card workcard">
+            <div className=" workcard_body">
+              <img src={service3} width={30} alt="Plumbing shops" />
+              <h3 className="  text-truncate workname">Plumbing shops</h3>
+              <span className="text justify-content  ">
+                Find the nearest Mechanic shops Near your place
+              </span>
+              <div className="d-block  ">
+                <Link to="/plumbershops">
+                  <button className=" btn service_btn btn-warning">Shops</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div className="card workcard">
+            <div className=" workcard_body">
+              <img src={service4} width={30} alt="Find Workers" />
+              <h3 className="  text-truncate workname">Find Workers</h3>
+              <span className="text justify-content  ">
+                Find the worker you need to make your work done
+              </span>
+              <div className="d-block  ">
+                <Link to="/workers">
+                  <button className=" btn service_btn btn-warning">Workers</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div className="card workcard">
+            <div className=" workcard_body">
+              <img src={service5} width={30} alt="Shop Join" />
+              <h3 className="  text-truncate workname">Shop Join</h3>
+              <span className="text justify-content  ">
+                Join your shop with us and sell your items online
+              </span>
+              <br />
+              <div className="d-block  ">
+                <Link to="/shopjoin">
+                  <button className="  btn service_btn btn-warning" data-inline="true">
+                    Add Shop
+                  </button>
+                </Link>
+                <Link to="/shopsignin">
+                  <button
+                    className=" btn service_btn btn-warning"
+                    data-inline="true"
+                    style={{ marginLeft: "10px" }}
+                  >
+                    Update
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div className="card workcard">
+            <div className=" workcard_body">
+              <img src={service6} width={30} alt="Workers Join" />
+              <h3 className="  text-truncate workname">Workers Join</h3>
+              <span className="text justify-content  ">
+                workers can Join our website and get work.
+              </span>
+              <div className="d-block  ">
+                <Link to="/workerJoin">
+                  <button className=" btn service_btn btn-warning">Join</button>
+                </Link>
+                <Link to="/workersignin">
+                  <button
+                    className=" btn service_btn btn-warning"
+                    data-inline="true"
+                    style={{ marginLeft: "10px" }}
+                  >
+                    Update
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
 
-        <div className="row workrow">
-          <div className="col-md-4 workcol">
-            <div className="card workcard">
-              <div className="mt-3">
-                <img
-                  src={service1}
-                  alt="Electrical Shops"
-                  style={{ width: "150px", height: "70px" }}
-                />
-                <h3 className="mt-3 text-truncate workname">
-                  Electrical Shops
-                </h3>
-                <span className="text justify-content mt-3">
-                  Find the nearest electrical shops Near your place
-                </span>
-                <div className="d-block mt-3">
-                  <Link to="/electricalshops">
-                    <button className="btn service_btn">Shops</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 workcol">
-            <div className="card workcard">
-              <div className="mt-3">
-                <img src={service2} width={30} alt="Mechanic shops" />
-                <h3 className="mt-3 text-truncate workname">Mechanic shops</h3>
-                <span className="text justify-content mt-3">
-                  Find the nearest Mechanic shops Near your place
-                </span>
-                <div className="d-block mt-3">
-                  <Link to="/mechanicshops">
-                    <button className="btn service_btn">Shops</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 workcol">
-            <div className="card workcard">
-              <div className="mt-3">
-                <img src={service3} width={30} alt="Plumbing shops" />
-                <h3 className="mt-3 text-truncate workname">Plumbing shops</h3>
-                <span className="text justify-content mt-3">
-                  Find the nearest Mechanic shops Near your place
-                </span>
-                <div className="d-block mt-3">
-                  <Link to="/plumbershops">
-                    <button className="btn service_btn">Shops</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 workcol">
-            <div className="card workcard">
-              <div className="mt-3">
-                <img src={service4} width={30} alt="Find Workers" />
-                <h3 className="mt-3 text-truncate workname">Find Workers</h3>
-                <span className="text justify-content mt-3">
-                  Find the worker you need to make your work done
-                </span>
-                <div className="d-block mt-3">
-                  <Link to="/workers">
-                    <button className="btn service_btn">Workers</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 workcol">
-            <div className="card workcard">
-              <div className="mt-3">
-                <img src={service5} width={30} alt="Shop Join" />
-                <h3 className="mt-3 text-truncate workname">Shop Join</h3>
-                <span className="text justify-content mt-3">
-                  Join your shop with us and sell your items online
-                </span>
-                <br />
-                <div className="d-block mt-3">
-                  <Link to="/shopjoin">
-                    <button className=" btn service_btn" data-inline="true">
-                      Add Shop
-                    </button>
-                  </Link>
-                  <Link to="/shopsignin">
-                    <button
-                      className="btn service_btn"
-                      data-inline="true"
-                      style={{ marginLeft: "10px" }}
-                    >
-                      Update
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 workcol">
-            <div className="card workcard">
-              <div className="mt-3">
-                <img src={service6} width={30} alt="Workers Join" />
-                <h3 className="mt-3 text-truncate workname">Workers Join</h3>
-                <span className="text justify-content mt-3">
-                  workers can Join our website and get work.
-                </span>
-                <div className="d-block mt-3">
-                  <Link to="/workerJoin">
-                    <button className="btn service_btn">Join</button>
-                  </Link>
-                  <Link to="/workersignin">
-                    <button
-                      className="btn service_btn"
-                      data-inline="true"
-                      style={{ marginLeft: "10px" }}
-                    >
-                      Update
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </>
   );

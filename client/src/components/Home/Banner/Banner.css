@@ -3,7 +3,7 @@
   height: 90vh;
 }
 .carousel-caption {
-  height: 10px;
+  height: 200px;
   width: 594px;
   display: flex !important;
   flex-direction: column !important;
