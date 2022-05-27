@@ -13,10 +13,11 @@ const Home = () => {
       <Banner />
       <Service />
       <About />
+      <Team />
       {/* 
       
       
-      <Team />
+      
       <Footer /> */}
     </>
   );
