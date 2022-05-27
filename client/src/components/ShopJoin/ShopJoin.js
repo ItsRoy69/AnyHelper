@@ -13,6 +13,7 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
 import signup from '../../assets/shop.png';
+import shp1 from "../../assets/shp1.svg"
 
 import './ShopJoin.css';
 
@@ -40,173 +41,251 @@ const CssTextField = withStyles({
 
 const ShopJoin = () => {
 
-  
-  
+
+
   return (
+    // <>
+    //   <Navbar />
+    //   <div className="signup-container">
+    //     <div className="signup-content">
+    //       <h1>Register Your Shop</h1>
+    //     </div>
+
+    //     <ThemeProvider theme={theme}>
+    //       <Container component="main">
+    //         <CssBaseline />
+
+    //         <form style={{ marginTop: "5vh" }}>
+    //           <div className="registrationForm" style={{ display: "flex" }}>
+    //             <Grid container style={{ flex: "6" }}>
+    //               <img src={signup} alt="" />
+    //             </Grid>
+    //             <div className="registrationFormContainer" style={{ flex: "6" }}>
+
+    //               <Grid spacing={2}  >
+    //                 <Grid item md={12} xs={8} className="grid_items" >
+    //                   <CssTextField label="Name*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="text"
+    //                   />
+    //                 </Grid>
+
+    //                 <Grid item md={12} xs={8} className="grid_items" >
+    //                   <CssTextField label="Email*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="email"
+    //                   />
+    //                 </Grid>
+
+    //                 <Grid className="location grid_items" item md={12} xs={8} >
+    //                   <CssTextField label="Latitude*" variant="outlined" autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="latitude"
+    //                   />
+    //                   <CssTextField label="Longitude*" variant="outlined" fullWidth autoFocus style={{ marginLeft: "8px" }}
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="longitude"
+    //                   />
+
+    //                 </Grid>
+
+    //                 <Grid item md={12} xs={8} className="grid_items" >
+    //                   <CssTextField label="Password*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="password"
+    //                   />
+    //                 </Grid>
+
+    //                 <Grid className="location grid_items" item md={12} xs={8}  >
+    //                   <CssTextField label="Phone*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="phone"
+    //                   />
+    //                   <CssTextField label="Shop Name*" variant="outlined" autoFocus style={{ marginLeft: "6px" }}
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="shopname"
+    //                   />
+    //                   <CssTextField label="City*" variant="outlined" autoFocus style={{ marginLeft: "8px" }}
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="city"
+    //                   />
+    //                 </Grid>
+
+    //                 <Grid item md={12} xs={8} className="grid_items" >
+    //                   <CssTextField label="Shop Address*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="Shop Address"
+    //                   />
+    //                 </Grid>
+
+    //               </Grid>
+    //             </div>
+    //           </div>
+    //         </form>
+
+    //         <form style={{ marginTop: "5vh" }}>
+    //           <div className="registrationitems" style={{ display: "flex" }}>
+    //             <label htmlFor="ShopType" >ShopType:</label>
+    //             <select
+    //               id="ShopType"
+    //               className='button'
+    //             >
+    //               <option value="plumbing">Plumbing</option>
+    //               <option value="electric">Electric</option>
+    //               <option value="mechanic">Mechanic</option>
+    //             </select>
+    //             <div className="registrationFormContainer" style={{ flex: "6" }}>
+
+    //               <Grid container spacing={2}  >
+
+    //                 <Grid className="location" item md={12} xs={8}>
+    //                   <CssTextField label="Latitude*" variant="outlined" autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="latitude"
+    //                   />
+    //                   <CssTextField label="Longitude*" variant="outlined" fullWidth autoFocus style={{ marginLeft: "8px" }}
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="longitude"
+    //                   />
+    //                 </Grid>
+
+    //                 <Grid item md={12} xs={8}>
+    //                   <CssTextField label="Password*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="password"
+    //                   />
+    //                 </Grid>
+
+    //                 <Grid className="location" item md={12} xs={8}>
+    //                   <CssTextField label="Phone*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="phone"
+    //                   />
+    //                   <CssTextField label="Shop Name*" variant="outlined" autoFocus style={{ marginLeft: "6px" }}
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="shopname"
+    //                   />
+    //                   <CssTextField label="City*" variant="outlined" autoFocus style={{ marginLeft: "8px" }}
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="city"
+    //                   />
+    //                 </Grid>
+
+    //                 <Grid item md={12} xs={8}>
+    //                   <CssTextField label="Shop Address*" variant="outlined" fullWidth autoFocus
+    //                     InputProps={{ style: { color: "black" } }}
+    //                     type="Shop Address"
+    //                   />
+    //                 </Grid>
+
+    //               </Grid>
+
+
+
+
+    //               <Grid item md={12} xs={8}>
+    //                 <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} >
+    //                   Sign Up
+    //                 </Button>
+    //               </Grid>
+
+
+    //               <Grid container justifyContent="center">
+    //                 <Grid item>
+    //                   <Link href="/signin" variant="body2">
+    //                     Already have an account? Sign in
+    //                   </Link>
+    //                 </Grid>
+    //               </Grid>
+
+    //             </div>
+    //           </div>
+    //         </form>
+    //       </Container>
+    //     </ThemeProvider>
+
+    //   </div>
+
+    // </>
+
+
     <>
+
       <Navbar />
-        <div className="signup-container">
-          <div className="signup-content">
-            <h1>Register Your Shop</h1>
-          </div>        
 
-          <ThemeProvider theme={theme}>
-            <Container component="main">
-              <CssBaseline />
+      <div className="shopjoin_container container">
+        <div className="shopjoin_container_inner">
 
-              <form style={{ marginTop: "5vh" }}>
-                <div className="registrationForm" style={{ display: "flex" }}>                  
-                    <Grid container style={{ flex: "6" }}>
-                      <img src={signup} alt=""  />
-                    </Grid>
-                  <div className="registrationFormContainer" style={{ flex: "6" }}>
-                    
-                    <Grid container spacing={2}  >
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Name*" variant="outlined" fullWidth autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="text"
-                        />
-                      </Grid>
+          <h2 className="shopjoin_header">Register your shop</h2>
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Email*" variant="outlined" fullWidth autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="email"
-                        />
-                      </Grid>                      
+          <div className="shopjoin_form1 row">
 
-                      <Grid className="location" item md={12} xs={8}>
-                        <CssTextField label="Latitude*" variant="outlined"autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="latitude"
-                        />
-                        <CssTextField label="Longitude*" variant="outlined" fullWidth  autoFocus style={{ marginLeft: "8px" }}
-                          InputProps={{ style: {color: "black"}}}
-                          type="longitude"
-                        />
-                        <Button type="location"  className='locationbutton' href="https://gps-coordinates.org/" variant="contained" style={{ marginLeft: "14px" }}>
-                          Location
-                        </Button>
-                      </Grid>
+            <div className="col-lg-6 col-md-12"><img src={shp1} alt="" className='shp_img1' /></div>
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Password*" variant="outlined" fullWidth  autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="password"
-                        />
-                      </Grid>
+            <div className="col-lg-6 col-md-12 form_col">
 
-                      <Grid className="location" item md={12} xs={8}>
-                        <CssTextField label="Phone*" variant="outlined" fullWidth autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="phone"
-                        />
-                        <CssTextField label="Shop Name*" variant="outlined" autoFocus style={{ marginLeft: "6px" }}
-                          InputProps={{ style: {color: "black"}}}
-                          type="shopname"
-                        />
-                        <CssTextField label="City*" variant="outlined" autoFocus style={{ marginLeft: "8px" }}
-                          InputProps={{ style: {color: "black"}}}
-                          type="city"
-                        />
-                      </Grid>                      
+              <form>
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Shop Address*" variant="outlined" fullWidth  autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="Shop Address"
-                        />
-                      </Grid>
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
 
-                    </Grid>
-                  </div>
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <div class="nav-item dropdown">
+
+                  <p class="dropdown-toggle form1_control" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >  Dropdown
+
+                  </p>
+
+                  <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/">Action</a></li>
+                    <li><a class="dropdown-item" href="/">Another action</a></li>
+
+                  </ul>
                 </div>
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+
+
+
+                <button type="submit" className="btn btn-warning">SignIn</button>
               </form>
 
-              <form style={{ marginTop: "5vh" }}>
-                <div className="registrationitems" style={{ display: "flex" }}>   
-                  <label htmlFor="ShopType" >ShopType:</label>
-                    <select
-                      id="ShopType"
-                      className='button'
-                    >
-                      <option value="plumbing">Plumbing</option>
-                      <option value="electric">Electric</option>
-                      <option value="mechanic">Mechanic</option>
-                    </select>
-                  <div className="registrationFormContainer" style={{ flex: "6" }}>
-                    
-                    <Grid container spacing={2}  >
 
-                      <Grid className="location" item md={12} xs={8}>
-                        <CssTextField label="Latitude*" variant="outlined"autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="latitude"
-                        />
-                        <CssTextField label="Longitude*" variant="outlined" fullWidth  autoFocus style={{ marginLeft: "8px" }}
-                          InputProps={{ style: {color: "black"}}}
-                          type="longitude"
-                        />                        
-                      </Grid>
+            </div>
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Password*" variant="outlined" fullWidth  autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="password"
-                        />
-                      </Grid>
 
-                      <Grid className="location" item md={12} xs={8}>
-                        <CssTextField label="Phone*" variant="outlined" fullWidth autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="phone"
-                        />
-                        <CssTextField label="Shop Name*" variant="outlined" autoFocus style={{ marginLeft: "6px" }}
-                          InputProps={{ style: {color: "black"}}}
-                          type="shopname"
-                        />
-                        <CssTextField label="City*" variant="outlined" autoFocus style={{ marginLeft: "8px" }}
-                          InputProps={{ style: {color: "black"}}}
-                          type="city"
-                        />
-                      </Grid>                      
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Shop Address*" variant="outlined" fullWidth  autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="Shop Address"
-                        />
-                      </Grid>
 
-                    </Grid>
+          </div>
 
-                    
 
-                      
-                      <Grid item md={12} xs={8}>
-                        <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} >
-                          Sign Up
-                        </Button>
-                      </Grid>
-                    
 
-                    <Grid container justifyContent="center">
-                      <Grid item>
-                        <Link href="/signin" variant="body2">
-                          Already have an account? Sign in
-                        </Link>
-                      </Grid>
-                    </Grid>
+        </div>
+      </div>
 
-                  </div>
-                </div>
-              </form>
-            </Container>
-          </ThemeProvider>  
 
-        </div>  
-      <Footer />
+
     </>
   )
 }
