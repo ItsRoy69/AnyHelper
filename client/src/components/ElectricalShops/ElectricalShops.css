@@ -1,4 +1,4 @@
-.banner h1 {
+/* .banner h1 {
   font-size: 3.5em;
   color: #2a4c90;
   text-align: center;
@@ -6,22 +6,6 @@
   text-align: center;
   margin-top: 10vh;
 }
-
-/* .button{
-  height: 40px;
-  width: 150px;
-  border-radius: 50px;
-  background: #DCC02F;
-  box-shadow: 3px 5px 4px 0px #00000040;
-  padding-left: 10px;
-  border-color: #212529;
-  cursor: pointer;
-  border-width: 2px;
-} */
-
-/* .button:hover{  
-  background: #0d6efd;
-} */
 
 .container {
   margin-top: 6vh;
@@ -151,4 +135,4 @@ h6 {
     rgba(35, 79, 109, 0.3785889355742297) 0%,
     rgba(69, 95, 113, 1) 100%
   );
-}
+} */

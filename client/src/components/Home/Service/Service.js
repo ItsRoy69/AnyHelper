@@ -12,124 +12,100 @@ import service6 from "../../../assets/service6.png";
 export default function Service({ customerDetails }) {
   return (
     <>
-      <div className="container" id="services">
+      <div className="servicecontainer" id="services">
         <div className="badge">
           <h1>Our Services</h1>
         </div>
-        <div className="row g-2">
-          <div className="col-md-4">
-            <div className="card p-3">
+
+        <div className="row workrow">
+          <div className="col-md-4 workcol">
+            <div className="card workcard">
               <div className="mt-3">
                 <img
                   src={service1}
-                  width={30}
                   alt="Electrical Shops"
+                  style={{ width: "150px", height: "70px" }}
                 />
-                <h3 className="mt-3 text-truncate">Electrical Shops</h3>
+                <h3 className="mt-3 text-truncate workname">
+                  Electrical Shops
+                </h3>
                 <span className="text justify-content mt-3">
                   Find the nearest electrical shops Near your place
                 </span>
                 <div className="d-block mt-3">
                   <Link to="/electricalshops">
-                    <button className="btn">
-                      Shops
-                    </button>
+                    <button className="btn service_btn">Shops</button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="card p-3">
+          <div className="col-md-4 workcol">
+            <div className="card workcard">
               <div className="mt-3">
-                <img
-                  src={service2}
-                  width={30}
-                  alt="Mechanic shops"
-                />
-                <h3 className="mt-3 text-truncate">Mechanic shops</h3>
+                <img src={service2} width={30} alt="Mechanic shops" />
+                <h3 className="mt-3 text-truncate workname">Mechanic shops</h3>
                 <span className="text justify-content mt-3">
                   Find the nearest Mechanic shops Near your place
                 </span>
                 <div className="d-block mt-3">
                   <Link to="/mechanicshops">
-                    <button className="btn">
-                      Shops
-                    </button>
+                    <button className="btn service_btn">Shops</button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="card p-3">
+          <div className="col-md-4 workcol">
+            <div className="card workcard">
               <div className="mt-3">
-                <img
-                  src={service3}
-                  width={30}
-                  alt="Plumbing shops"
-                />
-                <h3 className="mt-3 text-truncate">Plumbing shops</h3>
+                <img src={service3} width={30} alt="Plumbing shops" />
+                <h3 className="mt-3 text-truncate workname">Plumbing shops</h3>
                 <span className="text justify-content mt-3">
                   Find the nearest Mechanic shops Near your place
                 </span>
                 <div className="d-block mt-3">
                   <Link to="/plumbershops">
-                    <button className="btn">
-                      Shops
-                    </button>
+                    <button className="btn service_btn">Shops</button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-4" style={{marginTop: '10vh'}}>
-            <div className="card p-3">
+          <div className="col-md-4 workcol">
+            <div className="card workcard">
               <div className="mt-3">
-                <img
-                  src={service4}
-                  width={30}
-                  alt="Find Workers"
-                />
-                <h3 className="mt-3 text-truncate">Find Workers</h3>
+                <img src={service4} width={30} alt="Find Workers" />
+                <h3 className="mt-3 text-truncate workname">Find Workers</h3>
                 <span className="text justify-content mt-3">
                   Find the worker you need to make your work done
                 </span>
                 <div className="d-block mt-3">
                   <Link to="/workers">
-                    <button className="btn">
-                      Workers
-                    </button>
+                    <button className="btn service_btn">Workers</button>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-4" style={{marginTop: '10vh'}}>
-            <div className="card p-3">
+          <div className="col-md-4 workcol">
+            <div className="card workcard">
               <div className="mt-3">
-                <img
-                  src={service5}
-                  width={30}
-                  alt="Shop Join"
-                />
-                <h3 className="mt-3 text-truncate">Shop Join</h3>
+                <img src={service5} width={30} alt="Shop Join" />
+                <h3 className="mt-3 text-truncate workname">Shop Join</h3>
                 <span className="text justify-content mt-3">
                   Join your shop with us and sell your items online
                 </span>
                 <br />
                 <div className="d-block mt-3">
                   <Link to="/shopjoin">
-                    <button
-                      className=" btn"
-                      data-inline="true"
-                    >
+                    <button className=" btn service_btn" data-inline="true">
                       Add Shop
                     </button>
                   </Link>
                   <Link to="/shopsignin">
                     <button
-                      className="btn"
+                      className="btn service_btn"
                       data-inline="true"
                       style={{ marginLeft: "10px" }}
                     >
@@ -140,27 +116,21 @@ export default function Service({ customerDetails }) {
               </div>
             </div>
           </div>
-          <div className="col-md-4" style={{marginTop: '10vh'}}>
-            <div className="card p-3">
+          <div className="col-md-4 workcol">
+            <div className="card workcard">
               <div className="mt-3">
-                <img
-                  src={service6}
-                  width={30}
-                  alt="Workers Join"
-                />
-                <h3 className="mt-3 text-truncate">Workers Join</h3>
+                <img src={service6} width={30} alt="Workers Join" />
+                <h3 className="mt-3 text-truncate workname">Workers Join</h3>
                 <span className="text justify-content mt-3">
                   workers can Join our website and get work.
                 </span>
-                <div className="d-block mt-3">                  
+                <div className="d-block mt-3">
                   <Link to="/workerJoin">
-                    <button className="btn">
-                      Join
-                    </button>
+                    <button className="btn service_btn">Join</button>
                   </Link>
                   <Link to="/workersignin">
                     <button
-                      className="btn"
+                      className="btn service_btn"
                       data-inline="true"
                       style={{ marginLeft: "10px" }}
                     >
