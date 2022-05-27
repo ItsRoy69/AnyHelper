@@ -1,38 +1,61 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import navimg from "./../../assets/nav.png";
+import { MdExpandMore } from "react-icons/md";
+
+
 
 import "./Navbar.css";
 
 export default function Navbar() {
   return (
+
     <>
-      <div className="main_navbar fixed-top">
-          <div className="brand-logo-name">
-            <Link to={"/"} className="brand-logo">
-              <img src={navimg} alt="img" />
-            </Link>
-          </div>
-          <nav className="main-nav">
-            <ul>
-              <li>
-                <a href="/">Home</a>
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src={navimg} alt="img" className="navbar_brand_logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            {/* <span class="navbar-toggler-icon">-</span> */}
+            <MdExpandMore />
+          </button>
+
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">
+                  Home
+                </a>
               </li>
-              <li>
-                <a href="#services">Services</a>
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  Services
+                </a>
               </li>
-              <li>
-                <a href="#about">About Us</a>
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  About Us
+                </a>
               </li>
-              <li>
-                <a href="#team">Team</a>
-              </li>
-              <li>
-                <a href="#footer">Footer</a>
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  Team
+                </a>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
+      </nav>
     </>
   );
 }

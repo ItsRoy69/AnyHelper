@@ -1,45 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
-.main_navbar {
-  min-height: 2.5rem;
-  padding: 0 10vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Nunito", sans-serif;
-}
-
-.main_navbar.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background: #2A4C90;
-  box-shadow: 0px 2px 20px rgb(1 41 112 / 10%);
-}
-
-.brand-logo {
-  text-decoration: none;
-  font-family: "Nunito", sans-serif;
-  font-weight: 200;
-}
-
-.main-nav ul {
-  display: flex;
-  margin: 0;
-  padding: auto;
-  list-style: none;
-}
-
-.main-nav a {
-  text-decoration: none;
-  padding: 0 1rem;
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.brand-logo-name img {
+.navbar_brand_logo {
   width: 100px;
+}
+
+.nav-link {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+}
+
+.navbar-toggler-icon {
+  color: black !important;
 }
