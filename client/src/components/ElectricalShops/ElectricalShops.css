@@ -1,4 +1,4 @@
-/* .banner h1 {
+.banner h1 {
   font-size: 3.5em;
   color: #2a4c90;
   text-align: center;
@@ -7,7 +7,7 @@
   margin-top: 10vh;
 }
 
-.container {
+.eleccontainer {
   margin-top: 6vh;
 }
 
@@ -135,4 +135,4 @@ h6 {
     rgba(35, 79, 109, 0.3785889355742297) 0%,
     rgba(69, 95, 113, 1) 100%
   );
-} */
+}
