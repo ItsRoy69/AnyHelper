@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -10,109 +10,54 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import { withStyles } from "@mui/styles";
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import signup from '../assets/shopsign.jpg';
+import signup from "../assets/shopsign.jpg";
+// import shopsignin from "../assets/shopsignin.svg"
 
-import '../styles/ShopSignIn.css';
-
-const theme = createTheme();
-
-const CssTextField = withStyles({
-  root: {
-    "& label.Mui-focused": {
-      color: "black"
-    },
-
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "blue"
-      },
-      "&:hover fieldset": {
-        borderColor: "black"
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "blue"
-      }
-    }
-  }
-})(TextField);
+import "../styles/ShopSignIn.css";
 
 const ShopSignIn = () => {
-
-  const mediaLessthanmd = useMediaQuery(theme.breakpoints.down("md"));
-  
-
   return (
     <>
       <Navbar />
-        <div className="signup-container">
-          <div className="signup-content">
-            <h1>Sign In</h1>
-          </div>        
 
-          <ThemeProvider theme={theme}>
-            <Container component="main">
-              <CssBaseline />
+      <div className="shopsignin_container">
 
-              <form style={{ marginTop: "5vh" }}>
-                <div className="registrationForm" style={{ display: "flex" }}>
-                  {!mediaLessthanmd && (
-                    <Grid container style={{ flex: "5" }}>
-                      <img src={signup} alt=""  />
-                    </Grid>
-                  )}
-                  <div className="registrationFormContainer" style={{ flex: "6" }}>                    
+        <div className="row shopsignin_row">
 
-                    <Grid container spacing={2}  >
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Username" variant="outlined" fullWidth required autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="text"
-                        />
-                      </Grid>
+          <div className="col-lg-6 col-md-12 shopsignin_imgcol col-sm-12">
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Email" variant="outlined" fullWidth required autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="email"
-                        />
-                      </Grid>
+            <img src="https://i.ibb.co/gz4yCVX/shopsignin.gif" alt="hellothere" className="shopsignin_img" />
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Password" variant="outlined" fullWidth required autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="password"
-                        />
-                      </Grid>                      
-                      
-                      <Grid item md={12} xs={8}>
-                        <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} >
-                          Sign In
-                        </Button>
-                      </Grid>
 
-                    </Grid>
+          </div>
 
-                    <Grid container justifyContent="center">
-                      <Grid item>
-                        <Link href="/shopjoin" variant="body2">
-                          Don't have an account? Sign up
-                        </Link>
-                      </Grid>
-                    </Grid>
+          <div className="col-lg-6 col-md-12 col-sm-12 shopsignin_detailscol">
 
-                  </div>
-                </div>
-              </form>
-            </Container>
-          </ThemeProvider>  
+            <div className="shopsignin_details">
 
-        </div>  
-      <Footer />
+              <h1 className="shopsignin_header">Sign In</h1>
+
+              <input type="email" name="" id="" placeholder="Enter your email" className="form-control shopsignin_input" />
+              <input type="password" name="" id="" placeholder="Enter your password" className="form-control shopsignin_input" />
+
+              <button className="btn btn-warning shopsignin_btn">Sign In</button>
+
+              <p className="shopsignin_p">
+                Don't have an account? <Link href="/shop-sign-up">Sign Up</Link>
+              </p>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ShopSignIn
+export default ShopSignIn;

@@ -1,36 +1,103 @@
-/* .signup-content h1{
-    font-size: 3.5em;
-    color: #2A4C90;
-    text-align: center;
-    margin-bottom: 5vh;
-    text-align: center;
-    margin-top: 10vh;
+.shopsignin_container {
+  margin: 0px;
+  padding: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 5rem;
+}
+
+.shopsignin_imgcol {
+  display: flex;
+  justify-content: center;
+}
+
+.shopsignin_img {
+  width: 550px;
+}
+
+.shopsignin_details {
+  margin-top: 7rem;
+  width: 500px;
+}
+
+.shopsignin_header {
+  margin-bottom: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  width: 400px;
+}
+
+.shopsignin_input {
+  width: 400px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.shopsignin_p {
+  width: 400px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 430px) {
+  .shopsignin_container {
+    margin: 0px;
+    padding: 0px;
   }
 
-  .registrationForm img{
-    height:500px;
-    width: 300px;
-    background-size: cover;
-    opacity: 2
+  .shopsignin_header {
+    text-align: center;
   }
 
-  .registrationFormContainer Grid{
+  .shopsignin_details {
+    margin: 0px;
+    max-width: 425px;
     display: flex;
-    align-items:  center;
-    justify-content: center
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .location{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .shopsignin_header {
+    max-width: 425px;
   }
 
-  .locationbutton{
-    width: 176px;
-    height: 56px;
+  .shopsignin_input {
+    max-width: 300px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 1rem;
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    text-align: center;
   }
-  .locationbutton:hover{
-    background-color: #2A4C90;
-    color: white;
+
+  .shopsignin_imgcol {
+    margin: 0px;
+    padding: 0px;
+    max-width: 425px;
+    /* max-width: 425px; */
   }
- */
+  .shopsignin_detailscol {
+    margin: 0px;
+    padding: 0px;
+    max-width: 425px;
+  }
+
+  .shopsignin_p {
+    max-width: 425px;
+    text-align: center;
+  }
+
+  .shopsignin_img {
+    max-width: 425px;
+  }
+
+  .shopsignin_row {
+    margin: 0px;
+    padding: 0px;
+    max-width: 425px;
+  }
+}
