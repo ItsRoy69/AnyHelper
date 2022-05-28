@@ -4,137 +4,137 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCity } from '@fortawesome/free-solid-svg-icons';
+import { faCity } from "@fortawesome/free-solid-svg-icons";
 
-import workers1 from "../assets/eshop1.jpg";
-import workers2 from "../assets/eshop2.jpg";
-import workers3 from "../assets/eshop3.jpg";
+import mshop1 from "../assets/eshop1.jpg";
+import mshop2 from "../assets/eshop2.jpg";
+import mshop3 from "../assets/eshop3.jpg";
 import user from "../assets/user.webp";
 
 import "../styles/Workers.css";
 
-export default function Workers(){
+export default function Workers() {
   return (
     <>
-        <Navbar />
-          <div className="container">
-            <div className="banner">
-              <h1>Workers</h1>
-            </div>
-            <button
-                type="button"
-                className="button"
-              >
-                Sort By Distance
-            </button>
-            <select className="button dropdown-toggle" name="Occupation" id="selectOccupation" style={{marginLeft: "10px"}}>
-              <option value="All">All</option>
-              <option value="Plumber">Plumber</option>
-              <option value="Electrician">Electrician</option>
-              <option value="Mechanic">Mechanic</option>
-            </select>
+      <Navbar />
+      <div className="container eleccontainer">
+        <div className="banner">
+          <h1>Find workers</h1>
+        </div>
+        <button type="button" className="button">
+          Sort By Distance
+        </button>
+        <select
+          className="button dropdown-toggle"
+          name="Occupation"
+          id="selectOccupation"
+          style={{ marginLeft: "10px" }}
+        >
+          <option value="All">All</option>
+          <option value="Plumber">Plumber</option>
+          <option value="Electrician">Electrician</option>
+          <option value="Mechanic">Mechanic</option>
+        </select>
+      </div>
+
+      <div class="container cards-list">
+        <div class="card 1 eleccards">
+          <div class="card_image">
+            {" "}
+            <img src={mshop1} alt="totallyanimage" />{" "}
           </div>
-          <div className="containers">
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
 
-            <div className="cards">
-              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${workers1})`}} >
-                <div className="card-img-overlay d-flex flex-column">
-                  <div className="card-body">
-                    <h3>workers.name</h3>
-                    <div className="card-title mt-0 ">
-                      <h5>workers.plumber</h5>
-                    </div>                    
-                      <h5 className="text">
-                        <FontAwesomeIcon icon={faCity}/>
-                        &nbsp;
-                        workers.city
-                      </h5>
-                  </div>
-                  <div className="card-footer">
-                    <div className="media">
-                      <img src={user} alt="user" />
-                        <div className="media-body">
-                          <h6>workers.address</h6>
-                          <h6>workers.distance km</h6>
-                          <Link to="/signup">
-                            <button type="button" className="boxbutton">
-                                Message
-                            </button>
-                          </Link>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>   
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
             </div>
-
-            <div className="cards">
-              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${workers2})`}} >
-                <div className="card-img-overlay d-flex flex-column">
-                  <div className="card-body">
-                    <h3>workers.name</h3>
-                    <div className="card-title mt-0 ">
-                      <h5>workers.mechanic</h5>
-                    </div>                    
-                      <h5 className="text">
-                        <FontAwesomeIcon icon={faCity}/>
-                        &nbsp;
-                        workers.city
-                      </h5>
-                  </div>
-                  <div className="card-footer">
-                    <div className="media">
-                      <img src={user} alt="user" />
-                        <div className="media-body">
-                          <h6>workers.address</h6>
-                          <h6>workers.distance km</h6>
-                          <Link to="/signup">
-                            <button type="button" className="boxbutton">
-                                Message
-                            </button>
-                          </Link>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>   
-            </div>
-            
-            <div className="cards">
-              <div className="card pemCard card-has-bg click-col" style={{ backgroundImage:`url(${workers3})`}} >
-                <div className="card-img-overlay d-flex flex-column">
-                  <div className="card-body">
-                    <h3>workers.name</h3>
-                    <div className="card-title mt-0 ">
-                      <h5>workers.electrecian</h5>
-                    </div>                    
-                      <h5 className="text">
-                        <FontAwesomeIcon icon={faCity}/>
-                        &nbsp;
-                        workers.city
-                      </h5>
-                  </div>
-                  <div className="card-footer">
-                    <div className="media">
-                      <img src={user} alt="user" />
-                        <div className="media-body">
-                          <h6>workers.address</h6>
-                          <h6>workers.distance km</h6>
-                          <Link to="/signup">
-                            <button type="button" className="boxbutton">
-                                Message
-                            </button>
-                          </Link>                          
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>   
-            </div>
-
           </div>
+        </div>
 
-        <Footer />            
+        <div class="card 2 eleccards">
+          <div class="card_image">
+            <img src={mshop2} alt="totallyanimage" />
+          </div>
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
+
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div class="card 3 eleccards">
+          <div class="card_image">
+            <img src={mshop3} alt="totallyanimage" />
+          </div>
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
+
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div class="card 4 eleccards">
+          <div class="card_image">
+            <img src={mshop3} alt="totallyanimage" />
+          </div>
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
+
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }

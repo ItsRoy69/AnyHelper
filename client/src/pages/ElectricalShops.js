@@ -36,145 +36,106 @@ export default function ElectricalShops() {
           <option value="Mechanic">Mechanic</option>
         </select>
       </div>
-      <div className="containers">
-        <div className="cards">
-          <div
-            className="card pemCard card-has-bg click-col"
-            style={{ backgroundImage: `url(${eshop1})` }}
-          >
-            <div className="card-img-overlay d-flex flex-column">
-              <div className="card-body">
-                <h3>eshop.name</h3>
-                <div className="card-title mt-0 ">
-                  <h5>eshop.plumber</h5>
-                </div>
-                <h5 className="text">
-                  <FontAwesomeIcon icon={faCity} />
-                  &nbsp; eshop.city
-                </h5>
-              </div>
-              <div className="card-footer">
-                <div className="media">
-                  <img src={user} alt="user" />
-                  <div className="media-body">
-                    <h6>Phone : eshop.phoneNo</h6>
-                    <h6>eshop.address</h6>
-                    <h6>eshop.distance km</h6>
-                    <Link to="/items">
-                      <button type="button" className="boxbutton">
-                        Items
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+
+
+
+
+      <div class="container cards-list">
+
+        <div class="card 1 eleccards">
+          <div class="card_image"> <img src={eshop1} alt="totallyanimage" /> </div>
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
+
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="cards">
-          <div
-            className="card pemCard card-has-bg click-col"
-            style={{ backgroundImage: `url(${eshop2})` }}
-          >
-            <div className="card-img-overlay d-flex flex-column">
-              <div className="card-body">
-                <h3>eshop.name</h3>
-                <div className="card-title mt-0 ">
-                  <h5>eshop.mechanic</h5>
-                </div>
-                <h5 className="text">
-                  <FontAwesomeIcon icon={faCity} />
-                  &nbsp; eshop.city
-                </h5>
-              </div>
-              <div className="card-footer">
-                <div className="media">
-                  <img src={user} alt="user" />
-                  <div className="media-body">
-                    <h6>Phone : eshop.phoneNo</h6>
-                    <h6>eshop.address</h6>
-                    <h6>eshop.distance km</h6>
-                    <Link to="/items">
-                      <button type="button" className="boxbutton">
-                        Items
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="card 2 eleccards">
+          <div class="card_image">
+            <img src={eshop2} alt="totallyanimage" />
           </div>
-        </div>
-        <div className="cards">
-          <div
-            className="card pemCard card-has-bg click-col"
-            style={{ backgroundImage: `url(${eshop2})` }}
-          >
-            <div className="card-img-overlay d-flex flex-column">
-              <div className="card-body">
-                <h3>eshop.name</h3>
-                <div className="card-title mt-0 ">
-                  <h5>eshop.mechanic</h5>
-                </div>
-                <h5 className="text">
-                  <FontAwesomeIcon icon={faCity} />
-                  &nbsp; eshop.city
-                </h5>
-              </div>
-              <div className="card-footer">
-                <div className="media">
-                  <img src={user} alt="user" />
-                  <div className="media-body">
-                    <h6>Phone : eshop.phoneNo</h6>
-                    <h6>eshop.address</h6>
-                    <h6>eshop.distance km</h6>
-                    <Link to="/items">
-                      <button type="button" className="boxbutton">
-                        Items
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
+
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="cards">
-          <div
-            className="card pemCard card-has-bg click-col"
-            style={{ backgroundImage: `url(${eshop3})` }}
-          >
-            <div className="card-img-overlay d-flex flex-column">
-              <div className="card-body">
-                <h3>eshop.name</h3>
-                <div className="card-title mt-0 ">
-                  <h5>eshop.electrecian</h5>
-                </div>
-                <h5 className="text">
-                  <FontAwesomeIcon icon={faCity} />
-                  &nbsp; eshop.city
-                </h5>
-              </div>
-              <div className="card-footer">
-                <div className="media">
-                  <img src={user} alt="user" />
-                  <div className="media-body">
-                    <h6>Phone : eshop.phoneNo</h6>
-                    <h6>eshop.address</h6>
-                    <h6>eshop.distance km</h6>
-                    <Link to="/items">
-                      <button type="button" className="boxbutton">
-                        Items
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+        <div class="card 3 eleccards">
+          <div class="card_image">
+            <img src={eshop3} alt="totallyanimage" />
+          </div>
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
+
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
             </div>
           </div>
         </div>
+
+        <div class="card 4 eleccards">
+          <div class="card_image">
+            <img src={eshop3} alt="totallyanimage" />
+          </div>
+          <div class="card_title">
+            <p className="elec_name">Jyotirmoy Roy</p>
+            <p className="text elec_city">
+              <FontAwesomeIcon icon={faCity} />
+              &nbsp; Kolkata
+            </p>
+
+            <div className="elec_details">
+              <p className="elec_ph">(+91) 903252-3499</p>
+              <p className="elec_add">Mahestala, Batanagar</p>
+              <p className="elec_ra">Cover 50km</p>
+              <Link to="/items">
+                <button type="button" className="boxbutton">
+                  Items
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <Footer />
