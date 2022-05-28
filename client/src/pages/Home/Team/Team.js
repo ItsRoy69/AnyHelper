@@ -7,7 +7,7 @@ import "./Team.css";
 const Team = () => {
   return (
     <>
-      <div className="container">
+      <div className="container" id="team">
 
         <h2 className="team_header">Meet our team</h2>
 

@@ -79,7 +79,9 @@ const WorkerJoin = () => {
                 />
 
 
-                <button className="btn btn-warning" style={{ marginBottom: "2rem" }}>Get Location</button>
+                <a type="button" className="btn btn-warning" style={{ marginBottom: "2rem" }} href="https://gps-coordinates.org/">
+                   Get Location         
+                </a>
 
 
 
@@ -127,11 +129,6 @@ const WorkerJoin = () => {
                     <li>
                       <a class="dropdown-item" href="/">
                         Mechanic
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        Electrician
                       </a>
                     </li>
                   </ul>

@@ -65,6 +65,10 @@ const ShopJoin = () => {
                   placeholder="Longitude"
                 />
 
+                <a type="button" className="btn btn-warning" style={{ marginBottom: "2rem" }} href="https://gps-coordinates.org/">
+                   Get Location         
+                </a>
+
                 <input
                   type="email"
                   className="form-control form1_control"
@@ -113,7 +117,7 @@ const ShopJoin = () => {
                   placeholder="Shop name"
                 />
 
-                <div class="nav-item dropdown">
+<div class="nav-item dropdown">
                   <p
                     class="dropdown-toggle form1_control"
                     id="navbarDropdown"
@@ -122,18 +126,28 @@ const ShopJoin = () => {
                     aria-expanded="false"
                   >
                     {" "}
-                    Dropdown
+                    Occupation
                   </p>
 
                   <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
                     <li>
                       <a class="dropdown-item" href="/">
-                        Action
+                        Plumbing
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="/">
-                        Another action
+                        Electric
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/">
+                        Mechanic
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/">
+                        Electric
                       </a>
                     </li>
                   </ul>

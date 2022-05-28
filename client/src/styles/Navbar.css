@@ -4,12 +4,21 @@
 
 .nav-link {
   font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-  color: black;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
   font-weight: 700;
   margin-right: 30px;
 }
 
+.nav-link:hover {
+  color: rgb(198, 212, 0);
+  text-decoration: none;
+}
+
 .navbar-toggler-icon {
-  color: black !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.navbar{
+  background-color: #2A4C90;
 }

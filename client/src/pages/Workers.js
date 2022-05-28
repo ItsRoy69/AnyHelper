@@ -51,13 +51,12 @@ export default function Workers() {
             </p>
 
             <div className="elec_details">
-              <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
               <p className="elec_ra">Cover 50km</p>
-              <Link to="/items">
+              <Link to="/message">
                 <button type="button" className="boxbutton">
-                  Items
-                </button>
+  Message
+</button>
               </Link>
             </div>
           </div>
@@ -75,12 +74,11 @@ export default function Workers() {
             </p>
 
             <div className="elec_details">
-              <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
               <p className="elec_ra">Cover 50km</p>
-              <Link to="/items">
+              <Link to="/message">
                 <button type="button" className="boxbutton">
-                  Items
+                  Message
                 </button>
               </Link>
             </div>
@@ -99,12 +97,11 @@ export default function Workers() {
             </p>
 
             <div className="elec_details">
-              <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
               <p className="elec_ra">Cover 50km</p>
-              <Link to="/items">
+              <Link to="/message">
                 <button type="button" className="boxbutton">
-                  Items
+                  Message
                 </button>
               </Link>
             </div>
@@ -123,12 +120,11 @@ export default function Workers() {
             </p>
 
             <div className="elec_details">
-              <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
               <p className="elec_ra">Cover 50km</p>
-              <Link to="/items">
+              <Link to="/message">
                 <button type="button" className="boxbutton">
-                  Items
+                  Message
                 </button>
               </Link>
             </div>
