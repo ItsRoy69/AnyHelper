@@ -15,6 +15,12 @@
   margin-bottom: 5vh;
 }
 
+.button{
+  background-color: #dcc02f;
+  border-radius: 5px;
+  border: none;
+}
+
 .containers {
   margin-top: 6vh;
   display: grid;

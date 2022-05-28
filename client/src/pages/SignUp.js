@@ -9,12 +9,12 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { withStyles } from "@mui/styles";
 
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-import signup from '../../assets/signin.png';
+import signup from '../assets/signin.png';
 
-import './SignUp.css';
+import '../styles/SignUp.css';
 
 const theme = createTheme();
 

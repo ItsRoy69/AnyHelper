@@ -2,19 +2,19 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./components/Home/Home";
-import ElectricalShops from "./components/ElectricalShops/ElectricalShops";
-import MechanicShops from "./components/MechanicShops/MechanicShops";
-import PlumberShop from "./components/PlumberShop/PlumberShops";
-import Workers from "./components/Workers/Workers";
-import Items from "./components/Items/Items";
-import SignUp from "./components/SignUp/SignUp";
-import SignIn from "./components/SignUp/SignIn";
-import ShopJoin from "./components/ShopJoin/ShopJoin";
-import ShopSignIn from "./components/ShopSignIn/ShopSignIn";
-import WorkerJoin from "./components/WorkerJoin/WorkerJoin";
-import WorkerSignIn from "./components/WorkerSignIn/WorkerSignIn";
-import Message from "./components/Message/Message";
+import Home from "./pages/Home/Home";
+import ElectricalShops from "./pages/ElectricalShops";
+import MechanicShops from "./pages/MechanicShops";
+import PlumberShop from "./pages/PlumberShops";
+import Workers from "./pages/Workers";
+import Items from "./pages/Items";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import ShopJoin from "./pages/ShopJoin";
+import ShopSignIn from "./pages/ShopSignIn";
+import WorkerJoin from "./pages/WorkerJoin";
+import WorkerSignIn from "./pages/WorkerSignIn";
+import Message from "./pages/Message";
 
 function App() {
   return (

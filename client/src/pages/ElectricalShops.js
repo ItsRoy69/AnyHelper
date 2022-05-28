@@ -1,17 +1,17 @@
 import React from "react";
 
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCity } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-import eshop1 from "./../../assets/eshop1.jpg";
-import eshop2 from "./../../assets/eshop2.jpg";
-import eshop3 from "./../../assets/eshop3.jpg";
-import user from "./../../assets/user.webp";
+import eshop1 from "../assets/eshop1.jpg";
+import eshop2 from "../assets/eshop2.jpg";
+import eshop3 from "../assets/eshop3.jpg";
+import user from "../assets/user.webp";
 
-import "./ElectricalShops.css";
+import "../styles/ElectricalShops.css";
 
 export default function ElectricalShops() {
   return (

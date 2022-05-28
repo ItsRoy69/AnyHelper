@@ -1,5 +1,5 @@
 import React from 'react';
-import "./WorkerJoin.css";
+import "../styles/WorkerJoin.css";
 
 const WorkerJoin = () => {
   return (

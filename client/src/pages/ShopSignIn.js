@@ -10,12 +10,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import { withStyles } from "@mui/styles";
 
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-import signup from '../../assets/signin.png';
+import signup from '../assets/shopsign.jpg';
 
-import './SignUp.css';
+import '../styles/ShopSignIn.css';
 
 const theme = createTheme();
 
@@ -39,7 +39,7 @@ const CssTextField = withStyles({
   }
 })(TextField);
 
-const SignUp = () => {
+const ShopSignIn = () => {
 
   const mediaLessthanmd = useMediaQuery(theme.breakpoints.down("md"));
   
@@ -59,7 +59,7 @@ const SignUp = () => {
               <form style={{ marginTop: "5vh" }}>
                 <div className="registrationForm" style={{ display: "flex" }}>
                   {!mediaLessthanmd && (
-                    <Grid container style={{ flex: "6" }}>
+                    <Grid container style={{ flex: "5" }}>
                       <img src={signup} alt=""  />
                     </Grid>
                   )}
@@ -97,7 +97,7 @@ const SignUp = () => {
 
                     <Grid container justifyContent="center">
                       <Grid item>
-                        <Link href="/signup" variant="body2">
+                        <Link href="/shopjoin" variant="body2">
                           Don't have an account? Sign up
                         </Link>
                       </Grid>
@@ -115,4 +115,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default ShopSignIn

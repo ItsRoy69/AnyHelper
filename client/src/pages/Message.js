@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
-import user from "./../../assets/user.webp";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import user from "../assets/user.webp";
 
 import { ImSearch } from "react-icons/im";
 import { IoMdSend } from "react-icons/io";
 
-import './Message.css';
+import '../styles/Message.css';
 
 const Message = () => {
   return (

@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import navimg from "./../../assets/nav.png";
+import navimg from "../assets/nav.png";
 import { MdExpandMore } from "react-icons/md";
 
 
 
-import "./Navbar.css";
+import "../styles/Navbar.css";
 
 export default function Navbar() {
   return (

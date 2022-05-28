@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../components/Navbar";
 import Banner from "./Banner/Banner";
 import Service from "./Service/Service";
 import About from "./About/About";
 import Team from "./Team/Team";
-import Footer from "./../Footer/Footer";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
@@ -14,11 +14,8 @@ const Home = () => {
       <Service />
       <About />
       <Team />
-      {/* 
-      
-      
-      
-      <Footer /> */}
+{/*       
+      <Footer />  */}
     </>
   );
 };

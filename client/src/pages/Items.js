@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import "./Items.css";
+import "../styles/Items.css";
 
 import { BsFillCartFill, BsFillHeartFill } from "react-icons/bs";
 
-import items1 from "./../../assets/items1.png";
-import items2 from "./../../assets/items2.png";
-import items3 from "./../../assets/items3.png";
+import items1 from "../assets/items1.png";
+import items2 from "../assets/items2.png";
+import items3 from "../assets/items3.png";
 
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Items = () => {
   return (

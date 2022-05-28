@@ -9,13 +9,13 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { withStyles } from "@mui/styles";
 
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-import signup from '../../assets/shop.png';
-import shp1 from "../../assets/shp1.svg"
+import signup from '../assets/shop.png';
+import shp1 from "../assets/shp1.svg"
 
-import './ShopJoin.css';
+import '../styles/ShopJoin.css';
 
 const theme = createTheme();
 
@@ -225,21 +225,21 @@ const ShopJoin = () => {
             <div className="col-lg-6 col-md-12 form_col">
 
               <form>
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Name' />
 
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email' />
 
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Latitude' />
 
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Longitude' />
 
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Password' />
 
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Phone' />
 
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='City' />
 
-                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
+                <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Address' />
 
                 <input type="email" className="form-control form1_control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Shop name' />
 
