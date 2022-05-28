@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -9,127 +9,96 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { withStyles } from "@mui/styles";
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import signup from '../assets/signin.png';
-
-import '../styles/SignUp.css';
-
-const theme = createTheme();
-
-const CssTextField = withStyles({
-  root: {
-    "& label.Mui-focused": {
-      color: "black"
-    },
-
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "blue"
-      },
-      "&:hover fieldset": {
-        borderColor: "black"
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "blue"
-      }
-    }
-  }
-})(TextField);
+import signup from "../assets/signin.png";
 
 const SignUp = () => {
-
-  
-  
   return (
     <>
       <Navbar />
-        <div className="signup-container">
-          <div className="signup-content">
-            <h1>Sign Up</h1>
-          </div>        
 
-          <ThemeProvider theme={theme}>
-            <Container component="main">
-              <CssBaseline />
+      <div className="shopsignin_container">
+        <div className="row shopsignin_row">
+          <div className="col-lg-6 col-md-12 shopsignin_imgcol col-sm-12">
+            <img
+              src="https://i.ibb.co/gz4yCVX/shopsignin.gif"
+              alt="hellothere"
+              className="shopsignin_img"
+            />
+          </div>
 
-              <form style={{ marginTop: "5vh" }}>
-                <div className="registrationForm" style={{ display: "flex" }}>                  
-                    <Grid container style={{ flex: "6" }}>
-                      <img src={signup} alt=""  />
-                    </Grid>
-                  <div className="registrationFormContainer" style={{ flex: "6" }}>
-                    
-                    <Grid container spacing={2}  >
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Username*" variant="outlined" fullWidth autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="text"
-                        />
-                      </Grid>
+          <div className="col-lg-6 col-md-12 col-sm-12 shopsignin_detailscol">
+            <div className="shopsignin_details">
+              <h1 className="shopsignin_header">Sign Up</h1>
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Email*" variant="outlined" fullWidth autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="email"
-                        />
-                      </Grid>
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter your email"
+                className="form-control shopsignin_input"
+              />
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter your username"
+                className="form-control shopsignin_input"
+              />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Enter your password"
+                className="form-control shopsignin_input"
+              />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Confirm your password"
+                className="form-control shopsignin_input"
+              />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Latitude"
+                className="form-control shopsignin_input"
+              />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Longitude"
+                className="form-control shopsignin_input"
+              />
 
-                      <Grid className="location" item md={11} xs={8}>
-                        <CssTextField label="Latitude*" variant="outlined" fullWidth autoFocus
-                          InputProps={{ style: {color: "black"}}}
-                          type="latitude"
-                        />
-                        <CssTextField label="Longitude*" variant="outlined" fullWidth  autoFocus style={{ marginLeft: "10px" }}
-                          InputProps={{ style: {color: "black"}}}
-                          type="longitude"
-                        />
-                        <Button type="location"  className='locationbutton' href="https://gps-coordinates.org/" variant="contained" style={{ marginLeft: "30px" }}>
-                          Location
-                        </Button>
-                      </Grid>
+              <button
+                className="btn btn-warning"
+                style={{ marginBottom: "2rem" }}
+              >
+                Get Location
+              </button>
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Password*" variant="outlined" fullWidth  autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="password"
-                        />
-                      </Grid>
+              <br />
 
-                      <Grid item md={12} xs={8}>
-                        <CssTextField label="Confirm Password*" variant="outlined" fullWidth  autoFocus 
-                          InputProps={{ style: {color: "black"}}}
-                          type="confirm password"
-                        />
-                      </Grid>
-                      
-                      <Grid item md={12} xs={8}>
-                        <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} >
-                          Sign Up
-                        </Button>
-                      </Grid>
+              <button className="btn btn-warning shopsignin_btn">
+                Sign In
+              </button>
 
-                    </Grid>
-
-                    <Grid container justifyContent="center">
-                      <Grid item>
-                        <Link href="/signin" variant="body2">
-                          Already have an account? Sign in
-                        </Link>
-                      </Grid>
-                    </Grid>
-
-                  </div>
-                </div>
-              </form>
-            </Container>
-          </ThemeProvider>  
-
-        </div>  
-      <Footer />
+              <p className="shopsignin_p">
+                Already have an account?{" "}
+                <Link href="/shop-sign-up">Sign In</Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;
