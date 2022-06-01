@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/Messages.css";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,9 +8,7 @@ import user from "../assets/user.webp";
 import { ImSearch } from "react-icons/im";
 import { IoMdSend } from "react-icons/io";
 
-import '../styles/Message.css';
-
-const Message = () => {
+const Messages = () => {
   return (
     <>
       <Navbar />
@@ -73,50 +72,51 @@ const Message = () => {
                 </div>
               </div>
             </div>
-            <div className='messagechatbox'>
-              <div className="message">
-                <div className="message-content">
-                  <p>messages.message</p>
+            <div className="message-box">
+              <div className='messagechatbox'>
+                <div className="message">
+                  <div className="message-content">
+                    <p>messages.message</p>
+                  </div>
+                  <div className="message-meta">
+                    <p id="time">2:30</p>
+                    <p id="author">messages.username</p>
+                  </div>                
                 </div>
-                <div className="message-meta">
-                  <p id="time">2:30</p>
-                  <p id="author">messages.username</p>
-                </div>                
-              </div>
-              <div className="message">
-                <div className="message-content">
-                  <p>messages.message</p>
+                <div className="message">
+                  <div className="message-content">
+                    <p>messages.message</p>
+                  </div>
+                  <div className="message-meta">
+                    <p id="time">2:30</p>
+                    <p id="author">messages.username</p>
+                  </div>                
                 </div>
-                <div className="message-meta">
-                  <p id="time">2:30</p>
-                  <p id="author">messages.username</p>
-                </div>                
-              </div>
-              <div className="message">
-                <div className="message-content">
-                  <p>messages.message</p>
+                <div className="message">
+                  <div className="message-content">
+                    <p>messages.message</p>
+                  </div>
+                  <div className="message-meta">
+                    <p id="time">2:30</p>
+                    <p id="author">messages.username</p>
+                  </div>                
                 </div>
-                <div className="message-meta">
-                  <p id="time">2:30</p>
-                  <p id="author">messages.username</p>
-                </div>                
               </div>
-            </div>
             <div className="chat-section">
               <input
                 type="text"
                 placeholder="Hey..."
                 className='chat-input'
               />
-              <button>
+              <button type='button' onClick="www.">
                 <IoMdSend />
               </button>
-            </div>
+            </div>             
           </div>
-        </div>
-      <Footer />
+        </div>                    
+      </div>
     </>
   )
 }
 
-export default Message
+export default Messages

@@ -14,7 +14,6 @@ export default function Service({ customerDetails }) {
     <>
       <div className="container servicecontainer" id="services">
         <h1 className="serviceheader">Our Services</h1>
-
         <div className="cards_parent">
 
           <div className="card workcard">
@@ -22,7 +21,6 @@ export default function Service({ customerDetails }) {
               <img
                 src={service1}
                 alt="Electrical Shops"
-
               />
               <h3 className="  text-truncate workname">
                 Electrical Shops
@@ -37,9 +35,6 @@ export default function Service({ customerDetails }) {
               </div>
             </div>
           </div>
-
-
-
 
           <div className="card workcard">
             <div className=" workcard_body">
@@ -56,7 +51,6 @@ export default function Service({ customerDetails }) {
             </div>
           </div>
 
-
           <div className="card workcard">
             <div className=" workcard_body">
               <img src={service3} width={30} alt="Plumbing shops" />
@@ -72,10 +66,6 @@ export default function Service({ customerDetails }) {
             </div>
           </div>
 
-
-
-
-
           <div className="card workcard">
             <div className=" workcard_body">
               <img src={service4} width={30} alt="Find Workers" />
@@ -90,10 +80,6 @@ export default function Service({ customerDetails }) {
               </div>
             </div>
           </div>
-
-
-
-
 
           <div className="card workcard">
             <div className=" workcard_body">
@@ -122,8 +108,6 @@ export default function Service({ customerDetails }) {
             </div>
           </div>
 
-
-
           <div className="card workcard">
             <div className=" workcard_body">
               <img src={service6} width={30} alt="Workers Join" />
@@ -148,11 +132,7 @@ export default function Service({ customerDetails }) {
             </div>
           </div>
 
-
-
         </div>
-
-
       </div>
     </>
   );

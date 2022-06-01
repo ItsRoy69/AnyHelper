@@ -15,8 +15,6 @@ import Footer from '../components/Footer';
 
 import signup from '../assets/signin.png';
 
-import '../styles/SignUp.css';
-
 const theme = createTheme();
 
 const CssTextField = withStyles({
@@ -42,7 +40,6 @@ const CssTextField = withStyles({
 const SignUp = () => {
 
   const mediaLessthanmd = useMediaQuery(theme.breakpoints.down("md"));
-  
 
   return (
     <>
@@ -51,11 +48,9 @@ const SignUp = () => {
           <div className="signup-content">
             <h1>Sign In</h1>
           </div>        
-
           <ThemeProvider theme={theme}>
             <Container component="main">
               <CssBaseline />
-
               <form style={{ marginTop: "5vh" }}>
                 <div className="registrationForm" style={{ display: "flex" }}>
                   {!mediaLessthanmd && (
@@ -92,7 +87,6 @@ const SignUp = () => {
                           Sign In
                         </Button>
                       </Grid>
-
                     </Grid>
 
                     <Grid container justifyContent="center">
@@ -108,7 +102,6 @@ const SignUp = () => {
               </form>
             </Container>
           </ThemeProvider>  
-
         </div>  
       <Footer />
     </>

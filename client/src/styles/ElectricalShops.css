@@ -27,16 +27,14 @@
   max-width: 100%;
   min-width: 100%;
   padding: 0px;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  justify-content: space-evenly;
 }
 
 .eleccards {
   margin-top: 5rem;
-  margin-right: 8rem;
   width: 350px;
-  height: 450px;
-  border-radius: 40px;
+  height: auto;
+  border-radius: 20px;
   box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
   cursor: pointer;
@@ -45,15 +43,15 @@
 
 .eleccards .card_image {
   width: inherit;
-  height: inherit;
-  border-radius: 40px;
+  height: 65vh;
+  border-radius: 20px;
 }
 
 .eleccards .card_image img {
   width: inherit;
-  height: inherit;
-  border-radius: 40px;
+  border-radius: 20px;
   object-fit: cover;
+  height: 80vh;
 }
 
 .eleccards .card_title {
@@ -135,6 +133,10 @@
 .elec_ra {
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
+}
+
+.eleccards .card_image img {
+  height: 100%;
 }
 
 @media (max-width: 430px) {

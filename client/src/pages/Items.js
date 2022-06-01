@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Items.css";
 
-import { BsFillCartFill, BsFillHeartFill } from "react-icons/bs";
+import { BsFillCartFill } from "react-icons/bs";
 
 import items1 from "../assets/items1.png";
 import items2 from "../assets/items2.png";
@@ -15,14 +14,9 @@ const Items = () => {
   return (
     <>
       <Navbar />
-
       <div className="Items-container-header">
         <h1>Shop items here</h1>
       </div>
-
-
-
-
       <div className="container itemscard_parent">
 
         <div className="card itemscard_card" style={{ width: "18rem" }}>
@@ -36,12 +30,6 @@ const Items = () => {
               size={20}
               style={{ fill: "#C70A80", marginRight: "1rem" }}
             />
-
-            <BsFillHeartFill
-              size={20}
-              style={{ fill: "#F24C4C", marginRight: "5px" }}
-            />
-
           </div>
         </div>
 
@@ -56,12 +44,6 @@ const Items = () => {
               size={20}
               style={{ fill: "#C70A80", marginRight: "1rem" }}
             />
-
-            <BsFillHeartFill
-              size={20}
-              style={{ fill: "#F24C4C", marginRight: "5px" }}
-            />
-
           </div>
         </div>
 
@@ -76,12 +58,6 @@ const Items = () => {
               size={20}
               style={{ fill: "#C70A80", marginRight: "1rem" }}
             />
-
-            <BsFillHeartFill
-              size={20}
-              style={{ fill: "#F24C4C", marginRight: "5px" }}
-            />
-
           </div>
         </div>
 
@@ -96,12 +72,6 @@ const Items = () => {
               size={20}
               style={{ fill: "#C70A80", marginRight: "1rem" }}
             />
-
-            <BsFillHeartFill
-              size={20}
-              style={{ fill: "#F24C4C", marginRight: "5px" }}
-            />
-
           </div>
         </div>
 
@@ -116,12 +86,6 @@ const Items = () => {
               size={20}
               style={{ fill: "#C70A80", marginRight: "1rem" }}
             />
-
-            <BsFillHeartFill
-              size={20}
-              style={{ fill: "#F24C4C", marginRight: "5px" }}
-            />
-
           </div>
         </div>
 
@@ -136,16 +100,17 @@ const Items = () => {
               size={20}
               style={{ fill: "#C70A80", marginRight: "1rem" }}
             />
-
-            <BsFillHeartFill
-              size={20}
-              style={{ fill: "#F24C4C", marginRight: "5px" }}
-            />
-
           </div>
         </div>
       </div>
-
+      <div className="item_bottom">
+        <div className="item_pay">
+          <h1>Payment</h1>
+        </div>
+        <button className="button">
+          Pay
+        </button>
+      </div>
 
     </>
   );

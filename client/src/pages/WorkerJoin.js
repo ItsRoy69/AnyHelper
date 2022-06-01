@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/WorkerJoin.css";
-import shp1 from "../assets/shp1.svg";
 import Navbar from "../components/Navbar";
+
+import Link from "@mui/material/Link";
 
 const WorkerJoin = () => {
   return (
@@ -78,12 +79,9 @@ const WorkerJoin = () => {
                   placeholder="Longitude"
                 />
 
-
                 <a type="button" className="btn btn-warning" style={{ marginBottom: "2rem" }} href="https://gps-coordinates.org/">
                    Get Location         
                 </a>
-
-
 
                 <input
                   type="email"
@@ -100,8 +98,6 @@ const WorkerJoin = () => {
                   aria-describedby="emailHelp"
                   placeholder="Address"
                 />
-
-
 
                 <div class="nav-item dropdown">
                   <p
@@ -134,11 +130,13 @@ const WorkerJoin = () => {
                   </ul>
                 </div>
 
-
-
                 <button type="submit" className="btn btn-warning">
                   Join us
                 </button>
+
+                <p className="shopsignin_p">
+                  Already have an account? <Link href="/workersignin">Sign In</Link>
+                </p>
               </form>
             </div>
           </div>

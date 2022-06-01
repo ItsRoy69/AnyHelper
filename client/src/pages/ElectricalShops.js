@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import eshop1 from "../assets/eshop1.jpg";
 import eshop2 from "../assets/eshop2.jpg";
 import eshop3 from "../assets/eshop3.jpg";
-import user from "../assets/user.webp";
 
 import "../styles/ElectricalShops.css";
 
@@ -37,9 +36,6 @@ export default function ElectricalShops() {
         </select>
       </div>
 
-
-
-
       <div class="container cards-list">
 
         <div class="card 1 eleccards">
@@ -50,7 +46,6 @@ export default function ElectricalShops() {
               <FontAwesomeIcon icon={faCity} />
               &nbsp; Kolkata
             </p>
-
             <div className="elec_details">
               <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
@@ -74,7 +69,6 @@ export default function ElectricalShops() {
               <FontAwesomeIcon icon={faCity} />
               &nbsp; Kolkata
             </p>
-
             <div className="elec_details">
               <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
@@ -98,7 +92,6 @@ export default function ElectricalShops() {
               <FontAwesomeIcon icon={faCity} />
               &nbsp; Kolkata
             </p>
-
             <div className="elec_details">
               <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
@@ -122,7 +115,6 @@ export default function ElectricalShops() {
               <FontAwesomeIcon icon={faCity} />
               &nbsp; Kolkata
             </p>
-
             <div className="elec_details">
               <p className="elec_ph">(+91) 903252-3499</p>
               <p className="elec_add">Mahestala, Batanagar</p>
@@ -135,10 +127,7 @@ export default function ElectricalShops() {
             </div>
           </div>
         </div>
-
       </div>
-
-      <Footer />
     </>
   );
 }

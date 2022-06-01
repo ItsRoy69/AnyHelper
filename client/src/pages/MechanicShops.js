@@ -9,9 +9,6 @@ import { Link } from "react-router-dom";
 import mshop1 from "../assets/eshop1.jpg";
 import mshop2 from "../assets/eshop2.jpg";
 import mshop3 from "../assets/eshop3.jpg";
-import user from "../assets/user.webp";
-
-import "../styles/MechanicShops.css";
 
 export default function MechanicShops() {
   return (

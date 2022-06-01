@@ -1,18 +1,8 @@
 import React from "react";
 
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { withStyles } from "@mui/styles";
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import signup from "../assets/shop.png";
 import shp1 from "../assets/shp1.svg";
 
 import "../styles/ShopJoin.css";
@@ -109,15 +99,7 @@ const ShopJoin = () => {
                   placeholder="Shop name"
                 />
 
-                <input
-                  type="email"
-                  className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Shop name"
-                />
-
-<div class="nav-item dropdown">
+                <div class="nav-item dropdown">
                   <p
                     class="dropdown-toggle form1_control"
                     id="navbarDropdown"
@@ -152,13 +134,37 @@ const ShopJoin = () => {
                     </li>
                   </ul>
                 </div>
+              </form>
+            </div>
+          </div>
+          <div className="shopjoin_form1 row">
+            <div className="col-lg-3 col-md-12 form_col">              
 
+              <input
+                type="email"
+                className="form-control form1_control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Tap"
+              />
+
+              <input
+                type="email"
+                className="form-control form1_control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Showers"
+              />              
+            </div>
+
+            <div className="col-lg-3 col-md-12 form_col">
+              <form>
                 <input
                   type="email"
                   className="form-control form1_control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Shop name"
+                  placeholder="Valves"
                 />
 
                 <input
@@ -166,7 +172,20 @@ const ShopJoin = () => {
                   className="form-control form1_control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Shop name"
+                  placeholder="PVC Pipes"
+                />              
+                
+              </form>
+            </div>
+
+            <div className="col-lg-3 col-md-12 form_col">
+              <form>
+                <input
+                  type="email"
+                  className="form-control form1_control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Metal Fittings"
                 />
 
                 <input
@@ -174,7 +193,20 @@ const ShopJoin = () => {
                   className="form-control form1_control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Shop name"
+                  placeholder="Sinks"
+                />               
+                
+              </form>
+            </div>
+
+            <div className="col-lg-3 col-md-12 form_col">
+              <form>
+                <input
+                  type="email"
+                  className="form-control form1_control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Toilet Pot"
                 />
 
                 <input
@@ -182,11 +214,22 @@ const ShopJoin = () => {
                   className="form-control form1_control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Shop name"
+                  placeholder="Flush Valve"
                 />
+              </form>
+            </div>
 
+            <div className="col-lg-3 col-md-12 form_col">
+              <form>
+                <input
+                  type="email"
+                  className="form-control form1_control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Geyser"
+                />
                 <button type="submit" className="btn btn-warning">
-                  SignIn
+                  SignUp
                 </button>
               </form>
             </div>

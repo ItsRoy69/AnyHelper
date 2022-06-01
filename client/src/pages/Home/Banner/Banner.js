@@ -4,14 +4,11 @@ import banner2 from "../../../assets/banner2.png";
 import banner3 from "../../../assets/banner3.jpg";
 import { FcNext, FcPrevious } from "react-icons/fc";
 
-
 import "./Banner.css";
 
 export default function Features() {
   return (
-
     <>
-
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -42,18 +39,14 @@ export default function Features() {
           </div>
         </div>
 
-
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-
           <FcPrevious style={{ fontSize: "2.5rem" }} />
         </button>
-
 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
           <FcNext style={{ fontSize: "2.5rem" }} />
         </button>
       </div>
-
     </>
   );
 }

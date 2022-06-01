@@ -9,9 +9,7 @@ import { faCity } from "@fortawesome/free-solid-svg-icons";
 import mshop1 from "../assets/eshop1.jpg";
 import mshop2 from "../assets/eshop2.jpg";
 import mshop3 from "../assets/eshop3.jpg";
-import user from "../assets/user.webp";
 
-import "../styles/Workers.css";
 
 export default function Workers() {
   return (
@@ -55,8 +53,8 @@ export default function Workers() {
               <p className="elec_ra">Cover 50km</p>
               <Link to="/message">
                 <button type="button" className="boxbutton">
-  Message
-</button>
+                  Message
+                </button>
               </Link>
             </div>
           </div>
@@ -122,7 +120,7 @@ export default function Workers() {
             <div className="elec_details">
               <p className="elec_add">Mahestala, Batanagar</p>
               <p className="elec_ra">Cover 50km</p>
-              <Link to="/message">
+              <Link to="/signup">
                 <button type="button" className="boxbutton">
                   Message
                 </button>
