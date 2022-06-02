@@ -99,9 +99,9 @@ const WorkerJoin = () => {
                   placeholder="Address"
                 />
 
-                <div class="nav-item dropdown">
+                <div className="nav-item dropdown">
                   <p
-                    class="dropdown-toggle form1_control"
+                    className="dropdown-toggle form1_control"
                     id="navbarDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -111,19 +111,19 @@ const WorkerJoin = () => {
                     Occupation
                   </p>
 
-                  <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                  <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" href="/">
+                      <a className="dropdown-item" href="/">
                         Plumber
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="/">
+                      <a className="dropdown-item" href="/">
                         Electrician
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="/">
+                      <a className="dropdown-item" href="/">
                         Mechanic
                       </a>
                     </li>

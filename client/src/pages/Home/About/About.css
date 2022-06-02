@@ -12,6 +12,10 @@
   max-width: 550px;
 }
 
+.about_desc p{
+  text-align: justify;
+}
+
 @media (max-width: 430px) {
   .aboutus_img {
     width: 400px;

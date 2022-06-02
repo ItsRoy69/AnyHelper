@@ -33,7 +33,7 @@ const AboutUs = () => {
         <div className="row" style={{ marginTop: "3rem", }}>
           <div className="col-lg-6 col-md-12">
             <div className="about_desc">
-              <h2>Our Process</h2>
+              <h2 style={{ marginTop: "6rem" }}>Our Process</h2>
               <p className="para_desc">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy

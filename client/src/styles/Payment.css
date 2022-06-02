@@ -1,0 +1,20 @@
+.cardbody{
+    width: 900px;
+    height: 450px;
+    background-color: #EFF5FF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+    border: 2px solid #688F23;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 20px #6d6d6d;
+}
+
+.backdrop-con{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+}
+

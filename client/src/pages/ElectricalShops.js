@@ -36,11 +36,11 @@ export default function ElectricalShops() {
         </select>
       </div>
 
-      <div class="container cards-list">
+      <div className="container cards-list">
 
-        <div class="card 1 eleccards">
-          <div class="card_image"> <img src={eshop1} alt="totallyanimage" /> </div>
-          <div class="card_title">
+        <div className="card 1 eleccards">
+          <div className="card_image"> <img src={eshop1} alt="totallyanimage" /> </div>
+          <div className="card_title">
             <p className="elec_name">Jyotirmoy Roy</p>
             <p className="text elec_city">
               <FontAwesomeIcon icon={faCity} />
@@ -59,11 +59,11 @@ export default function ElectricalShops() {
           </div>
         </div>
 
-        <div class="card 2 eleccards">
-          <div class="card_image">
+        <div className="card 2 eleccards">
+          <div className="card_image">
             <img src={eshop2} alt="totallyanimage" />
           </div>
-          <div class="card_title">
+          <div className="card_title">
             <p className="elec_name">Jyotirmoy Roy</p>
             <p className="text elec_city">
               <FontAwesomeIcon icon={faCity} />
@@ -82,11 +82,11 @@ export default function ElectricalShops() {
           </div>
         </div>
 
-        <div class="card 3 eleccards">
-          <div class="card_image">
+        <div className="card 3 eleccards">
+          <div className="card_image">
             <img src={eshop3} alt="totallyanimage" />
           </div>
-          <div class="card_title">
+          <div className="card_title">
             <p className="elec_name">Jyotirmoy Roy</p>
             <p className="text elec_city">
               <FontAwesomeIcon icon={faCity} />
@@ -105,11 +105,11 @@ export default function ElectricalShops() {
           </div>
         </div>
 
-        <div class="card 4 eleccards">
-          <div class="card_image">
+        <div className="card 4 eleccards">
+          <div className="card_image">
             <img src={eshop3} alt="totallyanimage" />
           </div>
-          <div class="card_title">
+          <div className="card_title">
             <p className="elec_name">Jyotirmoy Roy</p>
             <p className="text elec_city">
               <FontAwesomeIcon icon={faCity} />
