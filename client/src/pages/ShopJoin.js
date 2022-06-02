@@ -8,6 +8,8 @@ import shp1 from "../assets/shp1.svg";
 import "../styles/ShopJoin.css";
 
 const ShopJoin = () => {
+
+  
   return (
     <>
       <Navbar />
@@ -24,34 +26,22 @@ const ShopJoin = () => {
             <div className="col-lg-6 col-md-12 form_col">
               <form>
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Name"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Email"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Latitude"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Longitude"
                 />
 
@@ -60,42 +50,27 @@ const ShopJoin = () => {
                 </a>
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Password"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Phone"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="City"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Address"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
                   placeholder="Shop name"
                 />
 
@@ -128,9 +103,6 @@ const ShopJoin = () => {
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="/">
-                        Electric
-                      </a>
                     </li>
                   </ul>
                 </div>
@@ -141,18 +113,14 @@ const ShopJoin = () => {
             <div className="col-lg-3 col-md-12 form_col">              
 
               <input
-                type="email"
                 className="form-control form1_control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="item1"
                 placeholder="Tap"
               />
 
               <input
-                type="email"
                 className="form-control form1_control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="item2"
                 placeholder="Showers"
               />              
             </div>
@@ -160,18 +128,14 @@ const ShopJoin = () => {
             <div className="col-lg-3 col-md-12 form_col">
               <form>
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="item3"
                   placeholder="Valves"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="item4"
                   placeholder="PVC Pipes"
                 />              
                 
@@ -181,18 +145,14 @@ const ShopJoin = () => {
             <div className="col-lg-3 col-md-12 form_col">
               <form>
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="item5"
                   placeholder="Metal Fittings"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="item6"
                   placeholder="Sinks"
                 />               
                 
@@ -202,18 +162,14 @@ const ShopJoin = () => {
             <div className="col-lg-3 col-md-12 form_col">
               <form>
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="item7"
                   placeholder="Toilet Pot"
                 />
 
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="item8"
                   placeholder="Flush Valve"
                 />
               </form>
@@ -222,10 +178,8 @@ const ShopJoin = () => {
             <div className="col-lg-3 col-md-12 form_col">
               <form>
                 <input
-                  type="email"
                   className="form-control form1_control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="item9"
                   placeholder="Geyser"
                 />
                 <button type="submit" className="btn btn-warning">
