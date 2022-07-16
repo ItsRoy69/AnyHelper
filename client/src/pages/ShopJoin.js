@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -9,6 +9,86 @@ import "../styles/ShopJoin.css";
 
 const ShopJoin = () => {
 
+  const [shop, setShop] = useState({
+    
+    shopType: "plumbing",
+    item1: "",
+    price1: 0,
+    item2: "",
+    price2: 0,
+    item3: "",
+    price3: 0,
+    item4: "",
+    price4: 0,
+    item5: "",
+    price5: 0,
+    item6: "",
+    price6: 0,
+    item7: "",
+    price7: 0,
+    item8: "",
+    price8: 0,
+    item9: "",
+    price9: 0
+  });
+
+  var pemitems = {
+    item1: "Tap",
+    item2: "Showers",
+    item3: "Valves",
+    item4: "CPVC Pipes & Fittings",
+    item5: "Metal Fittings",
+    item6: "Sinks",
+    item7: "Toilet Pot",
+    item8: "Flush Valve",
+    item9: "Water Storage Solution",
+  };
+  
+  var electricItems = {
+    item1: "LED Bulb",
+    item2: "WIRE",
+    item3: "MCB",
+    item4: "Extension Box",
+    item5: "Switch",
+    item6: "Socket",
+    item7: "Switch Board",
+    item8: "Bulb Holder",
+    item9: "Tube Light"
+  };
+  var mechanicItems = {
+    item1: "Wheel",
+    item2: "Gear",
+    item3: "Electric Wrench",
+    item4: "Mechanic ToolSet",
+    item5: "Adjustable spanner",
+    item6: "Wire Stripper",
+    item7: "Screw Driver",
+    item8: "Springs",
+    item9: "Clamp"
+  };  
+
+  var collapseTitle;
+  var collapseItems = {};
+  if (shop.shopType === "plumbing") {
+    collapseTitle = "Plumbing Items";
+    collapseItems = pemitems;
+  } else if (shop.shopType === "electric") {
+    collapseTitle = "Electric Items";
+    collapseItems = electricItems;
+  } else {
+    collapseTitle = "Mechanic Items";
+    collapseItems = mechanicItems;
+  }
+  shop.item1 = collapseItems.item1;
+  shop.item2 = collapseItems.item2;
+  shop.item3 = collapseItems.item3;
+  shop.item4 = collapseItems.item4;
+  shop.item5 = collapseItems.item5;
+  shop.item6 = collapseItems.item6;
+  shop.item7 = collapseItems.item7;
+  shop.item8 = collapseItems.item8;
+  shop.item9 = collapseItems.item9;
+  
   
   return (
     <>
@@ -86,21 +166,26 @@ const ShopJoin = () => {
                     Occupation
                   </p>
 
-                  <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
+                  <ul className="dropdown-menu " aria-labelledby="navbarDropdown" onChange={(e) =>
+                      setShop({
+                        ...shop,
+                        shopType: e.target.value,
+                      })
+                    }>
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <option className="dropdown-item" value="plumbing">
                         Plumbing
-                      </a>
+                      </option>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <option className="dropdown-item" value="electric">
                         Electric
-                      </a>
+                      </option>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <option className="dropdown-item" value="mechanic">
                         Mechanic
-                      </a>
+                      </option>
                     </li>
                     <li>
                     </li>
@@ -115,13 +200,13 @@ const ShopJoin = () => {
               <input
                 className="form-control form1_control"
                 id="item1"
-                placeholder="Tap"
+                placeholder={collapseItems.item1}
               />
 
               <input
                 className="form-control form1_control"
                 id="item2"
-                placeholder="Showers"
+                placeholder={collapseItems.item2}
               />              
             </div>
 
@@ -130,13 +215,13 @@ const ShopJoin = () => {
                 <input
                   className="form-control form1_control"
                   id="item3"
-                  placeholder="Valves"
+                  placeholder={collapseItems.item3}
                 />
 
                 <input
                   className="form-control form1_control"
                   id="item4"
-                  placeholder="PVC Pipes"
+                  placeholder={collapseItems.item4}
                 />              
                 
               </form>
@@ -147,13 +232,13 @@ const ShopJoin = () => {
                 <input
                   className="form-control form1_control"
                   id="item5"
-                  placeholder="Metal Fittings"
+                  placeholder={collapseItems.item5}
                 />
 
                 <input
                   className="form-control form1_control"
                   id="item6"
-                  placeholder="Sinks"
+                  placeholder={collapseItems.item6}
                 />               
                 
               </form>
@@ -164,13 +249,13 @@ const ShopJoin = () => {
                 <input
                   className="form-control form1_control"
                   id="item7"
-                  placeholder="Toilet Pot"
+                  placeholder={collapseItems.item7}
                 />
 
                 <input
                   className="form-control form1_control"
                   id="item8"
-                  placeholder="Flush Valve"
+                  placeholder={collapseItems.item8}
                 />
               </form>
             </div>
@@ -180,7 +265,7 @@ const ShopJoin = () => {
                 <input
                   className="form-control form1_control"
                   id="item9"
-                  placeholder="Geyser"
+                  placeholder={collapseItems.item9}
                 />
                 <button type="submit" className="btn btn-warning">
                   SignUp
