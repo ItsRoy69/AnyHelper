@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+  
+  .nav-link {
+    font-family: 'Itim', cursive;
+    font-style: normal;
+    font-size: 16px;
+    color: #000000;
+    margin-right: 30px;
+    text-transform: uppercase;
+    padding: 1.2rem;
+  }
+  
+  .nav-link:hover {
+    color: rgb(198, 212, 0);
+    text-decoration: none;
+  }
+  
+   .navbar-brand {    
+    font-style: normal;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+  }
+
+  .navbar-brand:hover {       
+    color: #000000;
+  }  
+  
+  .btn {
+    font-family: 'Itim', cursive;
+    font-style: normal;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+    border: 3px solid rgba(36, 0, 255, 0.44);
+    border-radius: 15px;
+    text-transform: uppercase;
+  }
+
+  .btn:hover {
+    color: #ffffff;    
+    background-color: rgba(36, 0, 255, 0.44);
+  }
+  
+  .nav-btnlink{
+    font-family: 'Itim', cursive;
+    font-style: normal;
+    font-size: 16px;
+    color: #000000;
+    margin-right: 30px;
+    text-transform: uppercase;
+    padding: 0rem;
+    margin-top: 8px;
+  }
+  
+  
