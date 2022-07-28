@@ -3,8 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
 .carousel-item {
-    width: 100vw;
-    height: 90vh;
+    height: 80vh;
 }
 
 .banner{
@@ -91,4 +90,53 @@
 
 .down_button_circle{
   color: rgba(0, 26, 255, 0.79);
+}
+
+
+
+/* ---------------------------------------------Blogs-------------------------------------------------- */
+
+.blogs{
+  height: 80vh;
+}
+
+.blogs_boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.blog_box{
+  background-color: #6598FF;
+  border-radius: 20px;
+  width: 350px;
+  height: 150px;
+}
+
+.blog_box h2, p, .blog_link{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.blog_para{
+  width: 320px;
+  height: 120px;
+  padding: 20px;
+}
+
+.blogs_more{
+  display: flex;
+  float: right;
+  margin-right: 10vw;
+  margin-top: 2vh;
+}
+
+.blogs_more a{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  color: #000000;
+  text-decoration: none;  
+  font-size: 20px;
 }

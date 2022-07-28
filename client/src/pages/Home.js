@@ -8,13 +8,14 @@ import banner3 from "../assets/banner3.png";
 
 import { FcNext, FcPrevious } from "react-icons/fc";
 import { Link } from "react-router-dom";
-import { BsArrowDownCircle } from "react-icons/bs";
+import { BsArrowDownCircle, BsArrowRight } from "react-icons/bs";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <div className='Banner'>
+
+      <div className='banner'>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -23,7 +24,7 @@ const Home = () => {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <div className="banner">
+              <div className="banner_slider">
                 <div className="banner_container">
                   <div className="banner_para">
                     <h1>
@@ -46,7 +47,7 @@ const Home = () => {
               </div>
             </div>
             <div className="carousel-item">
-              <div className="banner">
+              <div className="banner_slider">
                 <div className="banner_container">
                   <div className="banner_para">
                     <h1>
@@ -69,7 +70,7 @@ const Home = () => {
               </div>
             </div>
             <div className="carousel-item">
-              <div className="banner">
+              <div className="banner_slider">
                 <div className="banner_container">
                   <div className="banner_para">
                     <h1>
@@ -101,6 +102,49 @@ const Home = () => {
             <FcNext style={{ fontSize: "1.5rem" }} />
           </button>
         </div>
+      </div>
+
+      <div className="blogs">
+        <div className="blogs_boxes">
+          <div className="blog_box">
+            <div className="blog_para">
+              <h2>
+                One tap services
+              </h2>
+                <Link to="sign-up" className='blog_link' type='p'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry ...
+                </Link>
+            </div>            
+          </div>
+
+          <div className="blog_box">
+            <div className="blog_para">
+              <h2>
+                One tap services
+              </h2>
+              <Link to="sign-up" className='blog_link' type='p'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry ...
+              </Link>
+            </div> 
+          </div>
+
+          <div className="blog_box">
+            <div className="blog_para">
+                <h2>
+                  One tap services
+                </h2>
+                <Link to="sign-up" className='blog_link' type='p'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry ...
+                </Link>
+              </div> 
+          </div>
+        </div>
+        <div className="blogs_more">
+          <a type='h2'>More...</a>
+        </div>  
+        <div className="down_button" style={{marginLeft: "5rem", marginTop: "5rem"}}>
+          <BsArrowDownCircle className="down_button_circle" /> SERVICES
+        </div>      
       </div>
     </>
   )
