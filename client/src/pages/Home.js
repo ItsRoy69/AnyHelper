@@ -6,14 +6,23 @@ import banner1 from "../assets/banner1.png";
 import banner2 from "../assets/banner2.png";
 import banner3 from "../assets/banner3.png";
 
+import service_img1 from "../assets/service_img1.png";
+import service_img2 from "../assets/service_img2.png";
+import service_img3 from "../assets/service_img3.png";
+import service_img4 from "../assets/service_img4.png";
+import service_img5 from "../assets/service_img5.png";
+import service_img6 from "../assets/service_img6.png";
+
 import { FcNext, FcPrevious } from "react-icons/fc";
 import { Link } from "react-router-dom";
-import { BsArrowDownCircle, BsArrowRight } from "react-icons/bs";
+import { BsArrowDownCircle } from "react-icons/bs";
 
 const Home = () => {
   return (
     <>
       <Navbar />
+
+      {/* --------------------------------BANNER------------------------------------ */}
 
       <div className='banner'>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
@@ -30,7 +39,7 @@ const Home = () => {
                     <h1>
                       SERVICES AT YOUR DOORSTEP
                     </h1>
-                    <p>
+                    <p className='banner_about'>
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     </p>
                     <Link to="sign-up" className="banner-btnlink">
@@ -53,7 +62,7 @@ const Home = () => {
                     <h1>
                       GET JOBS BY PROVIDING SERVICES
                     </h1>
-                    <p>
+                    <p className='banner_about'>
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     </p>
                     <Link to="sign-up" className="banner-btnlink">
@@ -76,7 +85,7 @@ const Home = () => {
                     <h1>
                       BUY ITEMS FROM SHOPS
                     </h1>
-                    <p>
+                    <p className='banner_about'>
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     </p>
                     <Link to="sign-up" className="banner-btnlink">
@@ -103,6 +112,8 @@ const Home = () => {
           </button>
         </div>
       </div>
+
+      {/* --------------------------------BLOGS------------------------------------ */}
 
       <div className="blogs">
         <div className="blogs_boxes">
@@ -140,12 +151,62 @@ const Home = () => {
           </div>
         </div>
         <div className="blogs_more">
-          <a type='h2'>More...</a>
+          <a type='h2' href="" >More...</a>
         </div>  
         <div className="down_button" style={{marginLeft: "5rem", marginTop: "5rem"}}>
           <BsArrowDownCircle className="down_button_circle" /> SERVICES
         </div>      
       </div>
+
+      {/* --------------------------------SERVICES------------------------------------ */}
+
+      <div className="services_section">
+        <div className="services_box">
+          <div className="services_provided">
+
+            <div className="service">
+              <img src={service_img1} alt="" className="service_img1" />
+              <p className="service_about">WOMEN RELATED</p>
+            </div>
+
+            <div className="service">
+              <img src={service_img2} alt="" className="service_img2" />
+              <p className="service_about">MEN RELATED</p>
+            </div>
+
+            <div className="service">
+              <img src={service_img3} alt="" className="service_img3" />
+              <p className="service_about">THERAPIES</p>
+            </div>
+
+            <div className="service">
+              <img src={service_img4} alt="" className="service_img4" />
+              <p className="service_about">CLEANING</p>
+            </div>
+
+          </div>
+
+          <div className="services_provided">
+            
+            <div className="service">
+              <img src={service_img5} alt="" className="service_img5" />
+              <p className="service_about">SHOPS</p>
+            </div>
+
+            <div className="service">
+              <img src={service_img6} alt="" className="service_img6" />
+              <p className="service_about">WORKERS</p>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+
+      <div className="down_button" style={{marginLeft: "5rem", marginTop: "5rem"}}>
+        <BsArrowDownCircle className="down_button_circle" /> FOOTER
+      </div>
+      
     </>
   )
 }

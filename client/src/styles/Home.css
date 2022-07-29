@@ -1,6 +1,7 @@
 /* ---------------------------------------------Banner-------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
 
 .carousel-item {
     height: 80vh;
@@ -97,7 +98,7 @@
 /* ---------------------------------------------Blogs-------------------------------------------------- */
 
 .blogs{
-  height: 80vh;
+  height: 50vh;
 }
 
 .blogs_boxes {
@@ -113,7 +114,7 @@
   height: 150px;
 }
 
-.blog_box h2, p, .blog_link{
+.blog_box h2, .blog_link{
   font-family: 'Jost', sans-serif;
   font-style: normal;
   color: #ffffff;
@@ -140,3 +141,41 @@
   text-decoration: none;  
   font-size: 20px;
 }
+
+/* ---------------------------------------------Services-------------------------------------------------- */
+
+.services_provided{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.services_provided img{
+  width: 100px;
+  height: 100px;
+}
+
+.services_section{
+  justify-content: center;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services_box{
+  box-shadow: 20px 20px 20px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 90vw;
+  padding: 20px;
+}
+
+.service{
+  text-align: center;
+}
+
+.service p{
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 400;
+}
+
