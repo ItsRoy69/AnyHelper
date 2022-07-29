@@ -13,7 +13,6 @@
 
 .worker_registration_left{
     width: 40vw;
-    justify-content: space-around;
     display: flex;
     flex-direction: column;
 }
@@ -99,6 +98,7 @@
 .worker_registration-login{
     text-decoration: none;
     color: #fff;
+    font-size: 18px;
 }
 
 .worker_registration-login:hover{

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+
+.blogs_section{
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.blogs_head h1{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #222;
+}
+
+.blogs_card img{
+    width: 200px;
+}
+
+.blogs_card{
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+}
+
+.blogs_para{
+    font-size: 14px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.blogs_lists{
+    width: 90vw;
+    justify-content: space-evenly;
+}
