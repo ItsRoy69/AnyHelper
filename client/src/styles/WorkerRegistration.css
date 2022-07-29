@@ -74,7 +74,6 @@
 .worker_register_btn {
     display: flex;
     float: right;
-    margin: 10px;
     border: none;
     background: #fff;
     border: none;
@@ -85,4 +84,23 @@
     text-align: center;
     color: #0050ff;
     padding: 10px;
+    margin: 5px;
+}
+
+.worker_registration-paralogin{
+    padding: 5px;
+    display: flex;
+    float: left;
+    color: #222;
+    font-size: 20px;
+}
+
+.worker_registration-login{
+    text-decoration: none;
+    color: #fff;
+}
+
+.worker_registration-login:hover{
+    text-decoration: none;
+    color: #fff;
 }

@@ -41,6 +41,12 @@ const WorkerRegistration = () => {
               <input type="text" className="worker_registration_work_input" placeholder="Work your want to do ?" />
             </div>
           </div>
+
+          <p className="worker_registration-paralogin">Already a member of this website ? 
+            <Link to="sign-up" className="worker_registration-login">
+            &nbsp;Login
+            </Link>
+          </p>
           <Link to="sign-up" className="worker_registration-button">
             <button className="worker_register_btn">Join Us</button>
           </Link>
