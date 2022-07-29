@@ -14,6 +14,7 @@ import service_img3 from "../assets/service_img3.png";
 import service_img4 from "../assets/service_img4.png";
 import service_img5 from "../assets/service_img5.png";
 import service_img6 from "../assets/service_img6.png";
+import service_img7 from "../assets/service_img7.png";
 
 
 import { FcNext, FcPrevious } from "react-icons/fc";
@@ -119,7 +120,7 @@ const Home = () => {
 
       {/* --------------------------------BLOGS------------------------------------ */}
 
-      <div className="blogs">
+      <div className="blogs" id='blogs'>
         <div className="blogs_boxes">
           <div className="blog_box">
             <div className="blog_para">
@@ -155,7 +156,7 @@ const Home = () => {
           </div>
         </div>
         <div className="blogs_more">
-          <a type='h2' href="" >More...</a>
+          <a type='h2' href="/blogs" >More...</a>
         </div>  
         <div className="down_button" style={{marginLeft: "5rem", marginTop: "5rem"}}>
           <BsArrowDownCircle className="down_button_circle" /> SERVICES
@@ -164,18 +165,23 @@ const Home = () => {
 
       {/* --------------------------------SERVICES------------------------------------ */}
 
-      <div className="services_section">
+      <div className="services_section" id='services'>
         <div className="services_box">
           <div className="services_provided">
 
             <div className="service">
               <img src={service_img1} alt="" className="service_img1" />
-              <p className="service_about">WOMEN RELATED</p>
+              <p className="service_about">WOMEN RELATED SERVICES</p>
+            </div>
+
+            <div className="service">
+              <img src={service_img7} alt="" className="service_img7" />
+              <p className="service_about">WOMEN SALON</p>
             </div>
 
             <div className="service">
               <img src={service_img2} alt="" className="service_img2" />
-              <p className="service_about">MEN RELATED</p>
+              <p className="service_about">MEN SALON</p>
             </div>
 
             <div className="service">

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+
+
+.worker_registration{
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.worker_registration_left{
+    width: 40vw;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+.worker_registration_left h1{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #222;
+}
+
+.worker_registration_left h4{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #555;
+}
+
+.worker_registration_mid{
+    justify-content: center;  
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.worker_registration_box {
+    width: 1136px;
+    background: linear-gradient(91.41deg,#0050ff .15%,#4d85ff 99.82%);
+    box-shadow: 0 6px 8px rgb(0 80 255 / 15%);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.worker_registration_inputs {    
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.worker_registration_inputs input{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: hsla(0,0%,100%,.2);
+}
+
+.worker_registration_inputs input::placeholder { 
+    color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  
+
+.worker_registration_box h2{
+    color: #ffff;
+}
+
+.worker_register_btn {
+    display: flex;
+    float: right;
+    margin: 10px;
+    border: none;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #0050ff;
+    padding: 10px;
+}
