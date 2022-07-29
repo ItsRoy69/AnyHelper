@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Navbar from "../components/Navbar";
+import Footer from '../components/Footer';
 import "../styles/Home.css"
 
 import banner1 from "../assets/banner1.png";
@@ -13,9 +15,11 @@ import service_img4 from "../assets/service_img4.png";
 import service_img5 from "../assets/service_img5.png";
 import service_img6 from "../assets/service_img6.png";
 
+
 import { FcNext, FcPrevious } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { BsArrowDownCircle } from "react-icons/bs";
+
 
 const Home = () => {
   return (
@@ -206,6 +210,12 @@ const Home = () => {
       <div className="down_button" style={{marginLeft: "5rem", marginTop: "5rem"}}>
         <BsArrowDownCircle className="down_button_circle" /> FOOTER
       </div>
+
+
+      {/* --------------------------------FOOTER------------------------------------ */}
+
+      <Footer />
+
       
     </>
   )

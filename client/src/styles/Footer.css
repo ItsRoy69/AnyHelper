@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+.footer_section{
+    background-color: #000000;
+    margin-top: 5vh;
+    padding: 20px;
+}
+
+.footer_left h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.footer_line {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer_categories_details, .footer_categories_contact_first{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+    
+}
+
+.footer_boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.footer_categories_contact_social img{
+    width: 50px;
+}
+
+.footer_right img{
+    height: 300px;
+    width: auto;
+}
