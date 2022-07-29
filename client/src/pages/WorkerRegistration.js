@@ -36,14 +36,29 @@ const WorkerRegistration = () => {
             </div>
             <div className="worker_registration_phone">
               <input type="text" className="worker_registration_phone_input" placeholder="Your phone number" />
-            </div>
+            </div>            
             <div className="worker_registration_work">
               <input type="text" className="worker_registration_work_input" placeholder="Work your want to do ?" />
+            </div>
+            <div className="worker_registration_location">
+              <input type="text" className="worker_registration_work_location" placeholder="Your Address" />
+            </div>
+          </div>
+
+          <div className="worker_registration_inputs" style={{marginTop: "20px"}}>
+            <div className="worker_registration_country">
+              <input type="text" className="worker_registration_work_country" placeholder="Country you live in" />
+            </div>
+            <div className="worker_registration_state">
+              <input type="text" className="worker_registration_work_state" placeholder="State you live in" />
+            </div>                        
+            <div className="worker_registration_password">
+              <input type="text" className="worker_registration_password_input" placeholder="Password" />
             </div>
           </div>
 
           <p className="worker_registration-paralogin">Already a member of this website ? 
-            <Link to="sign-up" className="worker_registration-login">
+            <Link to="/workerlogin" className="worker_registration-login">
             &nbsp;Login
             </Link>
           </p>

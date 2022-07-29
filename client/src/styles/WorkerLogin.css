@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
 
 
-.worker_registration{
+.worker_login{
     margin-top: 20vh;
     display: flex;
     flex-direction: row;
@@ -11,35 +11,35 @@
 
 }
 
-.worker_registration_left{
+.worker_login_left{
     width: 40vw;
     justify-content: space-around;
     display: flex;
     flex-direction: column;
 }
 
-.worker_registration_left h1{
+.worker_login_left h1{
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 700;
     color: #222;
 }
 
-.worker_registration_left h4{
+.worker_login_left h4{
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 400;
     color: #555;
 }
 
-.worker_registration_mid{
+.worker_login_mid{
     justify-content: center;  
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
-.worker_registration_box {
+.worker_login_box {
     width: 1236px;
     background: linear-gradient(91.41deg,#0050ff .15%,#4d85ff 99.82%);
     box-shadow: 0 6px 8px rgb(0 80 255 / 15%);
@@ -47,13 +47,13 @@
     padding: 30px;
 }
 
-.worker_registration_inputs {    
+.worker_login_inputs {    
     flex-direction: row;
     display: flex;
     justify-content: space-evenly;
 }
 
-.worker_registration_inputs input{
+.worker_login_inputs input{
     outline: none;
     padding: 10px;
     border: 1px solid #e0e0e0;
@@ -61,13 +61,13 @@
     background-color: hsla(0,0%,100%,.2);
 }
 
-.worker_registration_inputs input::placeholder { 
+.worker_login_inputs input::placeholder { 
     color: rgb(255, 255, 255);
     opacity: 1;
   }
   
 
-.worker_registration_box h2{
+.worker_login_box h2{
     color: #ffff;
 }
 
@@ -87,7 +87,7 @@
     margin: 5px;
 }
 
-.worker_registration-paralogin{
+.worker_login-paralogin{
     padding: 5px;
     display: flex;
     float: left;
@@ -95,12 +95,12 @@
     font-size: 20px;
 }
 
-.worker_registration-login{
+.worker_login-login{
     text-decoration: none;
     color: #fff;
 }
 
-.worker_registration-login:hover{
+.worker_login-login:hover{
     text-decoration: none;
     color: #fff;
 }
