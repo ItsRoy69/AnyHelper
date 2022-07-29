@@ -51,6 +51,7 @@
     flex-direction: row;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 .worker_login_inputs input{
@@ -59,6 +60,7 @@
     border: 1px solid #e0e0e0;
     border-radius: 6px;
     background-color: hsla(0,0%,100%,.2);
+    width: 300px;
 }
 
 .worker_login_inputs input::placeholder { 

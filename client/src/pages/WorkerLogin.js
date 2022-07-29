@@ -4,7 +4,7 @@ import "../styles/WorkerLogin.css";
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import wokerbanner from "../assets/wokerbanner.png";
+import wokerbanner from "../assets/workerlogin.png";
 
 import { Link } from "react-router-dom";
 
@@ -34,24 +34,18 @@ const WorkerLogin = () => {
             <div className="worker_login_mail">
               <input type="text" className="worker_login_mail_input" placeholder="Mail ID" />
             </div>
-            <div className="worker_login_phone">
-              <input type="text" className="worker_login_phone_input" placeholder="Your phone number" />
-            </div>
-            <div className="worker_login_location">
-              <input type="text" className="worker_login_work_location" placeholder="Your Address" />
-            </div>
-            <div className="worker_login_work">
-              <input type="text" className="worker_login_work_input" placeholder="Work your want to do ?" />
+            <div className="worker_registration_password">
+              <input type="text" className="worker_registration_password_input" placeholder="Password" />
             </div>
           </div>
 
-          <p className="worker_login-paralogin">Already a member of this website ? 
-            <Link to="/workerlogin" className="worker_login-login">
-            &nbsp;Login
+          <p className="worker_login-paralogin">Not a member of this website ? 
+            <Link to="/workerregistration" className="worker_login-login">
+            &nbsp;Signup
             </Link>
           </p>
           <Link to="sign-up" className="worker_login-button">
-            <button className="worker_register_btn">Join Us</button>
+            <button className="worker_register_btn">Login</button>
           </Link>
         </div>
       </div>  
