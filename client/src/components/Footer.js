@@ -23,7 +23,9 @@ const Footer = () => {
                     <a className='footer_line'>Terms & Conditions</a>
                     <a className='footer_line'>Privacy Policy</a>
                     <a className='footer_line'>Blogs</a>
-                    <a className='footer_line'>Ratings</a>
+                    <a className='footer_line'>Ratings</a>                    
+                  </div>
+                  <div className="footer_categories_contact">
                     <a className='footer_line'>Careers</a>
                     <a className='footer_line'>Complaints</a>
                     <a className='footer_line'>Contact Us</a>
@@ -34,9 +36,6 @@ const Footer = () => {
                       <img src={footer4} alt="" className="social4" />
                     </div>
                   </div>
-                  <div className="footer_categories_contact">
-                    
-                  </div>
                 </div>
               </div>
 
@@ -44,7 +43,7 @@ const Footer = () => {
                 <img src={footer} alt="" className="footer_img" />
               </div>
             </div>
-
+            
           </div>          
         </div>
         
