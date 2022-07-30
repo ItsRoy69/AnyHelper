@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+
+
+.login_service{
+    margin-top: 20vh;
+    
+}
+
+.login_service_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.login_service_right img{
+    width: 30vw;
+}
+
+.login_service_left{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_service_left h1{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #222;
+}
+
+.login_service_left h4{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #555;
+}
+
+
+.login_service_inputs {    
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.login_service input{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: hsla(0,0%,100%,.2);
+    margin: 5px;
+}
+
+.login_service input::placeholder { 
+    color: rgb(110, 109, 109);
+    opacity: 1;
+}
+
+.login_service_midbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.login_service_mid{
+    margin-left: 10vw;
+}
+  
+.login_service_btn{
+    color: rgb(68, 0, 255);
+}
+
+.login_service_button {
+    display: flex;
+    border: none;
+    background: #0050ff;
+    border: none;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+    line-height: 1;
+}
+
+.login_service_buttons{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+}
+
+.shop_login-paralogin{
+    padding: 5px;
+    display: flex;
+    float: left;
+    color: #222;
+    font-size: 20px;
+}
+
+.shop_login-login{
+    text-decoration: none;
+    color: #0050ff;
+    font-size: 18px;
+}
+
+.shop_login-login:hover{
+    text-decoration: none;
+}
+
+.login_service_buttons{
+    justify-content: space-between;
+    display: flex;
+}

@@ -7,6 +7,8 @@ import WorkerLogin from './pages/WorkerLogin';
 import Blogs from './pages/Blogs';
 import ShopRegister from './pages/ShopRegister';
 import ShopLogin from './pages/ShopLogin';
+import ServiceLogin from './pages/ServiceLogin';
+import ServiceSignUp from './pages/ServiceSignUp';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/blogs" exact element={<Blogs />} />
             <Route path="/shopregister" exact element={<ShopRegister />} />
             <Route path="/shoplogin" exact element={<ShopLogin />} />
+            <Route path="/servicelogin" exact element={<ServiceLogin />} />
+            <Route path="/servicesignup" exact element={<ServiceSignUp />} />
           </Routes>
         </div>
       </Router> 
