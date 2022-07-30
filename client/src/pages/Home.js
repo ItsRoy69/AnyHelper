@@ -8,6 +8,8 @@ import banner1 from "../assets/banner1.png";
 import banner2 from "../assets/banner2.png";
 import banner3 from "../assets/banner3.png";
 
+import about from "../assets/about.png";
+
 import service_img1 from "../assets/service_img1.png";
 import service_img2 from "../assets/service_img2.png";
 import service_img3 from "../assets/service_img3.png";
@@ -60,7 +62,7 @@ const Home = () => {
                       <button className="banner_btn">Sign Up / Login</button>
                     </Link>
                     <div className="down_button">
-                      <BsArrowDownCircle className="down_button_circle" /> BLOGS
+                      <BsArrowDownCircle className="down_button_circle" /> ABOUT
                     </div>
                   </div>
                   <div className="banner_pic">
@@ -83,7 +85,7 @@ const Home = () => {
                       <button className="banner_btn">GET JOBS</button>
                     </Link>
                     <div className="down_button">
-                      <BsArrowDownCircle className="down_button_circle" /> BLOGS
+                      <BsArrowDownCircle className="down_button_circle" /> ABOUT
                     </div>
                   </div>
                   <div className="banner_pic">
@@ -106,7 +108,7 @@ const Home = () => {
                       <button className="banner_btn">BUY ITEMS</button>
                     </Link>
                     <div className="down_button">
-                      <BsArrowDownCircle className="down_button_circle" /> BLOGS
+                      <BsArrowDownCircle className="down_button_circle" /> ABOUT
                     </div>
                   </div>
                   <div className="banner_pic">
@@ -124,6 +126,21 @@ const Home = () => {
           <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <FcNext style={{ fontSize: "1.5rem" }} />
           </button>
+        </div>
+      </div>
+
+      {/* --------------------------------ABOUT------------------------------------ */}
+
+      <div className="about">        
+        <div className="about_left">
+            <img src={about} alt="" className="worker_register_banner" />
+        </div>
+        <div className="about_right">
+          <h1>About</h1>
+          <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </h4>
         </div>
       </div>
 

@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
 
 .carousel-item {
-    height: 80vh;
+    height: 60vh;
 }
 
 .banner{
@@ -93,6 +93,41 @@
   color: rgba(0, 26, 255, 0.79);
 }
 
+/* ---------------------------------------------About-------------------------------------------------- */
+
+.about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.about_left{  
+  width: 280px;
+}
+
+.about_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+  padding: 20px;
+}
+
+.about_right h1{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #222;  
+}
+
+.about_right h4{
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #555;
+  text-align: justify;
+}
 
 
 /* ---------------------------------------------Blogs-------------------------------------------------- */
