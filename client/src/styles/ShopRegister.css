@@ -88,4 +88,29 @@
     color: #ffffff;
     padding: 10px;
     margin: 5px;
+    line-height: 1;
+}
+
+.register_shop_buttons{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+}
+
+.shop_registration-paralogin{
+    padding: 5px;
+    display: flex;
+    float: left;
+    color: #222;
+    font-size: 20px;
+}
+
+.shop_registration-login{
+    text-decoration: none;
+    color: #0050ff;
+    font-size: 18px;
+}
+
+.shop_registration-login:hover{
+    text-decoration: none;
 }

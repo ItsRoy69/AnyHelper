@@ -115,11 +115,18 @@ const ShopRegister = () => {
               </div>
               <IoMdAddCircle className="register_shop_btn" size='30px' onClick={addInput}/> 
             </div>
-          </div>          
-          <Link to="sign-up">
-            <button className="register_shop_button">Register</button>
-          </Link>
-          
+          </div> 
+          <div className="register_shop_buttons">
+            <p className="shop_registration-paralogin">Already a member of this website ? 
+              <Link to="/shoplogin" className="shop_registration-login">
+              &nbsp;Login
+              </Link>
+            </p>         
+            <Link to="sign-up">
+              <button className="register_shop_button">Register</button>
+            </Link>
+          </div>
+                   
           
         </div>       
       </div>
