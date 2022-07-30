@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+
+
+.register_shop{
+    margin-top: 20vh;
+    
+}
+
+.register_shop_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.register_shop_left{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.register_shop_left h1{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #222;
+}
+
+.register_shop_left h4{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #555;
+}
+
+
+.register_shop_inputs {    
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.register_shop input{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: hsla(0,0%,100%,.2);
+    margin: 5px;
+}
+
+.register_shop input::placeholder { 
+    color: rgb(110, 109, 109);
+    opacity: 1;
+}
+
+.register_shop_smallbox{
+    display: flex;
+    flex-direction: row;
+}
+
+.register_shop_midbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.register_shop_mid{
+    margin-left: 10vw;
+}
+  
+.register_shop_btn{
+    color: rgb(68, 0, 255);
+}
+
+.register_shop_button {
+    display: flex;
+    border: none;
+    background: #0050ff;
+    border: none;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+}

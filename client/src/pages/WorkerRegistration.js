@@ -9,6 +9,14 @@ import wokerbanner from "../assets/wokerbanner.png";
 import { Link } from "react-router-dom";
 
 const WorkerRegistration = () => {
+
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(function(position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+    });
+  }
+
   return (
     <>
       <Navbar />
