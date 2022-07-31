@@ -9,6 +9,7 @@ import ShopRegister from './pages/ShopRegister';
 import ShopLogin from './pages/ShopLogin';
 import ServiceLogin from './pages/ServiceLogin';
 import ServiceSignUp from './pages/ServiceSignUp';
+import ShopList from './pages/ShopList';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/shoplogin" exact element={<ShopLogin />} />
             <Route path="/servicelogin" exact element={<ServiceLogin />} />
             <Route path="/servicesignup" exact element={<ServiceSignUp />} />
+            <Route path="/shoplist" exact element={<ShopList />} />
           </Routes>
         </div>
       </Router> 

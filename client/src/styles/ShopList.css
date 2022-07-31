@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+
+.shoplist_section{
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.shoplist_head h1{
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #222;
+}
+
+.shoplist_card img{
+    width: 250px;
+}
+
+.shoplist_card{
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+}
+
+.shoplist_lists{
+    width: 90vw;
+    justify-content: space-evenly;
+}
+
+.shoplist_card h1{
+    font-size: 25px;
+}
+
+.shoplist_card h5{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.shoplist_carddetails{
+    text-align: justify;
+    padding: 10px;
+}

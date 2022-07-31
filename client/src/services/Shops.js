@@ -31,7 +31,7 @@ const Shops = ({ setModal }) => {
                 <p>Plumbing Shops</p>
               </div>
             </div>   
-            <a className='servicesignup' href="/servicesignup">More <BsArrowRight /></a>
+            <a className='servicesignup' href="/shoplist">More <BsArrowRight /></a>
           </div>            
            
         </div>
