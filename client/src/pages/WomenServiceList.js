@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "../styles/WorkersList.css";
+import "../styles/WomenServiceList.css";
 import background1 from "../assets/workerslist1.png";
 import background2 from "../assets/workerslist2.png";
 import background3 from "../assets/workerslist3.png";
@@ -14,11 +14,11 @@ import { Link } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import { RiStarFill } from "react-icons/ri";
 
-const WorkersList = ({ customer }) => {
+const WomenserviceList = ({ customer }) => {
 
   // const [check, setcheck] = useState(false);
   // const locations = useSelector((state) => state.location);
-  // const [workers, setWorkers] = useState(locations);
+  // const [womenservice, setwomenservice] = useState(locations);
 
   //   // -----------------------------------------DISTANCE CALCULATION------------------------------------------------
   //   locations.map(
@@ -41,26 +41,26 @@ const WorkersList = ({ customer }) => {
   //     return 0;
   //   }
 
-  //   const sortWorkersBydistance = () => {
-  //     setWorkers(workers.sort(compareDistance));
+  //   const sortwomenserviceBydistance = () => {
+  //     setwomenservice(womenservice.sort(compareDistance));
   //   };
 
 
   return (
     <>
       <Navbar />
-      {/* ------------------------------WorkersList----------------------------------- */}
+      {/* ------------------------------womenservicelist----------------------------------- */}
 
-      <div className="workerslist_section">
-        <div className="workerslist_container">
-          <div className="workerslist_head">
-            <h1>List of workers you can checkout</h1>
-            <div className="workerslist_filter">
+      <div className="womenservicelist_section">
+        <div className="womenservicelist_container">
+          <div className="womenservicelist_head">
+            <h1>List of womenservice you can checkout</h1>
+            <div className="womenservicelist_filter">
               <div
                 type="button"
                 className="btn btn-primary distclass"
                 // onClick={() => {
-                //   sortWorkersBydistance();
+                //   sortwomenserviceBydistance();
                 //   setcheck(!check);
                 // }}
               >
@@ -72,30 +72,30 @@ const WorkersList = ({ customer }) => {
                 id="selectOccupation"
                 // onChange={(e) => {
                 //   if (e.target.value !== "All") {
-                //     setWorkers(
+                //     setwomenservice(
                 //       locations.filter(
                 //         (worker) => worker.occupation === e.target.value
                 //       )
                 //     );
                 //   } else {
-                //     setWorkers(locations);
+                //     setwomenservice(locations);
                 //   }
                 // }}
               >
                 <option value="All">All</option>
-                <option value="Plumbing workers">Plumbing workers</option>
-                <option value="Electric workers">Electric workers</option>
-                <option value="Mechanic workers">Mechanic workers</option>
+                <option value="Plumbing womenservice">Plumbing womenservice</option>
+                <option value="Electric womenservice">Electric womenservice</option>
+                <option value="Mechanic womenservice">Mechanic womenservice</option>
               </select>
             </div>            
           </div> 
                  
-          <div className="workerslist_lists">
+          <div className="womenservicelist_lists">
             <div className="row">
               
               <div className="col-lg-3 mb-3">
-                <div className="workerslist_card">
-                  <div className="card workersCard text-white card-has-bg click-col"
+                <div className="womenservicelist_card">
+                  <div className="card womenserviceCard text-white card-has-bg click-col"
                     style={{  backgroundImage:`url(${background1})` }}
                   >
                     <div className="card-img-overlay d-flex flex-column">
@@ -144,5 +144,5 @@ const WorkersList = ({ customer }) => {
   )
 }
 
-export default WorkersList
+export default WomenserviceList
 
