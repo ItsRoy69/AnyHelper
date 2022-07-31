@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
 
-.womenservicescardbody{
+.womensaloncardbody{
     width: 1000px;
     background-color: #EFF5FF;
     padding: 20px;
@@ -23,23 +23,23 @@
       justify-content: center;
   }
 
-  .womenservices_box{
+  .womensalon_box{
     text-align: center;
   }
 
-  .womenservices_box img{
+  .womensalon_box img{
     width: 100px;
     height: 100px;
   }
   
-  .womenservicescardpara{
+  .womensaloncardpara{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 900px;
   }
   
-  .headwomenservicescard h1{
+  .headwomensaloncard h1{
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 700;

@@ -32,7 +32,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/servicesignup">
+                <a className="nav-link" href="#services">
                   Services
                 </a>
               </li>
@@ -46,7 +46,7 @@ const Navbar = () => {
                   Register as Professional
                 </a>
               </li>
-              <Link to="sign-up" className="nav-btnlink">
+              <Link to="/servicesignup" className="nav-btnlink">
                 <button className="btn">Sign Up</button>
               </Link>
             </ul>

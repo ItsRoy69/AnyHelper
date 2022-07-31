@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Navbar from "../components/Navbar";
 import Footer from '../components/Footer';
+import WomenServices from '../services/WomenServices';
+import WomenSalon from '../services/WomenSalon';
 import "../styles/Home.css"
 
 import banner1 from "../assets/banner1.png";
@@ -33,6 +35,10 @@ const Home = () => {
       console.log("Longitude is :", position.coords.longitude);
     });
   }
+
+
+  const [modal1, setModal1] = useState(false);
+  const [modal2, setModal2] = useState(false);
 
   return (
     <>
@@ -153,7 +159,7 @@ const Home = () => {
               <h2>
                 One tap services
               </h2>
-                <Link to="sign-up" className='blog_link' type='p'>
+                <Link to="/blogs" className='blog_link' type='p'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry ...
                 </Link>
             </div>            
@@ -164,7 +170,7 @@ const Home = () => {
               <h2>
                 One tap services
               </h2>
-              <Link to="sign-up" className='blog_link' type='p'>
+              <Link to="/blogs" className='blog_link' type='p'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry ...
               </Link>
             </div> 
@@ -175,7 +181,7 @@ const Home = () => {
                 <h2>
                   One tap services
                 </h2>
-                <Link to="sign-up" className='blog_link' type='p'>
+                <Link to="/blogs" className='blog_link' type='p'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry ...
                 </Link>
               </div> 
@@ -195,12 +201,12 @@ const Home = () => {
         <div className="services_box">
           <div className="services_provided">
 
-            <div className="service">
+            <div className="service" onClick={()=>setModal1(true)}>
               <img src={service_img1} alt="" className="service_img1" />
               <p className="service_about">WOMEN RELATED SERVICES</p>
             </div>
 
-            <div className="service">
+            <div className="service" onClick={()=>setModal2(true)}>
               <img src={service_img7} alt="" className="service_img7" />
               <p className="service_about">WOMEN SALON</p>
             </div>
@@ -219,6 +225,9 @@ const Home = () => {
               <img src={service_img4} alt="" className="service_img4" />
               <p className="service_about">CLEANING</p>
             </div>
+
+            {modal1 && <WomenServices setModal={setModal1} />}
+            {modal2 && <WomenSalon setModal={setModal2} />}
 
           </div>
 
