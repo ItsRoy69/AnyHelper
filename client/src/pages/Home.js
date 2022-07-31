@@ -9,6 +9,7 @@ import MenSalon from '../services/MenSalon';
 import Therapies from '../services/Therapies';
 import Cleaning from '../services/Cleaning';
 import Shops from '../services/Shops';
+import Workers from '../services/Workers';
 
 import "../styles/Home.css"
 
@@ -50,6 +51,7 @@ const Home = () => {
   const [modal4, setModal4] = useState(false);
   const [modal5, setModal5] = useState(false);
   const [modal6, setModal6] = useState(false);
+  const [modal7, setModal7] = useState(false);
 
   return (
     <>
@@ -252,12 +254,14 @@ const Home = () => {
               <p className="service_about">SHOPS</p>
             </div>
 
-            <div className="service">
+            <div className="service" onClick={()=>setModal7(true)}>
               <img src={service_img6} alt="" className="service_img6" />
               <p className="service_about">WORKERS</p>
             </div>
 
             {modal6 && <Shops setModal={setModal6} />}
+            {modal7 && <Workers setModal={setModal7} />}
+
           </div>
         </div>
         
