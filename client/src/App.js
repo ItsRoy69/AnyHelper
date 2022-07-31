@@ -13,6 +13,8 @@ import ShopList from './pages/ShopList';
 import WorkersList from './pages/WorkersList';
 import WomenserviceList from './pages/WomenServiceList';
 import WomenSalonList from './pages/WomenSalonList';
+import TherapiesList from './pages/TherapiesList';
+import CleaningList from './pages/CleaningList';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
             <Route path="/workerslist" exact element={<WorkersList />} />
             <Route path="/womenservicelist" exact element={<WomenserviceList />} />
             <Route path="/womensalonlist" exact element={<WomenSalonList />} />
+            <Route path="/therapieslist" exact element={<TherapiesList />} />
+            <Route path="/cleaninglist" exact element={<CleaningList />} />
           </Routes>
         </div>
       </Router> 
