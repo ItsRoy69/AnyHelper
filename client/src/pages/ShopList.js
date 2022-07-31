@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 
 import "../styles/ShopList.css";
 
@@ -8,8 +8,41 @@ import Footer from '../components/Footer';
 import shoplist from "../assets/blogs.jpg";
 
 import { Link } from "react-router-dom";
+// import { getDistance } from "geolib";
+// import { useSelector } from "react-redux";
 
-const ShopList = () => {
+const ShopList = ({ customer }) => {
+
+  // const [check, setcheck] = useState(false);
+  // const locations = useSelector((state) => state.location);
+  // const [workers, setWorkers] = useState(locations);
+
+  //   // -----------------------------------------DISTANCE CALCULATION------------------------------------------------
+  //   locations.map(
+  //     (location) =>
+  //       (location.distance =
+  //         getDistance(
+  //           { latitude: location.latitude, longitude: location.longitude },
+  //           { latitude: customer.latitude, longitude: customer.longitude }
+  //         ) / 1000)
+  //   );
+
+  //   // ----------------------------------------SORTING-----------------------------------------------------
+  //   function compareDistance(a, b) {
+  //     if (a.distance < b.distance) {
+  //       return -1;
+  //     }
+  //     if (a.distance > b.distance) {
+  //       return 1;
+  //     }
+  //     return 0;
+  //   }
+
+  //   const sortWorkersBydistance = () => {
+  //     setWorkers(workers.sort(compareDistance));
+  //   };
+
+
   return (
     <>
       <Navbar />
@@ -19,7 +52,41 @@ const ShopList = () => {
         <div className="shoplist_container">
           <div className="shoplist_head">
             <h1>List of shops you can checkout</h1>
-          </div>        
+            <div className="shoplist_filter">
+              <div
+                type="button"
+                className="btn btn-primary distclass"
+                // onClick={() => {
+                //   sortWorkersBydistance();
+                //   setcheck(!check);
+                // }}
+              >
+                Sort By Distance
+              </div>
+              <select
+                className="btn btn-secondary dropdown-toggle"
+                name="Occupation"
+                id="selectOccupation"
+                // onChange={(e) => {
+                //   if (e.target.value !== "All") {
+                //     setWorkers(
+                //       locations.filter(
+                //         (worker) => worker.occupation === e.target.value
+                //       )
+                //     );
+                //   } else {
+                //     setWorkers(locations);
+                //   }
+                // }}
+              >
+                <option value="All">All</option>
+                <option value="Plumbing Shop">Plumbing Shop</option>
+                <option value="Electric Shop">Electric Shop</option>
+                <option value="Mechanic Shop">Mechanic Shop</option>
+              </select>
+            </div>            
+          </div> 
+                 
           <div className="shoplist_lists">
             <div className="row">
 

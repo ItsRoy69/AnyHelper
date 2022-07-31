@@ -44,3 +44,20 @@
     text-align: justify;
     padding: 10px;
 }
+
+.shoplist_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.shoplist_filter{
+    display: flex;
+    height: 40px;
+    flex-direction: row;
+}
+
+.shoplist_filter .btn{
+    margin-left: 10px;
+}

@@ -123,7 +123,7 @@ const Home = () => {
                     <p className='banner_about'>
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     </p>
-                    <Link to="sign-up" className="banner-btnlink">
+                    <Link to="/shoplist" className="banner-btnlink">
                       <button className="banner_btn">BUY ITEMS</button>
                     </Link>
                     <div className="down_button">
