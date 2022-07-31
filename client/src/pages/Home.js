@@ -7,6 +7,7 @@ import WomenServices from '../services/WomenServices';
 import WomenSalon from '../services/WomenSalon';
 import MenSalon from '../services/MenSalon';
 import Therapies from '../services/Therapies';
+import Cleaning from '../services/Cleaning';
 
 import "../styles/Home.css"
 
@@ -45,6 +46,7 @@ const Home = () => {
   const [modal2, setModal2] = useState(false);
   const [modal3, setModal3] = useState(false);
   const [modal4, setModal4] = useState(false);
+  const [modal5, setModal5] = useState(false);
 
   return (
     <>
@@ -222,12 +224,12 @@ const Home = () => {
               <p className="service_about">MEN SALON</p>
             </div>
 
-            <div className="service" onClick={()=>setModal4(true)} >
+            <div className="service" onClick={()=>setModal4(true)}>
               <img src={service_img3} alt="" className="service_img3" />
               <p className="service_about">THERAPIES</p>
             </div>
 
-            <div className="service">
+            <div className="service" onClick={()=>setModal5(true)}>
               <img src={service_img4} alt="" className="service_img4" />
               <p className="service_about">CLEANING</p>
             </div>
@@ -236,6 +238,7 @@ const Home = () => {
             {modal2 && <WomenSalon setModal={setModal2} />}
             {modal3 && <MenSalon setModal={setModal3} />}
             {modal4 && <Therapies setModal={setModal4} />}
+            {modal5 && <Cleaning setModal={setModal5} />}
 
           </div>
 
