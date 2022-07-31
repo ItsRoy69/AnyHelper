@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import "../styles/WomenServiceList.css";
+import "../styles/WomenSalonList.css";
 import background1 from "../assets/workerslist1.png";
 import background2 from "../assets/workerslist2.png";
 import background3 from "../assets/workerslist3.png";
-import workerman from "../assets/workerman.png";
+import womensalonman from "../assets/workerman.png";
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -14,11 +14,11 @@ import { Link } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import { RiStarFill } from "react-icons/ri";
 
-const WomenserviceList = ({ customer }) => {
+const WomenSalonList = ({ customer }) => {
 
   // const [check, setcheck] = useState(false);
   // const locations = useSelector((state) => state.location);
-  // const [womenservice, setwomenservice] = useState(locations);
+  // const [womensalon, setwomensalon] = useState(locations);
 
   //   // -----------------------------------------DISTANCE CALCULATION------------------------------------------------
   //   locations.map(
@@ -41,26 +41,26 @@ const WomenserviceList = ({ customer }) => {
   //     return 0;
   //   }
 
-  //   const sortwomenserviceBydistance = () => {
-  //     setwomenservice(womenservice.sort(compareDistance));
+  //   const sortwomensalonBydistance = () => {
+  //     setwomensalon(womensalon.sort(compareDistance));
   //   };
 
 
   return (
     <>
       <Navbar />
-      {/* ------------------------------womenservicelist----------------------------------- */}
+      {/* ------------------------------womensalonlist----------------------------------- */}
 
-      <div className="womenservicelist_section">
-        <div className="womenservicelist_container">
-          <div className="womenservicelist_head">
-            <h1>List of womenservice you can checkout</h1>
-            <div className="womenservicelist_filter">
+      <div className="womensalonlist_section">
+        <div className="womensalonlist_container">
+          <div className="womensalonlist_head">
+            <h1>List of womensalon you can checkout</h1>
+            <div className="womensalonlist_filter">
               <div
                 type="button"
                 className="btn btn-primary distclass"
                 // onClick={() => {
-                //   sortwomenserviceBydistance();
+                //   sortwomensalonBydistance();
                 //   setcheck(!check);
                 // }}
               >
@@ -72,56 +72,56 @@ const WomenserviceList = ({ customer }) => {
                 id="selectOccupation"
                 // onChange={(e) => {
                 //   if (e.target.value !== "All") {
-                //     setwomenservice(
+                //     setwomensalon(
                 //       locations.filter(
-                //         (worker) => worker.occupation === e.target.value
+                //         (womensalon) => womensalon.occupation === e.target.value
                 //       )
                 //     );
                 //   } else {
-                //     setwomenservice(locations);
+                //     setwomensalon(locations);
                 //   }
                 // }}
               >
                 <option value="All">All</option>
-                <option value="Plumbing womenservice">Plumbing womenservice</option>
-                <option value="Electric womenservice">Electric womenservice</option>
-                <option value="Mechanic womenservice">Mechanic womenservice</option>
+                <option value="Plumbing womensalon">Plumbing womensalon</option>
+                <option value="Electric womensalon">Electric womensalon</option>
+                <option value="Mechanic womensalon">Mechanic womensalon</option>
               </select>
             </div>            
           </div> 
                  
-          <div className="womenservicelist_lists">
+          <div className="womensalonlist_lists">
             <div className="row">
               
               <div className="col-lg-3 mb-3">
-                <div className="womenservicelist_card">
-                  <div className="card womenserviceCard text-white card-has-bg click-col"
+                <div className="womensalonlist_card">
+                  <div className="card womensalonCard text-white card-has-bg click-col"
                     style={{  backgroundImage:`url(${background1})` }}
                   >
                     <div className="card-img-overlay d-flex flex-column">
                       <div className="card-body">
-                        <h3>worker.name</h3>
-                        <h5>worker.occupation</h5>
-                        <h5>worker.city</h5>
+                        <h3>womensalon.name</h3>
+                        <h5>womensalon.occupation</h5>
+                        <h5>womensalon.city</h5>
                       </div>
                       <div className="card-footer">
                         <div className="media">
-                          <img className="mr-3 rounded-circle" src={workerman} style={{ maxWidth: "50px" }} />
+                          <img className="mr-3 rounded-circle" src={womensalonman} style={{ maxWidth: "50px" }} />
                           <div className="media-body">
-                            <h6>Phone : worker.phoneNo</h6>
-                            <h6>worker.address</h6>
-                            <h5>worker.distance km</h5>
+                            <h6>Phone : womensalon.phoneNo</h6>
+                            <h6>womensalon.address</h6>
+                            <h5>womensalon.distance km</h5>
                             <h5>5<RiStarFill /></h5>
-                            <button className="womenservicelist_btn"
+                            <button className="womensalonlist_btn"
                               // onClick={() => {
                               //   fetch(
                               //     `http://localhost:5000/send-text?recipient=${num}&customer=${customer.userName}&lat=${customer.latitude}&lon=${customer.longitude}`
                               //   ).catch((err) => console.error(err));
                               //   alert(
-                              //     `location shared to ${worker.occupation} ${worker.name}`
+                              //     `location shared to ${womensalon.occupation} ${womensalon.name}`
                               //   );
                               // }}
-                            >Send location to worker.name
+                            >Send location to womensalon.name
                             </button>
                           </div>
                         </div>
@@ -144,5 +144,5 @@ const WomenserviceList = ({ customer }) => {
   )
 }
 
-export default WomenserviceList
+export default WomenSalonList
 

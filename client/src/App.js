@@ -12,6 +12,7 @@ import ServiceSignUp from './pages/ServiceSignUp';
 import ShopList from './pages/ShopList';
 import WorkersList from './pages/WorkersList';
 import WomenserviceList from './pages/WomenServiceList';
+import WomenSalonList from './pages/WomenSalonList';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/shoplist" exact element={<ShopList />} />
             <Route path="/workerslist" exact element={<WorkersList />} />
             <Route path="/womenservicelist" exact element={<WomenserviceList />} />
+            <Route path="/womensalonlist" exact element={<WomenSalonList />} />
           </Routes>
         </div>
       </Router> 
