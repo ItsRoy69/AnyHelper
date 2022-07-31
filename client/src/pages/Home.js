@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 
 import Navbar from "../components/Navbar";
 import Footer from '../components/Footer';
+
 import WomenServices from '../services/WomenServices';
 import WomenSalon from '../services/WomenSalon';
 import MenSalon from '../services/MenSalon';
+import Therapies from '../services/Therapies';
+
 import "../styles/Home.css"
 
 import banner1 from "../assets/banner1.png";
@@ -41,6 +44,7 @@ const Home = () => {
   const [modal1, setModal1] = useState(false);
   const [modal2, setModal2] = useState(false);
   const [modal3, setModal3] = useState(false);
+  const [modal4, setModal4] = useState(false);
 
   return (
     <>
@@ -218,7 +222,7 @@ const Home = () => {
               <p className="service_about">MEN SALON</p>
             </div>
 
-            <div className="service">
+            <div className="service" onClick={()=>setModal4(true)} >
               <img src={service_img3} alt="" className="service_img3" />
               <p className="service_about">THERAPIES</p>
             </div>
@@ -231,6 +235,7 @@ const Home = () => {
             {modal1 && <WomenServices setModal={setModal1} />}
             {modal2 && <WomenSalon setModal={setModal2} />}
             {modal3 && <MenSalon setModal={setModal3} />}
+            {modal4 && <Therapies setModal={setModal4} />}
 
           </div>
 

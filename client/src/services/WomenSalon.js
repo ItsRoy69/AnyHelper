@@ -19,7 +19,7 @@ const WomenSalon = ({ setModal }) => {
       <div className='backdrop' onClick={()=>setModal(false)}>
         <div className='womensaloncardbody'>
           <div className='headwomensaloncard'>
-            <h1>Services for women at home</h1>
+            <h1>Women Salon at home</h1>
             <div className='womensaloncardpara'>
               <div className="womensalon_box">
                 <img src={womensalon1} alt="" className="womensalon" />
