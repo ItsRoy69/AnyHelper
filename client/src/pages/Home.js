@@ -8,6 +8,7 @@ import WomenSalon from '../services/WomenSalon';
 import MenSalon from '../services/MenSalon';
 import Therapies from '../services/Therapies';
 import Cleaning from '../services/Cleaning';
+import Shops from '../services/Shops';
 
 import "../styles/Home.css"
 
@@ -31,6 +32,7 @@ import { Link } from "react-router-dom";
 import { BsArrowDownCircle } from "react-icons/bs";
 
 
+
 const Home = () => {
   
 
@@ -47,6 +49,7 @@ const Home = () => {
   const [modal3, setModal3] = useState(false);
   const [modal4, setModal4] = useState(false);
   const [modal5, setModal5] = useState(false);
+  const [modal6, setModal6] = useState(false);
 
   return (
     <>
@@ -244,7 +247,7 @@ const Home = () => {
 
           <div className="services_provided">
             
-            <div className="service">
+            <div className="service" onClick={()=>setModal6(true)}>
               <img src={service_img5} alt="" className="service_img5" />
               <p className="service_about">SHOPS</p>
             </div>
@@ -254,6 +257,7 @@ const Home = () => {
               <p className="service_about">WORKERS</p>
             </div>
 
+            {modal6 && <Shops setModal={setModal6} />}
           </div>
         </div>
         

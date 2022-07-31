@@ -31,7 +31,7 @@ const Cleaning = ({ setModal }) => {
               </div>
               <div className="cleaning_box">
                 <img src={cleaning3} alt="" className="cleaning" />
-                <p>Mini services</p>
+                <p>Mini cleaning services</p>
               </div>
               <div className="cleaning_box">
                 <img src={cleaning4} alt="" className="cleaning" />
