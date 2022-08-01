@@ -115,51 +115,50 @@ const ChatBox = () => {
       <div className="chat-main">
         <div className="welcome-con">
           <h1>Let's chat, user.fullname!</h1>
-        </div>
-
-        <div className="chat-con">
+        </div> 
           <div className="chat-box">
             <div className="chat-box-1">
-            <div className="search-box">
-                <input
-                  type="text"
-                  id=""
-                  className="search"
-                />
-                {/* <input type="text" placeholder='Type something' className='inp' /> */}
-                <div className="btn">
-                  Search
+              <div className="search-box">
+                  <input
+                    type="text"
+                    id=""
+                    className="search"
+                  />
+                  {/* <input type="text" placeholder='Type something' className='inp' /> */}
+                  <div className="btn">
+                    Search
+                  </div>
+                </div>
+                <div className="name-box">
+                {/* {searchRes.length === 0
+                    ? userSpaces.map((space) => {
+                        return ( */}
+                          <div
+                            className="names"                          
+                          >
+                            <img src={chatPic} alt="..." />
+                            <h6>space.chatHead</h6>
+                          </div>
+                          
+                        {/* );
+                      })
+                    : searchRes.map((space) => {
+                        return ( */}
+                          <div
+                            className="names"
+                            // key={space.spaceName}
+                            
+                          >
+                            <img src={chatPic} alt="..." />
+                            <h6>space.chatHead</h6>
+                          </div>
+                        {/* );
+                      })} */}
                 </div>
               </div>
-              <div className="name-box">
-              {/* {searchRes.length === 0
-                  ? userSpaces.map((space) => {
-                      return ( */}
-                        <div
-                          className="names"                          
-                        >
-                          <img src={chatPic} alt="..." />
-                          <h3>space.chatHead</h3>
-                        </div>
-                      {/* );
-                    })
-                  : searchRes.map((space) => {
-                      return ( */}
-                        <div
-                          className="names"
-                          // key={space.spaceName}
-                          
-                        >
-                          <img src={chatPic} alt="..." />
-                          <h3>space.chatHead</h3>
-                        </div>
-                      {/* );
-                    })} */}
-              </div>
-            </div>
             <div className="chat-box-2">
               {/* {selectedSpace === "" ? ( */}
-                <h1>Select a user to chat!</h1>
+                <h2>Select a user to chat!</h2>
               {/* ) : ( */}
                 <div className="uid">
                   <h4>
@@ -192,6 +191,74 @@ const ChatBox = () => {
                                       </div>
                                     </div>
                                   </div>
+                                  <div className="message" >
+                                    <div>
+                                      <div className="message-content">
+                                        <p>messages.message</p>
+                                      </div>
+                                      <div className="message-meta">
+                                        <p id="time">2:30</p>
+                                        <p id="author">messages.username</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="message" >
+                                    <div>
+                                      <div className="message-content">
+                                        <p>messages.message</p>
+                                      </div>
+                                      <div className="message-meta">
+                                        <p id="time">2:30</p>
+                                        <p id="author">messages.username</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="message" >
+                                    <div>
+                                      <div className="message-content">
+                                        <p>messages.message</p>
+                                      </div>
+                                      <div className="message-meta">
+                                        <p id="time">2:30</p>
+                                        <p id="author">messages.username</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="message" >
+                                    <div>
+                                      <div className="message-content">
+                                        <p>messages.message</p>
+                                      </div>
+                                      <div className="message-meta">
+                                        <p id="time">2:30</p>
+                                        <p id="author">messages.username</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="message" >
+                                    <div>
+                                      <div className="message-content">
+                                        <p>messages.message</p>
+                                      </div>
+                                      <div className="message-meta">
+                                        <p id="time">2:30</p>
+                                        <p id="author">messages.username</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="message" >
+                                    <div>
+                                      <div className="message-content">
+                                        <p>messages.message</p>
+                                      </div>
+                                      <div className="message-meta">
+                                        <p id="time">2:30</p>
+                                        <p id="author">messages.username</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+
                                 {/* </>
                               )
                             })}
@@ -210,15 +277,15 @@ const ChatBox = () => {
                   placeholder="Hey..."
                   
                 />
-                <button>
-                  <IoMdSend />
+                <button type="button" className="chat_button">
+                  <IoMdSend className="chat_btn"/>
                 </button>
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
+
     <Footer />
     </>
   );
