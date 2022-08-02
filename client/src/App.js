@@ -16,6 +16,7 @@ import WomenSalonList from './pages/WomenSalonList';
 import TherapiesList from './pages/TherapiesList';
 import CleaningList from './pages/CleaningList';
 import ChatBox from './pages/ChatBox';
+import Items from './pages/Items';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/therapieslist" exact element={<TherapiesList />} />
             <Route path="/cleaninglist" exact element={<CleaningList />} />
             <Route path="/chatbox" exact element={<ChatBox />} />
+            <Route path="/items" exact element={<Items />} />
           </Routes>
         </div>
       </Router> 

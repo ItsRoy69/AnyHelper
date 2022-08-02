@@ -1,0 +1,40 @@
+.items{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12vh;
+    text-align: center;
+}
+
+.items_list{
+    width: 90vw;
+    justify-content: space-evenly;
+    margin-left: 4vw;
+}
+
+.items_card{
+    text-align: center;
+    width: 200px;
+    border: 1px solid #000000;
+}
+
+.items_card img{
+    width: 180px;
+}
+
+.items_service_button {
+    display: flex;
+    border: none;
+    background: #0050ff;
+    border: none;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+    line-height: 1;
+    text-decoration: none;
+}
+
