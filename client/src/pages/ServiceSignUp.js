@@ -37,6 +37,9 @@ const ServiceSignUp = () => {
               <div className="signup_service_password">
                 <input type="text" className="signup_service_password_input" placeholder="Password" name="requiredField" style={{width: "416px"}} />
               </div>
+              <div className="signup_service_address">
+                <textarea type="text" className="signup_service_password_input" placeholder="Address" name="requiredField" style={{width: "416px"}} />
+              </div>
               <div className="signup_service_buttons">
                 <Link to="sign-up">
                   <button className="signup_service_button">Signup</button>

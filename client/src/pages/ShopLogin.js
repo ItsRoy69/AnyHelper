@@ -42,7 +42,7 @@ const ShopLogin = () => {
                   <button className="login_shop_button">Login</button>
                 </Link>
                 <p className="shop_registration-paralogin">Not a member of this website ? 
-                  <Link to="/shoplogin" className="shop_registration-login">
+                  <Link to="/shopregister" className="shop_registration-login">
                   &nbsp;Register
                   </Link>
                 </p> 

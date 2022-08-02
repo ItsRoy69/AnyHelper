@@ -81,10 +81,9 @@ const ShopRegister = () => {
                 <div className="register_shop_name">
                   <input type="text" className="register_shop_name_input" placeholder="Shop name" name="requiredField" />
                 </div>
-              </div>            
-                          
+              </div>     
               <div className="register_shop_address">
-                <input type="text" className="register_shop_address_input" placeholder="Shop address" name="requiredField" style={{width: "416px"}} />
+                <textarea type="text" className="register_shop_address_input" placeholder="Shop address" name="requiredField" style={{width: "416px"}} />
               </div>
               <div className="register_shop_password">
                 <input type="text" className="register_shop_password_input" placeholder="Password" name="requiredField" style={{width: "416px"}} />

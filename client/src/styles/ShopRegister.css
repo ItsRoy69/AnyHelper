@@ -56,6 +56,20 @@
     opacity: 1;
 }
 
+.register_shop textarea{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: hsla(0,0%,100%,.2);
+    margin: 5px;
+}
+
+.register_shop textarea::placeholder { 
+    color: rgb(110, 109, 109);
+    opacity: 1;
+}
+
 .register_shop_smallbox{
     display: flex;
     flex-direction: row;

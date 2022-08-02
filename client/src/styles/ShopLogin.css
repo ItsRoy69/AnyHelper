@@ -49,6 +49,7 @@
     border-radius: 6px;
     background-color: hsla(0,0%,100%,.2);
     margin: 5px;
+    width: 420px;
 }
 
 .login_shop input::placeholder { 

@@ -60,6 +60,20 @@
     opacity: 1;
 }
 
+.signup_service textarea{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: hsla(0,0%,100%,.2);
+    margin: 5px;
+}
+
+.signup_service textarea::placeholder { 
+    color: rgb(110, 109, 109);
+    opacity: 1;
+}
+
 .signup_service_midbox{
     display: flex;
     flex-direction: row;
