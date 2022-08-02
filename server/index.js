@@ -5,7 +5,8 @@ import cors from "cors";
 import adminRouter from "./routes/Admin.js";
 
 import pemRoutes from "./routes/pem.js";
-import customerRoutes from "./routes/customer.js";
+//^ needs to be commented out after the making of the route
+// import customerRoutes from "./routes/customer.js";
 import shopRoutes from "./routes/shop.js";
 
 // Morgan
@@ -14,7 +15,7 @@ import morgan from "morgan";
 // swagger
 import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
-import { swaggerOptions } from "./swagger.js"
+import { swaggerOptions } from "./swagger.js";
 
 // SMS Imports
 import twilio from "twilio";
@@ -55,12 +56,12 @@ app.get("/", (req, res) => {
 
 //---------------------------------Routes-----------------------------------------
 
-
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 app.use("/pem", pemRoutes);
-app.use("/customer", customerRoutes);
+//^ needs to be commented out after the making of the route
+// app.use("/customer", customerRoutes);
 app.use("/shop", shopRoutes);
 app.use("/admin", adminRouter);
 

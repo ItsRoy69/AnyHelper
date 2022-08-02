@@ -6,10 +6,20 @@
   "scripts": {
     "start": "nodemon index.js"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "server": "^1.0.37"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.5.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19",
+    "server": "^1.0.37",
+    "stripe": "^9.16.0",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.5.0",
+    "twilio": "^3.80.0"
   }
 }
