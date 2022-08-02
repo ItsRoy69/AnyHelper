@@ -81,13 +81,18 @@ const WorkerRegistration = () => {
           </p>
 
           <div className="worker_registration_join_button_div">
-            {/* <Link to="sign-up" className="worker_registration-button">
-              <button className="worker_join_btn">Join Us</button>
-            </Link> */}
 
-            <Link to="sign-up" className="worker_registration-button">
+
+
+
+
+            {window.innerWidth < 430 ? <Link to="sign-up" className="worker_registration-button">
               <button className="btn btn-warning worker_join_button">Join Us</button>
-            </Link>
+            </Link> : <Link to="sign-up" className="worker_registration-button">
+              <button className="worker_join_btn">Join Us</button>
+            </Link>}
+
+
 
 
 

@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 
 import shopregister from "../assets/registershop.png";
 
-import {IoMdAddCircle} from "react-icons/io"
+import { IoMdAddCircle } from "react-icons/io"
 import { Link } from "react-router-dom";
 
 import "../styles/ShopRegister.css";
@@ -14,7 +14,7 @@ import "../styles/ShopRegister.css";
 const ShopRegister = () => {
 
   if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(function(position) {
+    navigator.geolocation.watchPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
     });
@@ -68,38 +68,38 @@ const ShopRegister = () => {
             <div className="register_shop_inputs">
               <div className="register_shop_smallbox">
                 <div className="register_shopkeep_name">
-                  <input type="text" className="register_shopkeep_name_input" placeholder="Name" />
+                  <input type="text" className="register_shopkeep_name_input rs_inputs" placeholder="Name" />
                 </div>
                 <div className="register_shop_mail">
-                  <input type="text" className="register_shop_mail_input" placeholder="Mail ID" name="requiredField" />
+                  <input type="text" className="register_shop_mail_input rs_inputs" placeholder="Mail ID" name="requiredField" />
                 </div>
               </div>
               <div className="register_shop_smallbox">
                 <div className="register_shop_type">
-                  <input type="text" className="register_shop_type_input" placeholder="Shop type" name="requiredField" />
+                  <input type="text" className="register_shop_type_input rs_inputs" placeholder="Shop type" name="requiredField" />
                 </div>
                 <div className="register_shop_name">
-                  <input type="text" className="register_shop_name_input" placeholder="Shop name" name="requiredField" />
+                  <input type="text" className="register_shop_name_input rs_inputs" placeholder="Shop name" name="requiredField" />
                 </div>
-              </div>     
+              </div>
               <div className="register_shop_address">
-                <textarea type="text" className="register_shop_address_input" placeholder="Shop address" name="requiredField" style={{width: "416px"}} />
+                <textarea type="text" className="register_shop_address_input rs_inputs" placeholder="Shop address" name="requiredField" style={{ width: "416px" }} />
               </div>
               <div className="register_shop_password">
-                <input type="text" className="register_shop_password_input" placeholder="Password" name="requiredField" style={{width: "416px"}} />
+                <input type="text" className="register_shop_password_input rs_inputs" placeholder="Password" name="requiredField" style={{ width: "416px" }} />
               </div>
             </div>
           </div>
           <div className="register_shop_right">
             <img src={shopregister} alt="" className="register_shop_banner" />
           </div>
-        </div> 
+        </div>
 
         <div className="register_shop_mid">
           <h4>List of items in your shop</h4>
           <div className="register_shop_midbox">
-            <div className="register_shop_smallbox">              
-              <div className="register_shop_items">      
+            <div className="register_shop_smallbox">
+              <div className="register_shop_items">
                 {arr.map((item, i) => {
                   return (
                     <input
@@ -112,27 +112,29 @@ const ShopRegister = () => {
                   );
                 })}
               </div>
-              <IoMdAddCircle className="register_shop_btn" size='30px' onClick={addInput}/> 
+              <IoMdAddCircle className="register_shop_btn" size='30px' onClick={addInput} />
             </div>
-          </div> 
-          <div className="register_shop_buttons">
-            <p className="shop_registration-paralogin">Already a member of this website ? 
-              <Link to="/shoplogin" className="shop_registration-login">
-              &nbsp;Login
-              </Link>
-            </p>         
-            <Link to="sign-up">
-              <button className="register_shop_button">Register</button>
-            </Link>
           </div>
-                   
-          
-        </div>       
+          <div className="register_shop_buttons">
+            <p className="shop_registration-paralogin">Already a member of this website ?
+              <Link to="/shoplogin" className="shop_registration-login">
+                &nbsp;Login
+              </Link>
+            </p>
+            <div className="shop_register_button_div">
+              <Link to="sign-up">
+                <button className="register_shop_button">Register</button>
+              </Link>
+            </div>
+          </div>
+
+
+        </div>
       </div>
 
-      
 
-      <Footer />
+
+      {/* <Footer /> */}
     </>
   )
 }
