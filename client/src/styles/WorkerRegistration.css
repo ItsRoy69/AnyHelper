@@ -161,7 +161,7 @@
     display: block;
   }
 
-  .worker_join_button {
+  .worker_join_button button {
     border: none;
     background: #fff;
     border: none;

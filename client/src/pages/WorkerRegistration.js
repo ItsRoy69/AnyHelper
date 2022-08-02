@@ -85,10 +85,9 @@ const WorkerRegistration = () => {
               <button className="worker_join_btn">Join Us</button>
             </Link> */}
 
-            <Link to="sign-up" className="worker_registration-button">
-              <button className="btn btn-warning worker_join_button">Join Us</button>
-            </Link>
-
+          <Link to="/" className="worker_login-button">
+            <button className="worker_register_btn">Register</button>
+          </Link>
 
 
           </div>
