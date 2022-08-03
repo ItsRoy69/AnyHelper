@@ -52,7 +52,7 @@ const WorkerLogin = () => {
             &nbsp;Signup
             </Link>
           </p>
-          <Link to="sign-up" className="worker_login-button">
+          <Link to="/" className="worker_login-button">
             <button className="worker_register_btn">Login</button>
           </Link>
         </div>
