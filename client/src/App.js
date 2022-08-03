@@ -17,6 +17,8 @@ import TherapiesList from './pages/TherapiesList';
 import CleaningList from './pages/CleaningList';
 import ChatBox from './pages/ChatBox';
 import Items from './pages/Items';
+import UserDashboard from './pages/UserDashboard';
+import MenSalonList from './pages/MenSalonList';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
             <Route path="/cleaninglist" exact element={<CleaningList />} />
             <Route path="/chatbox" exact element={<ChatBox />} />
             <Route path="/items" exact element={<Items />} />
+            <Route path="/userdashboard" exact element={<UserDashboard />} />
+            <Route path="/mensalonlist" exact element={<MenSalonList />} />
           </Routes>
         </div>
       </Router> 
