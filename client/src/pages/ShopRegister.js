@@ -2,16 +2,38 @@ import React, { useState } from 'react';
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-
+import axios from "axios";
 import shopregister from "../assets/registershop.png";
 
 import {IoMdAddCircle} from "react-icons/io"
 import { Link } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
 import "../styles/ShopRegister.css";
 
 
 const ShopRegister = () => {
+
+  const navigate = useNavigate();
+
+  const [shop, setShop] = useState({
+    admin: "",
+    address: "",
+    email: "",
+    sname: "",
+    password: "",
+    stype: ""
+  });
+
+  let name, value;
+
+  const inputsHandler = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+
+    setShop({ ...shop, [name]: value });
+  };
+
 
   if (navigator.geolocation) {
     navigator.geolocation.watchPosition(function(position) {
@@ -43,6 +65,35 @@ const ShopRegister = () => {
     });
   };
 
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const data = {
+        admin : shop.admin,
+        email: shop.email,
+        sname : shop.sname,
+        stype : shop.stype,
+        address : shop.address,
+        password : shop.password
+      };
+      await axios
+        .post("http://localhost:8000/stores/register", data, {
+          headers: { "Content-Type": "application/json" },
+        })
+        .then((response) => {
+          alert("Registration Successfull!");
+          navigate("/");
+          console.log(response);
+        })
+        .catch((e) => {
+          alert("Registration Unsuccessfull!");
+          console.log(e);
+        });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   const handleChange = e => {
     e.preventDefault();
 
@@ -68,25 +119,25 @@ const ShopRegister = () => {
             <div className="register_shop_inputs">
               <div className="register_shop_smallbox">
                 <div className="register_shopkeep_name">
-                  <input type="text" className="register_shopkeep_name_input" placeholder="Name" />
+                  <input type="text" className="register_shopkeep_name_input" placeholder="Name" name="admin" onChange={inputsHandler} value={shop.admin} />
                 </div>
                 <div className="register_shop_mail">
-                  <input type="text" className="register_shop_mail_input" placeholder="Mail ID" name="requiredField" />
+                  <input type="text" className="register_shop_mail_input" placeholder="Mail ID" name="email" onChange={inputsHandler} value={shop.email} />
                 </div>
               </div>
               <div className="register_shop_smallbox">
                 <div className="register_shop_type">
-                  <input type="text" className="register_shop_type_input" placeholder="Shop type" name="requiredField" />
+                  <input type="text" className="register_shop_type_input" placeholder="Shop type" name="stype" onChange={inputsHandler} value={shop.stype} />
                 </div>
                 <div className="register_shop_name">
-                  <input type="text" className="register_shop_name_input" placeholder="Shop name" name="requiredField" />
+                  <input type="text" className="register_shop_name_input" placeholder="Shop name" name="sname" onChange={inputsHandler} value={shop.sname} />
                 </div>
               </div>     
               <div className="register_shop_address">
-                <textarea type="text" className="register_shop_address_input" placeholder="Shop address" name="requiredField" style={{width: "416px"}} />
+                <textarea type="text" className="register_shop_address_input" placeholder="Shop address" name="address" onChange={inputsHandler} value={shop.address} style={{width: "416px"}} />
               </div>
               <div className="register_shop_password">
-                <input type="text" className="register_shop_password_input" placeholder="Password" name="requiredField" style={{width: "416px"}} />
+                <input type="password" className="register_shop_password_input" placeholder="Password" name="password" onChange={inputsHandler} value={shop.password} style={{width: "416px"}} />
               </div>
             </div>
           </div>
@@ -122,7 +173,7 @@ const ShopRegister = () => {
               </Link>
             </p>         
             <Link to="sign-up">
-              <button className="register_shop_button">Register</button>
+              <button className="register_shop_button" type="submit" onClick={submitHandler}>Register</button>
             </Link>
           </div>
                    
