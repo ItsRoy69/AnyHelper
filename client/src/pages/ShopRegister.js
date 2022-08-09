@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -15,6 +15,11 @@ import "../styles/ShopRegister.css";
 const ShopRegister = () => {
 
   const navigate = useNavigate();
+
+   const [latitude, setLatitude] = useState(null);
+   const [longitude, setLongitude] = useState(null);
+   
+
 
   const [shop, setShop] = useState({
     admin: "",
@@ -34,13 +39,23 @@ const ShopRegister = () => {
     setShop({ ...shop, [name]: value });
   };
 
-
+const getLocation = () => {
   if (navigator.geolocation) {
     navigator.geolocation.watchPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
+    setLatitude(position.coords.latitude);
+    setLongitude(position.coords.longitude);
+  
     });
   }
+}
+
+if(latitude && longitude){
+  localStorage.setItem("Latitude",latitude);
+  localStorage.setItem("Longitude",longitude);
+}
+
+// console.log("Latitude is : ", latitude);
+// console.log("Latitude is : ", longitude);
 
 
   const inputArr = [
@@ -69,12 +84,15 @@ const ShopRegister = () => {
     e.preventDefault();
     try {
       const data = {
+        latitude : latitude,
+        longitude : longitude,
         admin : shop.admin,
         email: shop.email,
         sname : shop.sname,
         stype : shop.stype,
         address : shop.address,
-        password : shop.password
+        password : shop.password,
+        type : "0"
       };
       await axios
         .post("http://localhost:8000/stores/register", data, {
@@ -106,7 +124,9 @@ const ShopRegister = () => {
     });
   };
 
-
+  useEffect(() => {
+    getLocation();
+  },[])
 
   return (
     <>

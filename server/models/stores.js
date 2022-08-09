@@ -4,6 +4,20 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const storeSchema = new mongoose.Schema({
+  type : {
+    type : Number,
+    required : true
+  },
+  latitude : {
+    type: Number,
+    required: true,
+    trim: true,
+  },
+  longitude : {
+    type: Number,
+    required: true,
+    trim: true,
+  },
   admin: {
     type: String,
     required: true,

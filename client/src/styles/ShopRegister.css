@@ -1,130 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
 
-
-.register_shop{
-    margin-top: 20vh;
-    
+.register_shop {
+  margin-top: 20vh;
 }
 
-.register_shop_header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.register_shop_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.register_shop_left{
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
+.register_shop_left {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
 }
 
-.register_shop_left h1{
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    color: #222;
+.register_shop_left h1 {
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #222;
 }
 
-.register_shop_left h4{
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    color: #555;
+.register_shop_left h4 {
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #555;
 }
 
-
-.register_shop_inputs {    
-    flex-direction: column;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
+.register_shop_inputs {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
 
-.register_shop input{
-    outline: none;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    background-color: hsla(0,0%,100%,.2);
-    margin: 5px;
+.register_shop input {
+  outline: none;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  margin: 5px;
 }
 
-.register_shop input::placeholder { 
-    color: rgb(110, 109, 109);
-    opacity: 1;
+.register_shop input::placeholder {
+  color: rgb(110, 109, 109);
+  opacity: 1;
 }
 
-.register_shop textarea{
-    outline: none;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    background-color: hsla(0,0%,100%,.2);
-    margin: 5px;
+.register_shop textarea {
+  outline: none;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  margin: 5px;
 }
 
-.register_shop textarea::placeholder { 
-    color: rgb(110, 109, 109);
-    opacity: 1;
+.register_shop textarea::placeholder {
+  color: rgb(110, 109, 109);
+  opacity: 1;
 }
 
-.register_shop_smallbox{
-    display: flex;
-    flex-direction: row;
+.register_shop_smallbox {
+  display: flex;
+  flex-direction: row;
 }
 
-.register_shop_midbox{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.register_shop_midbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.register_shop_mid{
-    margin-left: 10vw;
+.register_shop_mid {
+  margin-left: 10vw;
 }
-  
-.register_shop_btn{
-    color: rgb(68, 0, 255);
+
+.register_shop_btn {
+  color: rgb(68, 0, 255);
 }
 
 .register_shop_button {
+  display: flex;
+  border: none;
+  background: #0050ff;
+  border: none;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+  margin: 5px;
+  line-height: 1;
+}
+
+.register_shop_buttons {
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+}
+
+.shop_registration-paralogin {
+  padding: 5px;
+  display: flex;
+  float: left;
+  color: #222;
+  font-size: 20px;
+}
+
+.shop_registration-login {
+  text-decoration: none;
+  color: #0050ff;
+  font-size: 18px;
+}
+
+.shop_registration-login:hover {
+  text-decoration: none;
+}
+
+/* //* MOBILE RESPONSIVENESS */
+
+@media (max-width: 430px) and (min-width: 0px) {
+  .register_shop {
+    max-width: 400px;
+  }
+  .register_shop_header {
     display: flex;
-    border: none;
-    background: #0050ff;
-    border: none;
-    border-radius: 4px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .register_shop_right {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    color: #ffffff;
-    padding: 10px;
-    margin: 5px;
-    line-height: 1;
-}
+  }
+  .register_shop_banner {
+    max-width: 400px;
+  }
+  .register_shop_inputs {
+    max-width: 400px;
+  }
+  .register_shop_buttons {
+    flex-direction: column;
+  }
 
-.register_shop_buttons{
-    justify-content: space-evenly;
+  .shop_register_button_div {
+    text-align: center;
     display: flex;
-    flex-direction: row;
-}
+    justify-content: center;
+  }
 
-.shop_registration-paralogin{
-    padding: 5px;
+  .register_shop_left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .register_shop_mid h4 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .shop_registration-paralogin {
+    text-align: center;
     display: flex;
-    float: left;
-    color: #222;
-    font-size: 20px;
-}
-
-.shop_registration-login{
-    text-decoration: none;
-    color: #0050ff;
-    font-size: 18px;
-}
-
-.shop_registration-login:hover{
-    text-decoration: none;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
 }

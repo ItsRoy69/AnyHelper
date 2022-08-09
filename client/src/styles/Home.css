@@ -1,13 +1,13 @@
 /* ---------------------------------------------Banner-------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
 
 .carousel-item {
-    height: 60vh;
+  height: 60vh;
 }
 
-.banner{
+.banner {
   margin-top: 20vh;
 }
 
@@ -26,14 +26,14 @@
   width: 40vw;
 }
 
-.banner_para h1{
-  font-family: 'Jost', sans-serif;
+.banner_para h1 {
+  font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
 
-.banner_para p{
-  font-family: 'Kdam Thmor Pro', sans-serif;
+.banner_para p {
+  font-family: "Kdam Thmor Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 58px;
@@ -53,7 +53,7 @@
 }
 
 .banner_btn {
-  font-family: 'Itim', cursive;
+  font-family: "Itim", cursive;
   font-style: normal;
   font-size: 18px;
   color: #ffffff;
@@ -61,16 +61,16 @@
   border: none;
   border-radius: 6px;
   text-transform: uppercase;
-  background-color: rgba(0, 26, 255, 0.79);;
+  background-color: rgba(0, 26, 255, 0.79);
 }
 
 .banner_btn:hover {
-  color: #ffffff;    
+  color: #ffffff;
   background-color: rgba(36, 0, 255, 0.44);
 }
 
-.banner-btnlink{
-  font-family: 'Itim', cursive;
+.banner-btnlink {
+  font-family: "Itim", cursive;
   font-style: normal;
   font-size: 16px;
   color: #000000;
@@ -80,33 +80,33 @@
   margin-top: 8px;
 }
 
-.carousel-control-prev, .carousel-control-next{
+.carousel-control-prev,
+.carousel-control-next {
   width: 80px;
 }
 
-.down_button{
+.down_button {
   width: 200px;
   margin-top: 4vh;
 }
 
-.down_button_circle{
+.down_button_circle {
   color: rgba(0, 26, 255, 0.79);
 }
 
 /* ---------------------------------------------About-------------------------------------------------- */
 
-.about{
+.about {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
-.about_left{  
-  width: 280px;
+.about_left {
+  width: 500px;
 }
 
-.about_right{
+.about_right {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,25 +114,24 @@
   padding: 20px;
 }
 
-.about_right h1{
-  font-family: 'Jost', sans-serif;
+.about_right h1 {
+  font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 700;
-  color: #222;  
+  color: #222;
 }
 
-.about_right h4{
-  font-family: 'Jost', sans-serif;
+.about_right h4 {
+  font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #555;
   text-align: justify;
 }
 
-
 /* ---------------------------------------------Blogs-------------------------------------------------- */
 
-.blogs{
+.blogs {
   height: 50vh;
 }
 
@@ -142,74 +141,106 @@
   justify-content: space-evenly;
 }
 
-.blog_box{
-  background-color: #6598FF;
+.blog_box {
+  background-color: #6598ff;
   border-radius: 20px;
   width: 350px;
   height: 150px;
 }
 
-.blog_box h2, .blog_link{
-  font-family: 'Jost', sans-serif;
+.blog_box h2,
+.blog_link {
+  font-family: "Jost", sans-serif;
   font-style: normal;
   color: #ffffff;
   text-decoration: none;
 }
 
-.blog_para{
+.blog_para {
   width: 320px;
   height: 120px;
   padding: 20px;
 }
 
-.blogs_more{
+.blogs_more {
   display: flex;
   float: right;
   margin-right: 10vw;
   margin-top: 2vh;
 }
 
-.blogs_more a{
-  font-family: 'Jost', sans-serif;
+.blogs_more a {
+  font-family: "Jost", sans-serif;
   font-style: normal;
   color: #000000;
-  text-decoration: none;  
+  text-decoration: none;
   font-size: 20px;
 }
 
 /* ---------------------------------------------Services-------------------------------------------------- */
 
-.services_provided{
+.services_provided {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.services_provided img{
+.services_provided img {
   width: 100px;
   height: 100px;
 }
 
-.services_section{
-  justify-content: center;  
+.services_section {
+  justify-content: center;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
-.services_box{
+.services_box {
   box-shadow: 20px 20px 20px 8px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   width: 90vw;
   padding: 20px;
 }
 
-.service{
+.service {
   text-align: center;
 }
 
-.service p{
-  font-family: 'Gentium Book Basic';
+.service p {
+  font-family: "Gentium Book Basic";
   font-style: normal;
   font-weight: 400;
 }
 
+@media (max-width: 430px) and (min-width: 0px) {
+  .banner_pic {
+    display: none;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .about_left {
+    max-width: 320px;
+  }
+
+  .about_right {
+    max-width: 320px;
+  }
+  .worker_register_banner {
+    min-width: 400px;
+  }
+  .blogs {
+    display: none;
+  }
+  .services_provided {
+    max-width: 320px;
+  }
+  .services_box {
+    max-width: 320px;
+  }
+}

@@ -1,23 +1,72 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 import shoplogin from "../assets/loginshop.png";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../styles/ShopLogin.css";
-
+import axios from "axios";
 
 const ShopLogin = () => {
 
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-    });
+  const navigate = useNavigate();
+
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+
+  const [loguser, setLogUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  
+  let name, value;
+
+  const inputsHandler = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+
+    setLogUser({ ...loguser, [name]: value });
+  };
+
+  const signIn = async (e) => {
+    e.preventDefault();
+
+    const { email, password } = loguser;
+
+    const data = { email, password };
+
+    await axios
+      .post("http://localhost:8000/stores/login", data, { headers: { "Content-Type": "application/json" } })
+      .then((response) => {
+        console.log(response);
+          localStorage.setItem("token", response.data.token);
+          localStorage.setItem("store_info", JSON.stringify(response.data.user));
+          alert("Logged in Successfully!");
+          navigate('/userdashboard');
+      }).catch((e) => {
+        alert("Log in failed");
+        console.log(e);
+      });
+  };
+
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition(function(position) {
+      setLatitude(position.coords.latitude);
+      setLongitude(position.coords.longitude);
+    
+      });
+    }
   }
+  
+
+  useEffect(() => {
+    getLocation();
+  },[])
 
   return (
     <>
@@ -32,14 +81,14 @@ const ShopLogin = () => {
             <h4>Join 30,000+ partners across India</h4>
             <div className="login_shop_inputs">
               <div className="login_shopkeep_name">
-                <input type="text" className="login_shopkeep_name_input" placeholder="Name" />
+                <input type="text" className="login_shopkeep_name_input" placeholder="Email" name="email" onChange={inputsHandler} value={loguser.email}/>
               </div>
               <div className="login_shop_password">
-                <input type="text" className="login_shop_password_input" placeholder="Password" name="requiredField" style={{width: "416px"}} />
+                <input type="password" className="login_shop_password_input" placeholder="Password" name="password" onChange={inputsHandler} value={loguser.password} style={{width: "416px"}} />
               </div>
               <div className="login_shop_buttons">
                 <Link to="sign-up">
-                  <button className="login_shop_button">Login</button>
+                  <button className="login_shop_button" type="submit" onClick={signIn}>Login</button>
                 </Link>
                 <p className="shop_registration-paralogin">Not a member of this website ? 
                   <Link to="/shopregister" className="shop_registration-login">
