@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "../styles/WorkerLogin.css";
 
@@ -6,16 +6,68 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import wokerbanner from "../assets/workerlogin.png";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const WorkerLogin = () => {
 
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(function(position) {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-    });
+  const navigate = useNavigate();
+
+
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+
+  const [loguser, setLogUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  
+  let name, value;
+
+  const inputsHandler = (e) => {
+    name = e.target.name;
+    value = e.target.value;
+
+    setLogUser({ ...loguser, [name]: value });
+  };
+
+  const signIn = async (e) => {
+    e.preventDefault();
+
+    const { email, password } = loguser;
+
+    const data = { email, password };
+
+    await axios
+      .post("http://localhost:8000/workers/login", data, { headers: { "Content-Type": "application/json" } })
+      .then((response) => {
+        console.log(response);
+          localStorage.setItem("token", response.data.token);
+          localStorage.setItem("type", 1);
+          localStorage.setItem("worker_info", JSON.stringify(response.data.user));
+          alert("Logged in Successfully!");
+          navigate('/userdashboard');
+      }).catch((e) => {
+        alert("Log in failed");
+        console.log(e);
+      });
+  };
+
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition(function(position) {
+      setLatitude(position.coords.latitude);
+      setLongitude(position.coords.longitude);
+    
+      });
+    }
   }
+  
+
+  useEffect(() => {
+    getLocation();
+  },[])
 
   return (
     <>
@@ -36,14 +88,11 @@ const WorkerLogin = () => {
         <div className="worker_login_box">
           <h2>Let's get connected and help people by providing services</h2>
           <div className="worker_login_inputs">
-            <div className="worker_login_name">
-              <input type="text" className="worker_login_name_input" placeholder="Name" />
-            </div>
             <div className="worker_login_mail">
-              <input type="text" className="worker_login_mail_input" placeholder="Mail ID" />
+              <input type="text" className="worker_login_mail_input" placeholder="Mail ID" name="email" value={loguser.email} onChange={inputsHandler} />
             </div>
             <div className="worker_registration_password">
-              <input type="text" className="worker_registration_password_input" placeholder="Password" />
+              <input type="password" className="worker_registration_password_input" placeholder="Password" name="password" value={loguser.password} onChange={inputsHandler} />
             </div>
           </div>
 
@@ -52,8 +101,8 @@ const WorkerLogin = () => {
             &nbsp;Signup
             </Link>
           </p>
-          <Link to="/" className="worker_login-button">
-            <button className="worker_register_btn">Login</button>
+          <Link to="/userdashboard" className="worker_login-button">
+            <button className="worker_register_btn" type="submit" onClick={signIn}>Login</button>
           </Link>
         </div>
       </div>  

@@ -47,9 +47,10 @@
 }
 
 .worker_login_inputs {    
+    width: 55%;
     flex-direction: row;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 20px;
 }
 

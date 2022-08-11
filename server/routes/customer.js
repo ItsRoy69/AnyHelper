@@ -1,31 +1,27 @@
 const express = require("express");
 const router = express.Router();
-const Store = require('../models/stores');
 const bcrypt = require("bcrypt");
 const auth = require("../middleware/auth");
+const Customer = require("../models/customers");
 
 
 router.get("/", (req, res) => {
-  res.json({ message: "This is the store api" });
+  res.json({ message: "This is the customer api" });
 });
 
 router.post("/register", async (req, res) => {
     const {
       latitude,
       longitude,
-      admin,
       email,
-      stype,
-      sname,
+      name,
       password,
       address
     } = req.body;
   
     if (
-        !admin||
         !email||
-        !stype||
-        !sname||
+        !name||
         !password||
         !address||
         !latitude||
@@ -35,31 +31,29 @@ router.post("/register", async (req, res) => {
     }
   
     try {
-      const userSearchByEmail = await Store.findOne({ email: email });
-      const userSearchByUsername = await Store.findOne({ sname: sname });
+      const userSearchByEmail = await Customer.findOne({ email: email });
+
   
-      if (userSearchByEmail || userSearchByUsername) {
-        return res.status(422).json({ error: "store already exists." });
+      if (userSearchByEmail) {
+        return res.status(422).json({ error: "customer already exists." });
       }
   
-     
-        const store = new Store({
-            admin,
+   
+        const customer = new Customer({
             email,
-            stype,
-            sname,
+            name,
             password,
             address,
             latitude,
             longitude
         });
   
-        const registered = await store.save();
+        const registered = await customer.save();
   
-        res.status(201).json({ message: "Registered Successfully!", store : store });
+        res.status(201).json({ message: "Registered Successfully!", customer : customer });
       
     } catch (e) {
-      res.status(500).json({ message: `Could not create store! --> ${e}` });
+      res.status(500).json({ message: `Could not create customer account! --> ${e}` });
     }
   });
 
@@ -74,7 +68,7 @@ router.post("/register", async (req, res) => {
         return res.status(422).json({ error: "Please fill all the fields." });
       }
   
-      const userEmail = await Store.findOne({ email: logEmail });
+      const userEmail = await Customer.findOne({ email: logEmail });
       const passCheck = await bcrypt.compare(logPass, userEmail.password);
   
       const token = await userEmail.generateAuthToken();

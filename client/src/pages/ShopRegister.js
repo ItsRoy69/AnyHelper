@@ -91,8 +91,7 @@ if(latitude && longitude){
         sname : shop.sname,
         stype : shop.stype,
         address : shop.address,
-        password : shop.password,
-        type : "0"
+        password : shop.password
       };
       await axios
         .post("http://localhost:8000/stores/register", data, {
@@ -100,7 +99,7 @@ if(latitude && longitude){
         })
         .then((response) => {
           alert("Registration Successfull!");
-          navigate("/");
+          navigate("/shoplogin");
           console.log(response);
         })
         .catch((e) => {

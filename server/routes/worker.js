@@ -1,33 +1,31 @@
 const express = require("express");
 const router = express.Router();
-const Store = require('../models/stores');
+const Worker = require('../models/workers');
 const bcrypt = require("bcrypt");
 const auth = require("../middleware/auth");
 
 
 router.get("/", (req, res) => {
-  res.json({ message: "This is the store api" });
+  res.json({ message: "This is the worker api" });
 });
 
 router.post("/register", async (req, res) => {
     const {
       latitude,
       longitude,
-      admin,
+      name,
       email,
-      stype,
-      sname,
+      profession,
       password,
-      address
+      phone
     } = req.body;
   
     if (
-        !admin||
+        !name||
         !email||
-        !stype||
-        !sname||
+        !profession||
         !password||
-        !address||
+        !phone||
         !latitude||
         !longitude
     ) {
@@ -35,31 +33,29 @@ router.post("/register", async (req, res) => {
     }
   
     try {
-      const userSearchByEmail = await Store.findOne({ email: email });
-      const userSearchByUsername = await Store.findOne({ sname: sname });
+      const userSearchByEmail = await Worker.findOne({ email: email });
   
-      if (userSearchByEmail || userSearchByUsername) {
-        return res.status(422).json({ error: "store already exists." });
+      if (userSearchByEmail) {
+        return res.status(422).json({ error: "worker already exists." });
       }
   
      
-        const store = new Store({
-            admin,
+        const worker = new Worker({
+            phone,
             email,
-            stype,
-            sname,
+            name,
             password,
-            address,
+            profession,
             latitude,
             longitude
         });
   
-        const registered = await store.save();
+        const registered = await worker.save();
   
-        res.status(201).json({ message: "Registered Successfully!", store : store });
+        res.status(201).json({ message: "Registered Successfully!", worker : worker });
       
     } catch (e) {
-      res.status(500).json({ message: `Could not create store! --> ${e}` });
+      res.status(500).json({ message: `Could not create worker account! --> ${e}` });
     }
   });
 
@@ -74,7 +70,7 @@ router.post("/register", async (req, res) => {
         return res.status(422).json({ error: "Please fill all the fields." });
       }
   
-      const userEmail = await Store.findOne({ email: logEmail });
+      const userEmail = await Worker.findOne({ email: logEmail });
       const passCheck = await bcrypt.compare(logPass, userEmail.password);
   
       const token = await userEmail.generateAuthToken();

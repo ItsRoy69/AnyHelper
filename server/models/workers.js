@@ -3,7 +3,7 @@ const validator = require("validator");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const storeSchema = new mongoose.Schema({
+const workerSchema = new mongoose.Schema({
   latitude : {
     type: Number,
     required: true,
@@ -14,7 +14,7 @@ const storeSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  admin: {
+  name: {
     type: String,
     required: true,
     trim: true,
@@ -31,12 +31,7 @@ const storeSchema = new mongoose.Schema({
       }
     },
   },
-  stype: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  sname: {
+  profession: {
     type: String,
     required: true,
     trim: true,
@@ -46,9 +41,9 @@ const storeSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  address: 
+  phone: 
     {
-      type: String,
+      type: Number,
       required: true,
     },
   tokens: [
@@ -63,7 +58,7 @@ const storeSchema = new mongoose.Schema({
 
 // Hashing Passwords
 
-storeSchema.pre("save", async function (next) {
+workerSchema.pre("save", async function (next) {
   if (this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 10);
     console.log(this.password);
@@ -71,7 +66,7 @@ storeSchema.pre("save", async function (next) {
   next();
 });
 
-storeSchema.methods.generateAuthToken = async function () {
+workerSchema.methods.generateAuthToken = async function () {
   try {
     let token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
     this.tokens = this.tokens.concat({ token: token });
@@ -85,6 +80,6 @@ storeSchema.methods.generateAuthToken = async function () {
 
 
 
-const Store = mongoose.model("STORE", storeSchema);
+const Worker = mongoose.model("WORKER", workerSchema);
 
-module.exports = Store;
+module.exports = Worker;

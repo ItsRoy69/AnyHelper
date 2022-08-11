@@ -5,6 +5,16 @@ import { MdExpandMore } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+  
+
+  const token = localStorage.getItem("token");
+
+  const signOut = () => {
+    localStorage.clear();
+  }
+
+
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg ">
@@ -31,24 +41,40 @@ const Navbar = () => {
                   Blogs
                 </a>
               </li>
+
+
               <li className="nav-item">
                 <a className="nav-link" href="#services">
                   Services
                 </a>
               </li>
+
+              {!token?
+              <>
               <li className="nav-item">
                 <a className="nav-link" href="/shopregister">
                   Register Shop
                 </a>
-              </li>              
+              </li> 
+  
+          
+  
               <li className="nav-item">
                 <a className="nav-link" href="/workerregistration">
                   Register as Professional
                 </a>
               </li>
+           
+
               <Link to="/servicesignup" className="nav-btnlink">
                 <button className="btn">Sign Up</button>
               </Link>
+              </>
+              : 
+              <Link to="/" className="nav-btnlink">
+              <button className="btn" onClick={signOut}>Logout</button>
+            </Link>
+          }
             </ul>
           </div>
         </div>

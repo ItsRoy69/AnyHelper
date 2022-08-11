@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import "../styles/UserDashboard.css";
 
@@ -10,16 +10,30 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import EditUserDashboard from "../components/EditUserDashboard";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsPencilSquare } from "react-icons/bs";
 
 
 const UserDashboard = () => {
 
+    const navigate = useNavigate();
+
     const [modal8, setModal8] = useState(false);
 
+    const token = localStorage.getItem("token");
+    const user = localStorage.getItem("store_info") || localStorage.getItem("worker_info") || localStorage.getItem("customer_info");
+
+
+    useEffect(() => {
+        if (!user){
+         navigate("/")   
+        }
+    },[])
+
   return (
-    <>      
+    <>
+    {token ? (
+      <>
         <Navbar />
             <div className="UserDashboard">
                 <div className="UserDasboard_left">
@@ -259,6 +273,8 @@ const UserDashboard = () => {
 
                 
             </div>
+            </>
+            ) : null}
         <Footer />
     </>
   )
