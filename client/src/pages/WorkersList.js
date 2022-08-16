@@ -46,6 +46,10 @@ const WorkersList = ({ customer }) => {
   //   };
 
 
+
+  const type = localStorage.getItem("type");
+
+
   return (
     <>
       <Navbar />
@@ -111,18 +115,37 @@ const WorkersList = ({ customer }) => {
                             <h6>Phone : worker.phoneNo</h6>
                             <h6>worker.address</h6>
                             <h5>worker.distance km</h5>
-                            <h5>5<RiStarFill /></h5>
-                            <button className="workerlist_btn"
-                              // onClick={() => {
-                              //   fetch(
-                              //     `http://localhost:5000/send-text?recipient=${num}&customer=${customer.userName}&lat=${customer.latitude}&lon=${customer.longitude}`
-                              //   ).catch((err) => console.error(err));
-                              //   alert(
-                              //     `location shared to ${worker.occupation} ${worker.name}`
-                              //   );
-                              // }}
-                            >Send location to worker.name
-                            </button>
+                            <h5>5<RiStarFill /></h5>                           
+
+                            {type == 0?
+                                    <>
+                                    <button className="workerlist_btn"
+                                        // onClick={() => {
+                                        //   fetch(
+                                        //     `http://localhost:5000/send-text?recipient=${num}&customer=${customer.userName}&lat=${customer.latitude}&lon=${customer.longitude}`
+                                        //   ).catch((err) => console.error(err));
+                                        //   alert(
+                                        //     `location shared to ${worker.occupation} ${worker.name}`
+                                        //   );
+                                        // }}
+                                      >Message
+                                      </button>                                  
+                                </>
+                                    : 
+                                    <>
+                                      <button className="workerlist_btn"
+                                        // onClick={() => {
+                                        //   fetch(
+                                        //     `http://localhost:5000/send-text?recipient=${num}&customer=${customer.userName}&lat=${customer.latitude}&lon=${customer.longitude}`
+                                        //   ).catch((err) => console.error(err));
+                                        //   alert(
+                                        //     `location shared to ${worker.occupation} ${worker.name}`
+                                        //   );
+                                        // }}
+                                      >Send location to worker.name
+                                      </button>
+                                    </>
+                                }
                           </div>
                         </div>
                       </div>

@@ -17,7 +17,7 @@ const Items = () => {
                         <img src={items} alt="" className="items_image" />
                         <div className="items_carddetails">
                             <h5 className="items_para">Lorem Ipsum Items</h5>  
-                            <button className="items_service_button">Items</button>
+                            <button className="items_service_button">Buy</button>
                         </div>                  
                     </div>
                 </div>

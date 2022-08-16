@@ -47,7 +47,7 @@ const UserDashboard = () => {
                         <div className="UserDasboard_ProfileName">
                             <span>Sayak Sengupta</span>                       
                             <span>sayaktharki@gmail.com</span>
-                            {type == 0?
+                            {type === 0?
                                 <>  
                                     <div className="UserDasboard_itemsStatus">
                                         <div>
@@ -59,24 +59,24 @@ const UserDashboard = () => {
                                     <span>Sonagachi te bari</span>
                                 </>
                                 :
-                                <></>
+                                null
                             }
 
-                            {type == 1?
+                            {type === 1?
                                 <>  
                                     <span>99876543210</span>
                                     <span>Bashon Maje</span>
                                 </>
                                 :
-                                <></>
+                                null
                             }
 
-                            {type == 2?
+                            {type === 2?
                                 <>  
                                     <span>Sonagachi te bari</span>
                                 </>
                                 :
-                                <></>
+                                null
                             }
                             <div className="Userboard_edit">
                                 <BsPencilSquare onClick={()=>setModal8(true)} className='Userboard_pencil'/>
@@ -88,25 +88,25 @@ const UserDashboard = () => {
                             <hr />
                             <div>     
 
-                                {type == 0?
+                                {type === 0?
                                     <>
                                     <div className="UserDasboard_itemsfollow">
                                         <span>11</span>
                                         <span>Services</span>
                                     </div>                                    
                                 </>
-                                    : <></>
+                                    : null
                                 }
                            
-                                {type == 1?
+                                {type === 1?
                                     <div className="UserDasboard_itemsfollow">
                                         <span>11</span>
                                         <span>Services</span>
                                     </div>
-                                    : <></>
+                                    : null
                                 }
 
-                                {type == 2?
+                                {type === 2?
                                     <>
                                         <div className="UserDasboard_itemsfollow">
                                             <span>11</span>
@@ -118,7 +118,7 @@ const UserDashboard = () => {
                                             <span>Times ordered</span>
                                         </div> 
                                     </>
-                                    : <></>
+                                    : null
                                 }
                                                               
                             </div>
@@ -132,8 +132,154 @@ const UserDashboard = () => {
 
                 <div className="UserDasboard_mid">
                     <div className="UserDasboard_midCard">
+
+                    {type === 0?
+                        <div className='column'>
+                            <div className="row">
+                                <div className="userdashboardlist_card"  style={{ width : "1000px"}}>
+                                    <div className="card userdashboardCard text-white card-has-bg click-col"
+                                        style={{  backgroundImage:`url(${background1})` }}
+                                    >
+                                        <div className="card-img-overlay d-flex flex-column">
+                                            <div className="card-body">
+                                                <h6>WORKERS</h6>
+                                            </div>
+                                            <div className="card-footer">
+                                                <div className="media">                                                    
+                                                    <div className="media-body">
+                                                        <Link to= "/workerslist" className="userdashboardlist_btn"
+                                                        >Checkout
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                  
+                                </div>
+                            </div>
+                            <div className="row">
+                                <h1 style={{fontFamily: "'Jost', sans-serif", fontStyle: "normal", fontWeight:" 700", padding: "20px"}}>Items in Shop</h1>
+                                
+                                <div className="col-lg-3 mb-2">
+                                    <div className="items_card">
+                                        <img src={background1} alt="" className="items_image" />
+                                        <div className="items_carddetails">
+                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
+                                            <button className="items_service_button">Delete</button>
+                                        </div>                  
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-3 mb-2">
+                                    <div className="items_card">
+                                        <img src={background1} alt="" className="items_image" />
+                                        <div className="items_carddetails">
+                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
+                                            <button className="items_service_button">Delete</button>
+                                        </div>                  
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-3 mb-2">
+                                    <div className="items_card">
+                                        <img src={background1} alt="" className="items_image" />
+                                        <div className="items_carddetails">
+                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
+                                            <button className="items_service_button">Delete</button>
+                                        </div>                  
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-3 mb-2">
+                                    <div className="items_card">
+                                        <img src={background1} alt="" className="items_image" />
+                                        <div className="items_carddetails">
+                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
+                                            <button className="items_service_button">Delete</button>
+                                        </div>                  
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-3 mb-2">
+                                    <div className="items_card">
+                                        <img src={background1} alt="" className="items_image" />
+                                        <div className="items_carddetails">
+                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
+                                            <button className="items_service_button">Delete</button>
+                                        </div>                  
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        : null
+                    }
+                        
+
+
+                        {type === 1?
+                        <div className='column'>
+                            <div className="row">
+                                <div className="userdashboardlist_card"  style={{ width : "1000px"}}>
+                                    <div className="card userdashboardCard text-white card-has-bg click-col"
+                                        style={{  backgroundImage:`url(${background1})` }}
+                                    >
+                                        <div className="card-img-overlay d-flex flex-column">
+                                            <div className="card-body">
+                                                <h6>SHOPS</h6>
+                                            </div>
+                                            <div className="card-footer">
+                                                <div className="media">                                                    
+                                                    <div className="media-body">
+                                                        <Link to= "/shoplist" className="userdashboardlist_btn"
+                                                        >Checkout
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                  
+                                </div>
+                            </div>
+                            <div className="row">
+                                <h1 style={{fontFamily: "'Jost', sans-serif", fontStyle: "normal", fontWeight:" 700", padding: "20px"}}>Services you can provide</h1>
+
+                                <div className="col-lg-3 mb-3">
+                                    <div className="userdashboardlist_card">
+                                        <div className="card userdashboardCard text-white card-has-bg click-col"
+                                            style={{  backgroundImage:`url(${background1})` }}
+                                        >
+                                            <div className="card-img-overlay d-flex flex-column">
+                                                <div className="card-body">
+                                                    <h6>NAME</h6>
+                                                    <h6>Mail ID</h6>
+                                                    <h6>Address</h6>
+                                                </div>
+                                                <div className="card-footer">
+                                                    <div className="media">                                                    
+                                                        <div className="media-body">
+                                                            <Link to= "/womenservicelist" className="userdashboardlist_btn"
+                                                            >Message
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                  
+                                    </div>
+                                </div>
+
+
+                                
+                                                                      
+                            </div>
+                        </div>
+
+                        : null
+                    }
+                    {type === 2?
                         <div className="row">
-              
+                                
                             <div className="col-lg-3 mb-3">
                                 <div className="userdashboardlist_card">
                                     <div className="card userdashboardCard text-white card-has-bg click-col"
@@ -322,8 +468,11 @@ const UserDashboard = () => {
                                 </div>
                             </div>
 
-                            
                         </div>
+
+                        : null
+                    }
+
                     </div>
                 </div>
                 

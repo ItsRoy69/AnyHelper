@@ -144,8 +144,29 @@ useEffect(() => {
                 name="profession"
                 onChange={inputsHandler}
                 value={worker.profession}
-              />
-            </div>
+                list="browsers"
+              />   
+
+              <datalist id="browsers">
+                <option value="Bathroom cleaning" />
+                <option value="Kitchen cleaning" />
+                <option value="Mini cleaning services" />
+                <option value="Pest control" />
+                <option value="Full home cleaning" />
+                <option value="Disinfection" />
+                <option value="Shave/Beard Grooming" />
+                <option value="Men Salon" />
+                <option value="Therapy" />
+                <option value="Spa" />
+                <option value="Women Salon" />
+                <option value="Waxing" />
+                <option value="Facial" />
+                <option value="Mechanics" />
+                <option value="Electricians" />
+                <option value="Plumbers" />
+              </datalist>  
+
+            </div>            
             <div className="worker_registration_password">
               <input
                 type="password"

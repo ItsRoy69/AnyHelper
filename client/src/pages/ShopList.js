@@ -42,6 +42,7 @@ const ShopList = ({ customer }) => {
   //     setWorkers(workers.sort(compareDistance));
   //   };
 
+  const type = localStorage.getItem("type");
 
   return (
     <>
@@ -103,9 +104,27 @@ const ShopList = ({ customer }) => {
                     <h5>Owner : Lorem Owner</h5>
                     <h5>Phone : 9876543210</h5>
                     <h5>Mail : Lorem@gmail.com</h5>
-                    <Link to="/items">
-                      <button className="signup_service_button">Buy</button>
-                    </Link>
+                    {type === 1?
+                      <>
+                        <button className="signup_service_button"
+                          // onClick={() => {
+                          //   fetch(
+                          //     `http://localhost:5000/send-text?recipient=${num}&customer=${customer.userName}&lat=${customer.latitude}&lon=${customer.longitude}`
+                          //   ).catch((err) => console.error(err));
+                          //   alert(
+                          //     `location shared to ${worker.occupation} ${worker.name}`
+                          //   );
+                          // }}
+                        >Message
+                        </button>                                  
+                      </>
+                      : 
+                      <Link to="/items">
+                        <button className="signup_service_button">Buy</button>
+                      </Link>
+                    }
+
+                    
                   </div>                  
                 </div>
               </div>
