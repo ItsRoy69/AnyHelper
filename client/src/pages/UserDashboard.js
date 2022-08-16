@@ -29,6 +29,8 @@ const UserDashboard = () => {
          navigate("/")   
         }
     },[])
+   
+    const type = localStorage.getItem("type");
 
   return (
     <>
@@ -43,8 +45,39 @@ const UserDashboard = () => {
                             <img src={profile} alt="ProfileImage"  />
                         </div>
                         <div className="UserDasboard_ProfileName">
-                            <span>Sayak Sengupta</span>
-                            <span>Madhyamgram er sonagachi te bari</span>
+                            <span>Sayak Sengupta</span>                       
+                            <span>sayaktharki@gmail.com</span>
+                            {type == 0?
+                                <>  
+                                    <div className="UserDasboard_itemsStatus">
+                                        <div>
+                                            <span>Shop Type</span>
+                                            <span>AShop Name</span>
+                                        </div>
+                                        
+                                    </div>                                    
+                                    <span>Sonagachi te bari</span>
+                                </>
+                                :
+                                <></>
+                            }
+
+                            {type == 1?
+                                <>  
+                                    <span>99876543210</span>
+                                    <span>Bashon Maje</span>
+                                </>
+                                :
+                                <></>
+                            }
+
+                            {type == 2?
+                                <>  
+                                    <span>Sonagachi te bari</span>
+                                </>
+                                :
+                                <></>
+                            }
                             <div className="Userboard_edit">
                                 <BsPencilSquare onClick={()=>setModal8(true)} className='Userboard_pencil'/>
                                 {modal8 && <EditUserDashboard setModal={setModal8} />}
@@ -53,21 +86,46 @@ const UserDashboard = () => {
                         
                         <div className="UserDasboard_itemsStatus">
                             <hr />
-                            <div>
-                                <div className="UserDasboard_itemsfollow">
-                                    <span>11</span>
-                                    <span>Services</span>
-                                </div>
-                                <div className="UserDasboard_itemsvl"></div>
-                                <div className="UserDasboard_itemsfollow">
-                                    <span>33</span>
-                                    <span>Times ordered</span>
-                                </div>                               
+                            <div>     
+
+                                {type == 0?
+                                    <>
+                                    <div className="UserDasboard_itemsfollow">
+                                        <span>11</span>
+                                        <span>Services</span>
+                                    </div>                                    
+                                </>
+                                    : <></>
+                                }
+                           
+                                {type == 1?
+                                    <div className="UserDasboard_itemsfollow">
+                                        <span>11</span>
+                                        <span>Services</span>
+                                    </div>
+                                    : <></>
+                                }
+
+                                {type == 2?
+                                    <>
+                                        <div className="UserDasboard_itemsfollow">
+                                            <span>11</span>
+                                            <span>Services</span>
+                                        </div>
+                                        <div className="UserDasboard_itemsvl"></div>
+                                        <div className="UserDasboard_itemsfollow">
+                                            <span>33</span>
+                                            <span>Times ordered</span>
+                                        </div> 
+                                    </>
+                                    : <></>
+                                }
+                                                              
                             </div>
-                            <hr />
+                            <hr />                            
                             <Link to="/chatbox" className="UserDasboard_itemschat">
                                 <span>Chat</span>
-                            </Link>
+                            </Link>                            
                         </div>
                     </div>
                 </div>
