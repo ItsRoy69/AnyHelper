@@ -47,7 +47,7 @@ const UserDashboard = () => {
                         <div className="UserDasboard_ProfileName">
                             <span>Sayak Sengupta</span>                       
                             <span>sayaktharki@gmail.com</span>
-                            {type === 0?
+                            {type == 0?
                                 <>  
                                     <div className="UserDasboard_itemsStatus">
                                         <div>
@@ -62,7 +62,7 @@ const UserDashboard = () => {
                                 null
                             }
 
-                            {type === 1?
+                            {type == 1?
                                 <>  
                                     <span>99876543210</span>
                                     <span>Bashon Maje</span>
@@ -71,7 +71,7 @@ const UserDashboard = () => {
                                 null
                             }
 
-                            {type === 2?
+                            {type == 2?
                                 <>  
                                     <span>Sonagachi te bari</span>
                                 </>
@@ -88,7 +88,7 @@ const UserDashboard = () => {
                             <hr />
                             <div>     
 
-                                {type === 0?
+                                {type == 0?
                                     <>
                                     <div className="UserDasboard_itemsfollow">
                                         <span>11</span>
@@ -98,7 +98,7 @@ const UserDashboard = () => {
                                     : null
                                 }
                            
-                                {type === 1?
+                                {type == 1?
                                     <div className="UserDasboard_itemsfollow">
                                         <span>11</span>
                                         <span>Services</span>
@@ -106,7 +106,7 @@ const UserDashboard = () => {
                                     : null
                                 }
 
-                                {type === 2?
+                                {type == 2?
                                     <>
                                         <div className="UserDasboard_itemsfollow">
                                             <span>11</span>
@@ -133,7 +133,7 @@ const UserDashboard = () => {
                 <div className="UserDasboard_mid">
                     <div className="UserDasboard_midCard">
 
-                    {type === 0?
+                    {type == 0?
                         <div className='column'>
                             <div className="row">
                                 <div className="userdashboardlist_card"  style={{ width : "1000px"}}>
@@ -217,7 +217,7 @@ const UserDashboard = () => {
                         
 
 
-                        {type === 1?
+                        {type == 1?
                         <div className='column'>
                             <div className="row">
                                 <div className="userdashboardlist_card"  style={{ width : "1000px"}}>
@@ -258,7 +258,7 @@ const UserDashboard = () => {
                                                 <div className="card-footer">
                                                     <div className="media">                                                    
                                                         <div className="media-body">
-                                                            <Link to= "/womenservicelist" className="userdashboardlist_btn"
+                                                            <Link to= "/wvicelist" className="userdashboardlist_btn"
                                                             >Message
                                                             </Link>
                                                         </div>
@@ -277,7 +277,7 @@ const UserDashboard = () => {
 
                         : null
                     }
-                    {type === 2?
+                    {type == 2?
                         <div className="row">
                                 
                             <div className="col-lg-3 mb-3">

@@ -104,7 +104,7 @@ const ShopList = ({ customer }) => {
                     <h5>Owner : Lorem Owner</h5>
                     <h5>Phone : 9876543210</h5>
                     <h5>Mail : Lorem@gmail.com</h5>
-                    {type === 1?
+                    {type == 1?
                       <>
                         <button className="signup_service_button"
                           // onClick={() => {
