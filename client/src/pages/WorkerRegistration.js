@@ -168,13 +168,13 @@ useEffect(() => {
           <div className="worker_registration_join_button_div">
             {window.innerWidth < 430 ? (
               <Link to="sign-up" className="worker_registration-button">
-                <button className="btn btn-warning worker_join_button" type="submit" onClick={submitHandler}>
+                <button className="worker_join_btn" type="submit" onClick={submitHandler}>
                   Register
                 </button>
               </Link>
             ) : (
               <Link to="sign-up" className="worker_registration-button">
-                 <button className="btn btn-warning worker_join_button" type="submit" onClick={submitHandler}>
+                 <button className="worker_join_btn" type="submit" onClick={submitHandler}>
                   Register
                 </button>
               </Link>

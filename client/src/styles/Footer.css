@@ -64,6 +64,7 @@
   color: #4b4c4d;
   position: absolute;
   min-width: 100%;
+  margin-top: 5vh;
 }
 
 .footer_clean h3 {
