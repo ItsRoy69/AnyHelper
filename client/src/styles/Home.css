@@ -219,6 +219,29 @@
   .banner_pic {
     display: none;
   }
+  .banner_para {
+    margin: 5px;
+  }
+  .banner_para h1 {
+    text-align: center;
+    margin: 5px;
+  }
+  .banner_about {
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 28px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .getjob_btndiv {
+    display: flex;
+  }
+
+  .banner-btnlink {
+    margin: auto;
+  }
+
   .about {
     flex-direction: column;
     text-align: center;
