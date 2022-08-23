@@ -72,7 +72,17 @@ customerSchema.methods.generateAuthToken = async function () {
   }
 };
 
-
+customerSchema.methods.deleteToken = async function (authToken) {
+  try {
+    this.tokens = this.tokens.filter((currElem) => {
+    return currElem.token !== authToken;
+    });
+    await this.save();
+    return authToken;
+  } catch (e) {
+    console.log(`Failed to delete token --> ${e}`);
+  }
+};
 
 
 const Customer = mongoose.model("CUSTOMER", customerSchema);

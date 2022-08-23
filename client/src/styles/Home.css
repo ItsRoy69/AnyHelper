@@ -3,9 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
 
-.carousel-item {
-  height: 60vh;
-}
+/* .carousel-item {
+  min-height: 60vh;
+  max-height: 60vh;
+} */
 
 .banner {
   margin-top: 20vh;
@@ -216,9 +217,41 @@
 }
 
 @media (max-width: 430px) and (min-width: 0px) {
+  .carousel-indicators {
+    display: none;
+  }
   .banner_pic {
     display: none;
   }
+  .banner_para {
+    margin: 5px;
+  }
+  .banner_para h1 {
+    text-align: center;
+    margin: 5px;
+  }
+  .banner_about {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 28px !important;
+    max-width: 70%;
+
+    margin: auto;
+    text-align: center;
+  }
+
+  .getjob_btndiv {
+    display: flex;
+  }
+
+  .banner-btnlink {
+    margin: auto;
+  }
+
+  .down_button {
+    display: none;
+  }
+
   .about {
     flex-direction: column;
     text-align: center;

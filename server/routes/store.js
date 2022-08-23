@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Store = require('../models/stores');
 const bcrypt = require("bcrypt");
-const auth = require("../middleware/auth");
-
+const jwt = require("jsonwebtoken");
 
 router.get("/", (req, res) => {
   res.json({ message: "This is the store api" });
@@ -99,17 +98,40 @@ router.post("/register", async (req, res) => {
     }
   });
 
-  router.get("/logout", auth, async (req, res) => {
-    try {
-      console.log(req.rootUser.tokens);
-      req.rootUser.tokens = req.rootUser.tokens.filter((currElem) => {
-        return currElem.token != req.token;
-      });
-      res.status(200).send({ message: "logged out successfully!" });
-      await req.rootUser.save();
-    } catch (e) {
-      res.status(500).send(e);
+  router.post("/logout", async (req, res) => {
+    try{
+   const authToken = req.body.token;
+
+   console.log(authToken);
+ 
+
+   const verifyToken = jwt.verify(authToken,process.env.SECRET_KEY);
+    if(!authToken){
+      return res.status(401).json({ error: "Unauthorized. No Token Provided." });
     }
+   const rootUser = await Store.findOne({_id:verifyToken._id});
+   const Tokens = rootUser.tokens;
+
+   const check = Tokens.map((elem) => {
+    return elem.token == authToken;
+   })
+   let response;
+   console.log(check);
+
+   if(check.includes(true)){  
+   response = await rootUser.deleteToken(authToken);
+   }else{
+    res.status(404).json({ message: "Invalid Token." });
+   }
+ 
+
+  if(response){
+    res.json({ message: "logged out successfully!" });
+  }
+  }catch (error) {
+    res.status(401).send("Unauthorized : No token provided");
+    console.log(error);
+}
   });
 
 

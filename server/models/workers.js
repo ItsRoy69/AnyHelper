@@ -77,7 +77,17 @@ workerSchema.methods.generateAuthToken = async function () {
   }
 };
 
-
+workerSchema.methods.deleteToken = async function (authToken) {
+  try {
+    this.tokens = this.tokens.filter((currElem) => {
+    return currElem.token !== authToken;
+    });
+    await this.save();
+    return authToken;
+  } catch (e) {
+    console.log(`Failed to delete token --> ${e}`);
+  }
+};
 
 
 const Worker = mongoose.model("WORKER", workerSchema);
