@@ -47,7 +47,7 @@ const ServiceLogin = () => {
         console.log(response);
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("type", 2);
-          localStorage.setItem("customer_info", JSON.stringify(response.data.user));
+          localStorage.setItem("user", JSON.stringify(response.data.user));
           alert("Logged in Successfully!");
           navigate('/userdashboard');
       }).catch((e) => {

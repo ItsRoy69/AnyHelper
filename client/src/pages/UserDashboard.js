@@ -21,7 +21,7 @@ const UserDashboard = () => {
     const [modal8, setModal8] = useState(false);
 
     const token = localStorage.getItem("token");
-    const user = localStorage.getItem("store_info") || localStorage.getItem("worker_info") || localStorage.getItem("customer_info");
+    const user = JSON.parse(localStorage.getItem("user"));
 
 
     useEffect(() => {
@@ -45,18 +45,18 @@ const UserDashboard = () => {
                             <img src={profile} alt="ProfileImage"  />
                         </div>
                         <div className="UserDasboard_ProfileName">
-                            <span>Sayak Sengupta</span>                       
-                            <span>sayaktharki@gmail.com</span>
+                            <span>{user.admin}</span>                       
+                            <span>{user.email}</span>
                             {type == 0?
                                 <>  
                                     <div className="UserDasboard_itemsStatus">
                                         <div>
-                                            <span>Shop Type</span>
-                                            <span>AShop Name</span>
+                                            <span>{user.stype}</span>
+                                            <span>{user.sname}</span>
                                         </div>
                                         
                                     </div>                                    
-                                    <span>Sonagachi te bari</span>
+                                    <span>{user.address}</span>
                                 </>
                                 :
                                 null
@@ -64,8 +64,8 @@ const UserDashboard = () => {
 
                             {type == 1?
                                 <>  
-                                    <span>99876543210</span>
-                                    <span>Bashon Maje</span>
+                                    <span>{user.phone}</span>
+                                    <span>{user.profession}</span>
                                 </>
                                 :
                                 null
@@ -73,7 +73,7 @@ const UserDashboard = () => {
 
                             {type == 2?
                                 <>  
-                                    <span>Sonagachi te bari</span>
+                                    <span>{user.address}</span>
                                 </>
                                 :
                                 null

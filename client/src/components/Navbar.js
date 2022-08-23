@@ -2,17 +2,76 @@ import React from 'react';
 import "../styles/Navbar.css";
 
 import { MdExpandMore } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+
 
 const Navbar = () => {
 
-  
+  const navigate = useNavigate();
 
   const token = localStorage.getItem("token");
+  const type = localStorage.getItem("type");
 
-  const signOut = () => {
+
+
+  const signOut = async () => { 
+    if(type==0){
+    await axios
+    .post("http://localhost:8000/stores/logout", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      token : token
+    })
+    .then((response) => {
+    console.log(response);   
     localStorage.clear();
+    navigate('/');
+    }).catch((e) => {
+      console.log(e);
+    })
   }
+  else if(type==1){
+    await axios
+    .post("http://localhost:8000/workers/logout", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      token : token
+    })
+    .then((response) => {
+    console.log(response);   
+    localStorage.clear();
+    navigate('/');
+    }).catch((e) => {
+      console.log(e);
+    })
+  }
+  else{
+    await axios
+    .post("http://localhost:8000/customers/logout", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      token : token
+    })
+    .then((response) => {
+    console.log(response);   
+    localStorage.clear();
+    navigate('/');
+    }).catch((e) => {
+      console.log(e);
+    })
+  }
+  }
+
 
 
   return (
@@ -71,9 +130,15 @@ const Navbar = () => {
               </Link>
               </>
               : 
-              <Link to="/" className="nav-btnlink">
+              <>
+           
+            <a className="nav-link" href="/userdashboard">
+                  Dashboard
+            </a>
+            <Link to="/" className="nav-btnlink">
               <button className="btn" onClick={signOut}>Logout</button>
             </Link>
+            </>
           }
             </ul>
           </div>
