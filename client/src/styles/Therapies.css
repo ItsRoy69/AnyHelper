@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
 
-.therapiescardbody {
+.cleaningcardbody {
   width: 1000px;
   background-color: #eff5ff;
   padding: 20px;
@@ -23,23 +23,23 @@
   justify-content: center;
 }
 
-.therapies_box {
+.cleaning_box {
   text-align: center;
 }
 
-.therapies_box img {
+.cleaning_box img {
   width: 100px;
   height: 100px;
 }
 
-.therapiescardpara {
+.cleaningcardpara {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 900px;
 }
 
-.headtherapiescard h1 {
+.headcleaningcard h1 {
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -51,7 +51,7 @@
 }
 
 @media (max-width: 430px) and (min-width: 0px) {
-  .headtherapiescard h1 {
+  .headcleaningcard h1 {
     text-align: center !important ;
     margin-bottom: 1rem;
   }
@@ -60,22 +60,22 @@
     display: flex;
     flex-direction: column;
   }
-  .therapiescardbody {
+  .cleaningcardbody {
     width: auto;
   }
-  .headtherapiescard {
+  .headcleaningcard {
     max-width: 320px;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
-  .therapiescardpara {
+  .cleaningcardpara {
     max-width: 320px;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  .therapies {
+  .cleaning {
     max-width: 60px;
     max-height: 60px;
   }
