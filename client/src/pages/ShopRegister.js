@@ -149,8 +149,13 @@ if(latitude && longitude){
                   <input type="text" className="register_shop_type_input" placeholder="Shop type" name="stype" onChange={inputsHandler} value={shop.stype} />
                 </div>
                 <div className="register_shop_name">
-                  <input type="text" className="register_shop_name_input" placeholder="Shop name" name="sname" onChange={inputsHandler} value={shop.sname} />
+                  <input type="text" className="register_shop_name_input" placeholder="Shop name" name="sname" onChange={inputsHandler} value={shop.sname} list="browsers" />
                 </div>
+                <datalist id="browsers">
+                  <option value="Mechanical Shops" />
+                  <option value="Electrical Shops" />
+                  <option value="Plumbing Shops" />
+                </datalist>  
               </div>     
               <div className="register_shop_address">
                 <textarea type="text" className="register_shop_address_input" placeholder="Shop address" name="address" onChange={inputsHandler} value={shop.address} style={{width: "416px"}} />
