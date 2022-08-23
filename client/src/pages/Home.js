@@ -155,30 +155,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/*
-            <div className="carousel-item">
-              <div className="banner_slider">
-                <div className="banner_container">
-                  <div className="banner_para">
-                    <h1>BUY ITEMS FROM SHOPS</h1>
-                    <p className="banner_about">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
-                    </p>
-                    <Link to="/shoplist" className="banner-btnlink">
-                      <button className="banner_btn">BUY ITEMS</button>
-                    </Link>
-                    <div className="down_button">
-                      <BsArrowDownCircle className="down_button_circle" /> ABOUT
-                    </div>
-                  </div>
-                  <div className="banner_pic">
-                    <img src={banner3} alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-             */}
+
           </div>
 
           <button
