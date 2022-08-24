@@ -96,7 +96,7 @@ const ServiceSignUp = () => {
               <div className="signup_service_name">
                 <input
                   type="text"
-                  className="signup_service_name_input"
+                  className="service_signup_inputs signup_service_name_input "
                   placeholder="Name"
                   style={{ width: "416px" }}
                   name="name"
@@ -107,7 +107,7 @@ const ServiceSignUp = () => {
               <div className="signup_service_mail">
                 <input
                   type="text"
-                  className="signup_service_mail_input"
+                  className="service_signup_inputs signup_service_mail_input "
                   placeholder="Mail ID"
                   style={{ width: "416px" }}
                   name="email"
@@ -118,7 +118,7 @@ const ServiceSignUp = () => {
               <div className="signup_service_password">
                 <input
                   type="password"
-                  className="signup_service_password_input"
+                  className="service_signup_inputs signup_service_password_input "
                   placeholder="Password"
                   style={{ width: "416px" }}
                   name="password"
@@ -129,7 +129,7 @@ const ServiceSignUp = () => {
               <div className="signup_service_address">
                 <textarea
                   type="text"
-                  className="signup_service_password_input"
+                  className="service_signup_inputs signup_service_password_input "
                   placeholder="Address"
                   style={{ width: "416px" }}
                   name="address"
@@ -138,15 +138,17 @@ const ServiceSignUp = () => {
                 />
               </div>
               <div className="signup_service_buttons">
-                <Link to="sign-up">
-                  <button
-                    className="signup_service_button"
-                    type="submit"
-                    onClick={submitHandler}
-                  >
-                    Signup
-                  </button>
-                </Link>
+                <div className="signup_service_signup_button_div">
+                  <Link to="sign-up">
+                    <button
+                      className="signup_service_button"
+                      type="submit"
+                      onClick={submitHandler}
+                    >
+                      Signup
+                    </button>
+                  </Link>
+                </div>
                 <p className="signup_service-paralogin">
                   Already a member of this website ?
                   <Link to="/servicelogin" className="signup_service-login">
