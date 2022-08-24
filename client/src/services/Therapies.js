@@ -17,32 +17,32 @@ const Therapies = ({ setModal }) => {
   return (
     <>
       <div className='backdrop' onClick={()=>setModal(false)}>
-        <div className='therapiescardbody'>
-          <div className='headtherapiescard'>
+        <div className='cleaningcardbody'>
+          <div className='headcleaningcard'>
             <h1>Therapies at home</h1>
-            <div className='therapiescardpara'>
-              <div className="therapies_box">
-                <img src={therapies1} alt="" className="therapies" />
+            <div className='cleaningcardpara'>
+              <div className="cleaning_box">
+                <img src={therapies1} alt="" className="cleaning" />
                 <p>Work Distress</p>
               </div>
-              <div className="therapies_box">
-                <img src={therapies2} alt="" className="therapies" />
+              <div className="cleaning_box">
+                <img src={therapies2} alt="" className="cleaning" />
                 <p>Pain Relief</p>
               </div>
-              <div className="therapies_box">
-                <img src={therapies3} alt="" className="therapies" />
+              <div className="cleaning_box">
+                <img src={therapies3} alt="" className="cleaning" />
                 <p>Stress Relief</p>
               </div>
-              <div className="therapies_box">
-                <img src={therapies4} alt="" className="therapies" />
+              <div className="cleaning_box">
+                <img src={therapies4} alt="" className="cleaning" />
                 <p>Therapy</p>
               </div>
-              <div className="therapies_box">
-                <img src={therapies5} alt="" className="therapies" />
+              <div className="cleaning_box">
+                <img src={therapies5} alt="" className="cleaning" />
                 <p>Spa</p>
               </div>
-              <div className="therapies_box">
-                <img src={therapies6} alt="" className="therapies" />
+              <div className="cleaning_box">
+                <img src={therapies6} alt="" className="cleaning" />
                 <p>Beauty Retreat</p>
               </div>
             </div>   
