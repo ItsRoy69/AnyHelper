@@ -76,8 +76,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: 2rem;
 }
 
+.register_shop_items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 60vw;
+}
 .register_shop_mid {
   margin-left: 10vw;
 }
@@ -126,16 +133,25 @@
   text-decoration: none;
 }
 
+.register_shop_mid_list_heading {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
 /* //* MOBILE RESPONSIVENESS */
 
 @media (max-width: 430px) and (min-width: 0px) {
   .register_shop {
-    max-width: 400px;
+    max-width: 100vw;
+  }
+
+  .register_shop_mid {
+    margin-left: 0;
   }
   .register_shop_header {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
   }
 
   .register_shop_right {
@@ -144,13 +160,14 @@
     text-align: center;
   }
   .register_shop_banner {
-    max-width: 400px;
+    max-width: 350px;
+    margin-top: 1rem;
   }
-  .register_shop_inputs {
-    max-width: 400px;
-  }
+
   .register_shop_buttons {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .shop_register_button_div {
@@ -162,11 +179,6 @@
   .register_shop_left {
     width: 100%;
     text-align: center;
-  }
-
-  .register_shop_mid h4 {
-    text-align: center;
-    margin-top: 1rem;
   }
 
   .shop_registration-paralogin {
