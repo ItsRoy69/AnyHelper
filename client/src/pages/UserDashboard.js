@@ -32,6 +32,8 @@ const UserDashboard = () => {
    
     const type = localStorage.getItem("type");
 
+    console.log(user.items);
+
   return (
     <>
     {token ? (
@@ -159,56 +161,19 @@ const UserDashboard = () => {
                             </div>
                             <div className="row">
                                 <h1 style={{fontFamily: "'Jost', sans-serif", fontStyle: "normal", fontWeight:" 700", padding: "20px"}}>Items in Shop</h1>
-                                
+                                {user.items.map((item) => {
+                                return(
+                               
                                 <div className="col-lg-3 mb-2">
-                                    <div className="items_card">
-                                        <img src={background1} alt="" className="items_image" />
+                                    <div className="items_card" style={{height:"14rem"}}>
+                                        <img src={`https://source.unsplash.com/random/500×500/?${item}`} alt="" className="items_image" style={{width: "100%",objectFit:"cover", height:"10rem"}} />
                                         <div className="items_carddetails">
-                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
+                                            <h5 className="items_para">{item}</h5>  
                                             <button className="items_service_button">Delete</button>
                                         </div>                  
                                     </div>
                                 </div>
-
-                                <div className="col-lg-3 mb-2">
-                                    <div className="items_card">
-                                        <img src={background1} alt="" className="items_image" />
-                                        <div className="items_carddetails">
-                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
-                                            <button className="items_service_button">Delete</button>
-                                        </div>                  
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-3 mb-2">
-                                    <div className="items_card">
-                                        <img src={background1} alt="" className="items_image" />
-                                        <div className="items_carddetails">
-                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
-                                            <button className="items_service_button">Delete</button>
-                                        </div>                  
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-3 mb-2">
-                                    <div className="items_card">
-                                        <img src={background1} alt="" className="items_image" />
-                                        <div className="items_carddetails">
-                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
-                                            <button className="items_service_button">Delete</button>
-                                        </div>                  
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-3 mb-2">
-                                    <div className="items_card">
-                                        <img src={background1} alt="" className="items_image" />
-                                        <div className="items_carddetails">
-                                            <h5 className="items_para">Lorem Ipsum Items</h5>  
-                                            <button className="items_service_button">Delete</button>
-                                        </div>                  
-                                    </div>
-                                </div>
+                                )})}
 
                             </div>
                         </div>

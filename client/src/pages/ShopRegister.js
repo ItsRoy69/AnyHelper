@@ -58,24 +58,20 @@ if(latitude && longitude){
 // console.log("Latitude is : ", longitude);
 
 
-  const inputArr = [
-    {
-      type: "text",
-      id: 1,
-      value: ""
-    }
-  ];
+  // const inputArr = [
+  //   {
+  //     type: "text",
+  //     id: 1,
+  //     value: ""
+  //   }
+  // ];
 
-  const [arr, setArr] = useState(inputArr);
+  const [arr, setArr] = useState([""]);
 
   const addInput = () => {
     setArr(s => {
       return [
-        ...s,
-        {
-          type: "text",
-          value: ""
-        }
+        ...s,""
       ];
     });
   };
@@ -91,7 +87,8 @@ if(latitude && longitude){
         sname : shop.sname,
         stype : shop.stype,
         address : shop.address,
-        password : shop.password
+        password : shop.password,
+        items : arr
       };
       await axios
         .post("http://localhost:8000/stores/register", data, {
@@ -117,7 +114,7 @@ if(latitude && longitude){
     const index = e.target.id;
     setArr(s => {
       const newArr = s.slice();
-      newArr[index].value = e.target.value;
+      newArr[index] = e.target.value;
 
       return newArr;
     });

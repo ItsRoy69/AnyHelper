@@ -17,7 +17,8 @@ router.post("/register", async (req, res) => {
       stype,
       sname,
       password,
-      address
+      address,
+      items
     } = req.body;
   
     if (
@@ -28,7 +29,8 @@ router.post("/register", async (req, res) => {
         !password||
         !address||
         !latitude||
-        !longitude
+        !longitude||
+        !items
     ) {
       return res.status(422).json({ error: "Please fill all the fields." });
     }
@@ -50,7 +52,8 @@ router.post("/register", async (req, res) => {
             password,
             address,
             latitude,
-            longitude
+            longitude,
+            items
         });
   
         const registered = await store.save();

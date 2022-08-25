@@ -46,6 +46,13 @@ const storeSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  items : [
+    {
+    type: String,
+    required: true,
+    trim: true,
+    }
+  ],
   address: 
     {
       type: String,
