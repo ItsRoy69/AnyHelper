@@ -52,7 +52,6 @@ const ShopRegister = () => {
   // console.log("Latitude is : ", latitude);
   // console.log("Latitude is : ", longitude);
 
-<<<<<<< HEAD
   // const inputArr = [
   //   {
   //     type: "text",
@@ -60,30 +59,13 @@ const ShopRegister = () => {
   //     value: ""
   //   }
   // ];
-=======
-  const inputArr = [
-    {
-      type: "text",
-      id: 1,
-      value: "",
-    },
-  ];
->>>>>>> fd6f89624e0c06e2efec2a26a2e49963a63dcfdc
 
   const [arr, setArr] = useState([""]);
 
   const addInput = () => {
     setArr((s) => {
       return [
-<<<<<<< HEAD
         ...s,""
-=======
-        ...s,
-        {
-          type: "text",
-          value: "",
-        },
->>>>>>> fd6f89624e0c06e2efec2a26a2e49963a63dcfdc
       ];
     });
   };
@@ -96,18 +78,11 @@ const ShopRegister = () => {
         longitude: longitude,
         admin: shop.admin,
         email: shop.email,
-<<<<<<< HEAD
         sname : shop.sname,
         stype : shop.stype,
         address : shop.address,
         password : shop.password,
         items : arr
-=======
-        sname: shop.sname,
-        stype: shop.stype,
-        address: shop.address,
-        password: shop.password,
->>>>>>> fd6f89624e0c06e2efec2a26a2e49963a63dcfdc
       };
       await axios
         .post("http://localhost:8000/stores/register", data, {
