@@ -47,7 +47,7 @@ const WorkerLogin = () => {
           localStorage.setItem("type", 1);
           localStorage.setItem("user", JSON.stringify(response.data.user));
           alert("Logged in Successfully!");
-          navigate('/userdashboard');
+          navigate(`/userdashboard/?id=${response.data.user._id}`);
       }).catch((e) => {
         alert("Log in failed");
         console.log(e);

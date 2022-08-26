@@ -105,6 +105,20 @@ router.post("/register", async (req, res) => {
 
   })
 
+  router.get('/get-user/:id', async (req,res) => {
+    const _id = req.params.id;
+    if(!_id){
+      return res.status(422).json({ error: "No ID provided." });
+    }
+    const user = await Worker.findById(_id);
+    if(user){
+      res.status(200).json(user);
+    }else{
+      res.status(500).json({ error: "user not found" });
+    }
+  })
+  
+
   router.post("/logout", async (req, res) => {
     try{
    const authToken = req.body.token;

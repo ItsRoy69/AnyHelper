@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Store = require('../models/stores');
+const Worker = require('../models/workers');
 const Spaces = require('../models/chat');
+const Customer = require("../models/customers");
 
 
 
@@ -12,7 +14,7 @@ router.post("/create-space", async (req, res) => {
       if (!spaceName || !members || !chatPic || !chatHead) {
         return res.status(422).json({ error: "Please fill all the fields." });
       }
-      const userFound = await Store.findOne({ email: admin });
+      const userFound = await Store.findOne({ email: admin }) || await Worker.findOne({email : admin}) || await Customer.findOne({email : admin});
   
       const foundSpaces = await Spaces.find();
       const userName = userFound.admin || userFound.name;

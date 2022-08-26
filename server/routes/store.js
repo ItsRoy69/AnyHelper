@@ -101,6 +101,49 @@ router.post("/register", async (req, res) => {
     }
   });
 
+  router.get('/get-user/:id', async (req,res) => {
+    const _id = req.params.id;
+    if(!_id){
+      return res.status(422).json({ error: "No ID provided." });
+    }
+    const user = await Store.findById(_id);
+    if(user){
+      res.status(200).json(user);
+    }else{
+      res.status(500).json({ error: "user not found" });
+    }
+  })
+
+  router.get('/get-all-stores', async (req,res) => {
+    const allStores = await Store.find();
+    if(allStores){
+      res.status(200).json(allStores);
+    }else{
+      res.status(400).json({error : "No Store Found."})
+    }
+
+  })
+
+  router.post('/delete-item', async (req,res) => {
+    const email = req.body.email;
+    const deleteItem = req.body.item;
+
+    if(!email || !deleteItem){
+      return res.status(422).json({ error: "Please fill all the fields." });
+    }
+
+    const userFound = await Store.findOne({email : email});
+
+    const deleted = await userFound.deleteItems(deleteItem);
+
+    if(deleted){
+      res.json({ message: "Item deleted successfully!" });
+    }else{
+      res.json({ error: "Item could not be deleted!" });
+    }
+
+  })
+
   router.post("/logout", async (req, res) => {
     try{
    const authToken = req.body.token;

@@ -41,7 +41,7 @@ function App() {
             <Route path="/cleaninglist" exact element={<CleaningList />} />
             <Route path="/chatbox" exact element={<ChatBox />} />
             <Route path="/items" exact element={<Items />} />
-            <Route path="/userdashboard" exact element={<UserDashboard />} />
+            <Route path="/userdashboard/" exact element={<UserDashboard />} />
             <Route path="/mensalonlist" exact element={<MenSalonList />} />
           </Routes>
         </div>

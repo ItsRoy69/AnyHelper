@@ -5,6 +5,7 @@ import "../styles/UserDashboard.css";
 import profile from "../assets/workerman.png";
 import coverPicture from "../assets/cover.webp";
 import background1 from "../assets/workerslist1.png";
+import axios from 'axios';
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -14,29 +15,95 @@ import { Link, useNavigate } from "react-router-dom";
 import { BsPencilSquare } from "react-icons/bs";
 
 
+
+
 const UserDashboard = () => {
 
     const navigate = useNavigate();
 
     const [modal8, setModal8] = useState(false);
+    const [loggedInUser,setLoggedInUser] = useState("");
+    const type = localStorage.getItem("type");
+
+    
+
 
     const token = localStorage.getItem("token");
     const user = JSON.parse(localStorage.getItem("user"));
 
 
+    const [items, setItems] = useState("");
+
+    const fetchUser = async () => {
+    if(type==0){
+        await axios.get(`http://localhost:8000/stores/get-user/${user._id}`)
+        .then((response) => {
+            setLoggedInUser(response.data);
+            setItems(response.data.items);
+        }).catch((e) => {
+          console.log(e);
+        })
+    }if(type==1){
+        await axios.get(`http://localhost:8000/workers/get-user/${user._id}`)
+        .then((response) => {
+            setLoggedInUser(response.data);
+            setItems(response.data.items);
+        }).catch((e) => {
+          console.log(e);
+        })
+    }if(type==2){
+        await axios.get(`http://localhost:8000/customers/get-user/${user._id}`)
+        .then((response) => {
+            setLoggedInUser(response.data);
+            setItems(response.data.items);
+        }).catch((e) => {
+          console.log(e);
+        })
+    }
+      }
+
+      console.log(loggedInUser.items);
+
+    const deleteItem = async (item) => {
+
+        await axios.post('http://localhost:8000/stores/delete-item', {
+            email : user.email,
+            item : item
+        }).then((response) => {
+            console.log(response);
+            alert("Item Deleted From Shop!");
+        }).catch((e) => {
+            console.log(e);
+            alert("Item not deleted from shop.");
+        })
+
+        console.log(item);
+        if(items.includes(item)){
+            setItems
+            (items.filter((elem) => {
+                return elem !==item;
+            })
+            )
+        }
+
+    }
+
+
+
     useEffect(() => {
+        fetchUser();
         if (!user){
          navigate("/")   
         }
     },[])
    
-    const type = localStorage.getItem("type");
+ 
 
-    console.log(user.items);
+
 
   return (
     <>
-    {token ? (
+    {token && loggedInUser ? (
       <>
         <Navbar />
             <div className="UserDashboard">
@@ -161,15 +228,15 @@ const UserDashboard = () => {
                             </div>
                             <div className="row">
                                 <h1 style={{fontFamily: "'Jost', sans-serif", fontStyle: "normal", fontWeight:" 700", padding: "20px"}}>Items in Shop</h1>
-                                {user.items.map((item) => {
+                                {items.map((item,index) => {
                                 return(
                                
                                 <div className="col-lg-3 mb-2">
-                                    <div className="items_card" style={{height:"14rem"}}>
+                                    <div className="items_card" style={{height:"14rem"}} key={index}>
                                         <img src={`https://source.unsplash.com/random/500×500/?${item}`} alt="" className="items_image" style={{width: "100%",objectFit:"cover", height:"10rem"}} />
                                         <div className="items_carddetails">
                                             <h5 className="items_para">{item}</h5>  
-                                            <button className="items_service_button">Delete</button>
+                                            <button className="items_service_button" onClick={()=> deleteItem(item)}>Delete</button>
                                         </div>                  
                                     </div>
                                 </div>
@@ -214,22 +281,29 @@ const UserDashboard = () => {
                                         <div className="card userdashboardCard text-white card-has-bg click-col"
                                             style={{  backgroundImage:`url(${background1})` }}
                                         >
+                                            {user.orders.map((order) => {
+                                            return(
+
                                             <div className="card-img-overlay d-flex flex-column">
+                                                
+                                                 
                                                 <div className="card-body">
-                                                    <h6>NAME</h6>
-                                                    <h6>Mail ID</h6>
-                                                    <h6>Address</h6>
+                                                    <h6>{order.name}</h6>
+                                                    <h6>{order.email}</h6>
+                                                    <h6>{order.address}</h6>
                                                 </div>
                                                 <div className="card-footer">
                                                     <div className="media">                                                    
                                                         <div className="media-body">
-                                                            <Link to= "/wvicelist" className="userdashboardlist_btn"
+                                                            <Link to= "/chatbox" className="userdashboardlist_btn"
                                                             >Message
                                                             </Link>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            )
+                                        })}
                                         </div>                  
                                     </div>
                                 </div>

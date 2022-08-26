@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "../styles/ShopList.css";
 
@@ -7,12 +7,22 @@ import Footer from '../components/Footer';
 
 import shoplist from "../assets/blogs.jpg";
 
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
+import Axios from "axios";
+import axios from "axios";
+
+
 // import { getDistance } from "geolib";
 // import { useSelector } from "react-redux";
 
-const ShopList = ({ customer }) => {
 
+const ShopList = ({ customer }) => {
+  
+
+  const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  const [allStores, setAllStores] = useState("");
   // const [check, setcheck] = useState(false);
   // const locations = useSelector((state) => state.location);
   // const [workers, setWorkers] = useState(locations);
@@ -42,13 +52,48 @@ const ShopList = ({ customer }) => {
   //     setWorkers(workers.sort(compareDistance));
   //   };
 
+  const handleConnect = async(store) => {
+    await axios.post(
+      `http://localhost:8000/chat/create-space`, {
+        admin : user.email,
+        members : [user.admin|| user.name, store.admin],
+        spaceName : store.email,
+        chatPic : "https://www.lifehacker.com.au/2020/05/everything-you-can-and-cant-do-with-facebooks-new-avatars/",
+        chatHead: store.admin
+      }).then((res) => {
+        console.log("Space Created");
+        navigate('/chatbox');
+      }).catch((err) => {
+        console.error(err)
+        alert("You are already connected to this user.");
+        navigate('/chatbox');
+      });
+  }
+
   const type = localStorage.getItem("type");
+
+  const getAllStores = async () => {
+    await Axios.get(`http://localhost:8000/stores/get-all-stores`).then((res) => {
+      setAllStores(res.data);
+    }).catch((e) => {
+      console.log(e);
+    });
+  };
+
+  console.log(allStores);
+
+
+  useEffect(() => {
+    getAllStores();
+  },[])
+
 
   return (
     <>
       <Navbar />
       {/* ------------------------------ShopList----------------------------------- */}
-
+    {allStores?
+    <>
       <div className="shoplist_section">
         <div className="shoplist_container">
           <div className="shoplist_head">
@@ -90,9 +135,10 @@ const ShopList = ({ customer }) => {
                  
           <div className="shoplist_lists">
             <div className="row">
-
+            {allStores.map((store,index) => {
+            return(
               <div className="col-lg-3 mb-3">
-                <div className="shoplist_card">
+                <div className="shoplist_card" key={index}>
                   <img src={shoplist} alt="" className="shoplist_image" />
                   <div className="shoplist_carddetails">
                     <h1 className="shoplist_para">
@@ -100,10 +146,10 @@ const ShopList = ({ customer }) => {
                     </h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <h5>City : Lorem Ipsum city</h5>
-                    <h5>Address : Lorem Ipsum is simply dummy Address</h5>
-                    <h5>Owner : Lorem Owner</h5>
+                    <h5>Address : {store.address}</h5>
+                    <h5>Owner : {store.admin}</h5>
                     <h5>Phone : 9876543210</h5>
-                    <h5>Mail : Lorem@gmail.com</h5>
+                    <h5>Mail : {store.email}</h5>
                     {type == 1?
                       <>
                         <button className="signup_service_button"
@@ -115,6 +161,7 @@ const ShopList = ({ customer }) => {
                           //     `location shared to ${worker.occupation} ${worker.name}`
                           //   );
                           // }}
+                          onClick={() => handleConnect(store)}
                         >Message
                         </button>                                  
                       </>
@@ -126,8 +173,10 @@ const ShopList = ({ customer }) => {
 
                     
                   </div>                  
-                </div>
+                </div>            
               </div>
+               )
+              })}
 
                           
               
@@ -136,6 +185,9 @@ const ShopList = ({ customer }) => {
           </div>
         </div>        
       </div>
+      </>
+      : 
+      null}
       
       {/* -------------------------------FOOTER------------------------------------ */}
 

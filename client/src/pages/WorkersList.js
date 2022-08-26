@@ -70,6 +70,36 @@ const WorkersList = ({ customer }) => {
       });
   }
 
+  const handleCustomerConnect = async(worker) => {
+    await axios.post(
+      `http://localhost:8000/chat/create-space`, {
+        admin : user.email,
+        members : [user.admin|| user.name, worker.name],
+        spaceName : worker.email,
+        chatPic : "https://www.lifehacker.com.au/2020/05/everything-you-can-and-cant-do-with-facebooks-new-avatars/",
+        chatHead: worker.name
+      }).then((res) => {
+        console.log("Space Created");
+        axios.post('http://localhost:8000/customers/create-order',{
+          name : user.name,
+          email : user.email,
+          address : user.address,
+          workerEmail : worker.email
+        })
+        .then((response) => {
+          console.log(response);
+          navigate('/chatbox');
+        }).catch((e) => {
+          console.log(e);
+        })
+        
+      }).catch((err) => {
+        console.error(err)
+        alert("You are already connected to this user.");
+        navigate('/chatbox');
+      });
+  }
+
   const type = localStorage.getItem("type");
 
     const getAllWorkers = async () => {
@@ -175,7 +205,8 @@ const WorkersList = ({ customer }) => {
                                         //     `location shared to ${worker.occupation} ${worker.name}`
                                         //   );
                                         // }}
-                                      >Send location to worker.name
+                                        onClick={() => handleCustomerConnect(worker)}
+                                      >Send location to {worker.name}
                                       </button>
                                     </>
                                 }

@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Customer = require("../models/customers");
+const Worker = require('../models/workers');
 
 
 router.get("/", (req, res) => {
@@ -92,6 +93,57 @@ router.post("/register", async (req, res) => {
       res.status(500).json({ message: "Invalid login credentials" });
     }
   });
+
+  router.get('/get-user/:id', async (req,res) => {
+    const _id = req.params.id;
+    if(!_id){
+      return res.status(422).json({ error: "No ID provided." });
+    }
+    const user = await Customer.findById(_id);
+    if(user){
+      res.status(200).json(user);
+    }else{
+      res.status(500).json({ error: "user not found" });
+    }
+  })
+
+  router.post('/create-order', async (req,res) => {
+    const {name, email, address, workerEmail} = req.body;
+    try{
+
+    if(!name || !email || !address || !workerEmail){
+      return res.status(422).json({ error: "Please fill all the fields." });
+    }
+
+    const customerFound = await Customer.findOne({email : email});
+    const worker = await Worker.findOne({email : workerEmail});
+
+    const checkOrder = worker.orders.map((order) => {
+      return order.email == email;
+    })
+
+    console.log(checkOrder);
+
+    if(checkOrder.includes(true)){  
+      return res.status(500).json({error : "Order Already Exists!"});
+      }else{
+        if(customerFound && worker && !checkOrder.includes(true)){
+          const order = await worker.createOrder(name,email,address);
+    
+          if(order) {
+            res.status(200).json({message : "Order Created Successfully!", order : order});
+          }
+        }else{
+          res.status(500).json({ error: "user not found" });
+        }
+      }
+  
+  }catch (e) {
+    res.status(401).json({error : "Could Not Create Order!"});
+    console.log(e);
+  }
+
+  })
 
   router.post("/logout", async (req, res) => {
     try{

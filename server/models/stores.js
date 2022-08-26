@@ -101,7 +101,17 @@ storeSchema.methods.deleteToken = async function (authToken) {
   }
 };
 
-
+storeSchema.methods.deleteItems = async function (deleteItem) {
+  try {
+    this.items = this.items.filter((currElem) => {
+    return currElem !== deleteItem;
+    });
+    await this.save();
+    return deleteItem;
+  } catch (e) {
+    console.log(`Failed to delete item --> ${e}`);
+  }
+};
 
 
 const Store = mongoose.model("STORE", storeSchema);

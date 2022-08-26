@@ -46,6 +46,27 @@ const workerSchema = new mongoose.Schema({
       type: Number,
       required: true,
     },
+
+    orders : [
+      {
+      name : {
+        type: String,
+        required: true,
+      },
+      // phone : {
+      //   type: Number,
+      //   required: true,
+      // },
+      email : {
+        type: String,
+        required: true,
+      },
+      address : {
+        type: String,
+        required: true,
+      },
+    },
+  ],
   tokens: [
     {
       token: {
@@ -74,6 +95,16 @@ workerSchema.methods.generateAuthToken = async function () {
     return token;
   } catch (e) {
     console.log(`Failed to generate token --> ${e}`);
+  }
+};
+
+workerSchema.methods.createOrder = async function (name,email,address) {
+  try {
+    this.orders = this.orders.concat({ name : name, email : email, address : address});
+    await this.save();
+    return this.orders;
+  } catch (e) {
+    console.log(`Failed to create order --> ${e}`);
   }
 };
 

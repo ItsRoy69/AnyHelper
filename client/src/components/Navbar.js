@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "../styles/Navbar.css";
 
 import { MdExpandMore } from "react-icons/md";
@@ -12,6 +12,12 @@ const Navbar = () => {
 
   const token = localStorage.getItem("token");
   const type = localStorage.getItem("type");
+  const user = JSON.parse(localStorage.getItem("user"));
+
+
+
+
+
 
 
 
@@ -72,7 +78,7 @@ const Navbar = () => {
   }
   }
 
-
+ 
 
   return (
     <>
@@ -132,9 +138,9 @@ const Navbar = () => {
               : 
               <>
            
-            <a className="nav-link" href="/userdashboard">
+            <Link className="nav-link" to= {{ pathname : `/userdashboard/?id=${user._id}`}} >
                   Dashboard
-            </a>
+            </Link>
             <Link to="/" className="nav-btnlink">
               <button className="btn" onClick={signOut}>Logout</button>
             </Link>
