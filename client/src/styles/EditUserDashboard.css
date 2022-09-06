@@ -1,53 +1,80 @@
-.editDashboardbody{
-    background-color: #EFF5FF;
-    padding: 20px;
-    align-items: center;
-    font-family: 'Acme', sans-serif;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px 20px  #97abd8;
-  }
-  
- 
-  /* Form Styling */
-.infoForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .infoInput{
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    padding: 20px;
-    flex:1;
-  }
-  
-  .infoForm>div{
-    display: flex;
-    gap: 1rem;
-    height: 2rem;
-    width: 90%;
-  }
-  
-  .infoButton{
-    width: 4rem;
-    height: 2rem;
-    align-self: flex-end;
-    background: #0050ff;
-    border: none;
-    border-radius: 4px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 13px;
-    text-align: center;
-    color: #ffffff;
-    padding: 4px;
+/* .editDashboardbody {
+  background-color: #eff5ff;
+  padding: 20px;
+  align-items: center;
+  font-family: "Acme", sans-serif;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 20px #97abd8;
 }
 
-.editDashboard_image h6{
-    font-weight: 300;
-    font-size: 13px;
+.infoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.infoInput {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+
+.infoForm > div {
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  width: 90%;
+}
+
+.infoButton {
+  width: 4rem;
+  height: 2rem;
+  align-self: flex-end;
+  background: #0050ff;
+  border: none;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  padding: 4px;
+}
+
+.editDashboard_image h6 {
+  font-weight: 300;
+  font-size: 13px;
+} */
+
+.EditDashboard_ParentMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.EditDashboard_Formdiv1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.EditDashboard_Formdiv2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.infoInput {
+  text-align: center;
+  border-radius: 5px;
 }
