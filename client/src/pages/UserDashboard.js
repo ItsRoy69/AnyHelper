@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 import EditUserDashboard from "../components/EditUserDashboard";
 
 import { Link, useNavigate } from "react-router-dom";
-import { BsPencilSquare } from "react-icons/bs";
+import { BsPencilSquare, BsPlusSquare, BsShop } from "react-icons/bs";
 
 const UserDashboard = () => {
     const navigate = useNavigate();
@@ -189,8 +189,11 @@ const UserDashboard = () => {
                                             className="Userboard_pencil"
                                             data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                                         />
+
+
                                         {/* {modal8 && <EditUserDashboard setModal={setModal8} />} */}
                                     </div>
+
                                 </div>
 
                                 <div className="UserDasboard_itemsStatus">
@@ -268,16 +271,27 @@ const UserDashboard = () => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <h1
-                                                style={{
+                                            <div className="UserDashboard_shop_headings">
+                                                <h1
+                                                    style={{
+                                                        fontFamily: "'Jost', sans-serif",
+                                                        fontStyle: "normal",
+                                                        fontWeight: " 700",
+                                                        padding: "20px",
+                                                    }}
+                                                >
+                                                    Items in Shop
+
+                                                </h1>
+
+                                                <h3 style={{
                                                     fontFamily: "'Jost', sans-serif",
                                                     fontStyle: "normal",
                                                     fontWeight: " 700",
                                                     padding: "20px",
-                                                }}
-                                            >
-                                                Items in Shop
-                                            </h1>
+                                                }}>Add items <BsPlusSquare /></h3>
+                                            </div>
+
                                             {items.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-3 mb-2">
@@ -309,6 +323,9 @@ const UserDashboard = () => {
                                                     </div>
                                                 );
                                             })}
+
+
+
                                         </div>
                                     </div>
                                 ) : null}
