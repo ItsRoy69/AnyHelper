@@ -10,6 +10,7 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import EditUserDashboard from "../components/EditUserDashboard";
+import AddItems from "../components/AddItems";
 
 import { Link, useNavigate } from "react-router-dom";
 import { BsPencilSquare, BsPlusSquare, BsShop } from "react-icons/bs";
@@ -64,6 +65,8 @@ const UserDashboard = () => {
 
     console.log(loggedInUser.items);
 
+
+
     const deleteItem = async (item) => {
         await axios
             .post("http://localhost:8000/stores/delete-item", {
@@ -102,7 +105,7 @@ const UserDashboard = () => {
                 <>
                     <Navbar />
 
-                    {/* //* MODAL OPEN */}
+                    {/* //* EDIT INFO MODAL START */}
                     <div
                         class="modal fade"
                         id="staticBackdrop"
@@ -146,7 +149,50 @@ const UserDashboard = () => {
                         </div>
                     </div>
 
-                    {/* //* MODAL CLOSE */}
+                    {/* //* ADD INPUT MODAL START */}
+
+                    <div
+                        class="modal fade"
+                        id="addItems"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        tabindex="-1"
+                        aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel" >
+                                        Add items
+                                    </h5>
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    ></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <AddItems />
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal"
+                                    >
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">
+                                        Save changes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div className="UserDashboard">
@@ -289,7 +335,9 @@ const UserDashboard = () => {
                                                     fontStyle: "normal",
                                                     fontWeight: " 700",
                                                     padding: "20px",
-                                                }}>Add items <BsPlusSquare /></h3>
+                                                }}
+                                                    data-bs-toggle="modal" data-bs-target="#addItems"
+                                                >Add items <BsPlusSquare /></h3>
                                             </div>
 
                                             {items.map((item, index) => {
