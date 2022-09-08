@@ -65,7 +65,7 @@ const ShopRegister = () => {
   const addInput = () => {
     setArr((s) => {
       return [
-        ...s,""
+        ...s, ""
       ];
     });
   };
@@ -78,11 +78,11 @@ const ShopRegister = () => {
         longitude: longitude,
         admin: shop.admin,
         email: shop.email,
-        sname : shop.sname,
-        stype : shop.stype,
-        address : shop.address,
-        password : shop.password,
-        items : arr
+        sname: shop.sname,
+        stype: shop.stype,
+        address: shop.address,
+        password: shop.password,
+        items: arr
       };
       await axios
         .post("http://localhost:8000/stores/register", data, {
