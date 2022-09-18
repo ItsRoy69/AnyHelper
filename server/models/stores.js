@@ -58,6 +58,11 @@ const storeSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
+    walletAddress: 
+      {
+        type: String,
+        required: true,
+      },
   tokens: [
     {
       token: {

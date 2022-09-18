@@ -24,6 +24,7 @@ const ShopRegister = () => {
     sname: "",
     password: "",
     stype: "",
+    walletAddress: "",
   });
 
   let name, value;
@@ -82,6 +83,7 @@ const ShopRegister = () => {
         stype: shop.stype,
         address: shop.address,
         password: shop.password,
+        walletAddress : shop.walletAddress,
         items: arr
       };
       await axios
@@ -199,6 +201,17 @@ const ShopRegister = () => {
                   name="password"
                   onChange={inputsHandler}
                   value={shop.password}
+                  style={{ width: "416px" }}
+                />
+              </div>
+              <div className="register_shop_wallet">
+                <input
+                  type="text"
+                  className="register_shop_wallet_input"
+                  placeholder="Wallet Address"
+                  name="walletAddress"
+                  onChange={inputsHandler}
+                  value={shop.walletAddress}
                   style={{ width: "416px" }}
                 />
               </div>

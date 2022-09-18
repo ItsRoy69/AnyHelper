@@ -15,12 +15,6 @@ const Navbar = () => {
   const user = JSON.parse(localStorage.getItem("user"));
 
 
-
-
-
-
-
-
   const signOut = async () => { 
     if(type==0){
     await axios

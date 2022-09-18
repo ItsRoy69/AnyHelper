@@ -54,7 +54,7 @@ const WorkersList = ({ customer }) => {
 
   const handleConnect = async(worker) => {
     await axios.post(
-      `http://localhost:8000/chat/create-space`, {
+      `https://anyhelper.herokuapp.com/chat/create-space`, {
         admin : user.email,
         members : [user.admin|| user.name, worker.name],
         spaceName : worker.email,
@@ -72,7 +72,7 @@ const WorkersList = ({ customer }) => {
 
   const handleCustomerConnect = async(worker) => {
     await axios.post(
-      `http://localhost:8000/chat/create-space`, {
+      `https://anyhelper.herokuapp.com/chat/create-space`, {
         admin : user.email,
         members : [user.admin|| user.name, worker.name],
         spaceName : worker.email,
@@ -80,7 +80,7 @@ const WorkersList = ({ customer }) => {
         chatHead: worker.name
       }).then((res) => {
         console.log("Space Created");
-        axios.post('http://localhost:8000/customers/create-order',{
+        axios.post('https://anyhelper.herokuapp.com/customers/create-order',{
           name : user.name,
           email : user.email,
           address : user.address,
@@ -103,7 +103,7 @@ const WorkersList = ({ customer }) => {
   const type = localStorage.getItem("type");
 
     const getAllWorkers = async () => {
-    await Axios.get(`http://localhost:8000/workers/get-all-workers`).then((res) => {
+    await Axios.get(`https://anyhelper.herokuapp.com/workers/get-all-workers`).then((res) => {
       setAllWorkers(res.data);
     }).catch((e) => {
       console.log(e);

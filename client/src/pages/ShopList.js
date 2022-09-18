@@ -142,7 +142,7 @@ const ShopList = ({ customer }) => {
                   <img src={shoplist} alt="" className="shoplist_image" />
                   <div className="shoplist_carddetails">
                     <h1 className="shoplist_para">
-                      Lorem Ipsum Shop
+                      {store.sname}
                     </h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <h5>City : Lorem Ipsum city</h5>
@@ -166,7 +166,10 @@ const ShopList = ({ customer }) => {
                         </button>                                  
                       </>
                       : 
-                      <Link to="/items">
+                      <Link to={{
+                        pathname: `/items`,
+                        search: `?id=${store._id}`
+                        }} >
                         <button className="signup_service_button">Buy</button>
                       </Link>
                     }

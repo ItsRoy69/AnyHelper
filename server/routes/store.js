@@ -18,7 +18,8 @@ router.post("/register", async (req, res) => {
       sname,
       password,
       address,
-      items
+      items,
+      walletAddress
     } = req.body;
   
     if (
@@ -30,7 +31,8 @@ router.post("/register", async (req, res) => {
         !address||
         !latitude||
         !longitude||
-        !items
+        !items ||
+        !walletAddress
     ) {
       return res.status(422).json({ error: "Please fill all the fields." });
     }
@@ -53,7 +55,8 @@ router.post("/register", async (req, res) => {
             address,
             latitude,
             longitude,
-            items
+            items,
+            walletAddress
         });
   
         const registered = await store.save();
@@ -123,6 +126,18 @@ router.post("/register", async (req, res) => {
     }
 
   })
+
+  router.post('/get-store', async (req,res) => {
+    const id = req.body.id;
+    const Stores = await Store.findById(id);
+    if(Stores){
+      res.status(200).json(Stores);
+    }else{
+      res.status(400).json({error : "No Store Found."})
+    }
+
+  })
+
 
   router.post('/delete-item', async (req,res) => {
     const email = req.body.email;
