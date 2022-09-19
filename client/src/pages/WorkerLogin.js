@@ -40,7 +40,7 @@ const WorkerLogin = () => {
     const data = { email, password };
 
     await axios
-      .post("http://localhost:8000/workers/login", data, { headers: { "Content-Type": "application/json" } })
+      .post("https://anyhelper.herokuapp.com/workers/login", data, { headers: { "Content-Type": "application/json" } })
       .then((response) => {
         console.log(response);
           localStorage.setItem("token", response.data.token);

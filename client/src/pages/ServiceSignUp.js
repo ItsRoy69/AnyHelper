@@ -63,7 +63,7 @@ const ServiceSignUp = () => {
         password: customer.password,
       };
       await axios
-        .post("http://localhost:8000/customers/register", data, {
+        .post("https://anyhelper.herokuapp.com/customers/register", data, {
           headers: { "Content-Type": "application/json" },
         })
         .then((response) => {

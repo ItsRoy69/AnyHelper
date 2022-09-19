@@ -42,7 +42,7 @@ const ServiceLogin = () => {
     const data = { email, password };
 
     await axios
-      .post("http://localhost:8000/customers/login", data, { headers: { "Content-Type": "application/json" } })
+      .post("https://anyhelper.herokuapp.com/customers/login", data, { headers: { "Content-Type": "application/json" } })
       .then((response) => {
         console.log(response);
           localStorage.setItem("token", response.data.token);

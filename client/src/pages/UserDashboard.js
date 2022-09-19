@@ -30,7 +30,7 @@ const UserDashboard = () => {
     const fetchUser = async () => {
         if (type == 0) {
             await axios
-                .get(`http://localhost:8000/stores/get-user/${user._id}`)
+                .get(`https://anyhelper.herokuapp.com/stores/get-user/${user._id}`)
                 .then((response) => {
                     setLoggedInUser(response.data);
                     setItems(response.data.items);
@@ -41,7 +41,7 @@ const UserDashboard = () => {
         }
         if (type == 1) {
             await axios
-                .get(`http://localhost:8000/workers/get-user/${user._id}`)
+                .get(`https://anyhelper.herokuapp.com/workers/get-user/${user._id}`)
                 .then((response) => {
                     setLoggedInUser(response.data);
                     setItems(response.data.items);
@@ -52,7 +52,7 @@ const UserDashboard = () => {
         }
         if (type == 2) {
             await axios
-                .get(`http://localhost:8000/customers/get-user/${user._id}`)
+                .get(`https://anyhelper.herokuapp.com/customers/get-user/${user._id}`)
                 .then((response) => {
                     setLoggedInUser(response.data);
                     setItems(response.data.items);
@@ -69,7 +69,7 @@ const UserDashboard = () => {
 
     const deleteItem = async (item) => {
         await axios
-            .post("http://localhost:8000/stores/delete-item", {
+            .post("https://anyhelper.herokuapp.com/stores/delete-item", {
                 email: user.email,
                 item: item,
             })

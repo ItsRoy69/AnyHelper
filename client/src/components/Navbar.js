@@ -18,7 +18,7 @@ const Navbar = () => {
   const signOut = async () => { 
     if(type==0){
     await axios
-    .post("http://localhost:8000/stores/logout", {
+    .post("https://anyhelper.herokuapp.com/stores/logout", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const Navbar = () => {
   }
   else if(type==1){
     await axios
-    .post("http://localhost:8000/workers/logout", {
+    .post("https://anyhelper.herokuapp.com/workers/logout", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const Navbar = () => {
   }
   else{
     await axios
-    .post("http://localhost:8000/customers/logout", {
+    .post("https://anyhelper.herokuapp.com/customers/logout", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
