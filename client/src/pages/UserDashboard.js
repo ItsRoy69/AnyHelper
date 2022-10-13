@@ -15,6 +15,7 @@ import AddItems from "../components/AddItems";
 import { Link, useNavigate } from "react-router-dom";
 import { BsPencilSquare, BsPlusSquare, BsShop } from "react-icons/bs";
 
+
 const UserDashboard = () => {
     const navigate = useNavigate();
 
@@ -26,6 +27,7 @@ const UserDashboard = () => {
     const user = JSON.parse(localStorage.getItem("user"));
 
     const [items, setItems] = useState("");
+
 
     const fetchUser = async () => {
         if (type == 0) {
@@ -43,6 +45,7 @@ const UserDashboard = () => {
             await axios
                 .get(`https://anyhelper.herokuapp.com/workers/get-user/${user._id}`)
                 .then((response) => {
+                    
                     setLoggedInUser(response.data);
                     setItems(response.data.items);
                 })
@@ -54,6 +57,7 @@ const UserDashboard = () => {
             await axios
                 .get(`https://anyhelper.herokuapp.com/customers/get-user/${user._id}`)
                 .then((response) => {
+                    console.log(response.data)
                     setLoggedInUser(response.data);
                     setItems(response.data.items);
                 })
@@ -128,23 +132,12 @@ const UserDashboard = () => {
                                         aria-label="Close"
                                     ></button>
                                 </div>
-                                <div class="modal-body">
+                                
 
-                                    <EditUserDashboard />
+                                    <EditUserDashboard user={loggedInUser}/>
 
-                                </div>
-                                <div class="modal-footer">
-                                    <button
-                                        type="button"
-                                        class="btn btn-secondary"
-                                        data-bs-dismiss="modal"
-                                    >
-                                        Close
-                                    </button>
-                                    <button type="button" class="btn btn-primary">
-                                        Save changes
-                                    </button>
-                                </div>
+              
+                                
                             </div>
                         </div>
                     </div>
@@ -199,34 +192,34 @@ const UserDashboard = () => {
                         <div className="UserDasboard_left">
                             <div className="UserDasboard_ProfileCard">
                                 <div className="UserDasboard_ProfileImages">
-                                    <img src={coverPicture} alt="CoverImage" />
-                                    <img src={profile} alt="ProfileImage" />
+                                    <img src={loggedInUser.coverImg} alt="CoverImage" />
+                                    <img src={loggedInUser.profileImg} alt="ProfileImage" />
                                 </div>
                                 <div className="UserDasboard_ProfileName">
-                                    <span>{user.admin}</span>
-                                    <span>{user.email}</span>
+                                    <span>{loggedInUser.admin}</span>
+                                    <span>{loggedInUser.name}</span>
                                     {type == 0 ? (
                                         <>
                                             <div className="UserDasboard_itemsStatus">
                                                 <div>
-                                                    <span>{user.stype}</span>
-                                                    <span>{user.sname}</span>
+                                                    <span>{loggedInUser.stype}</span>
+                                                    <span>{loggedInUser.sname}</span>
                                                 </div>
                                             </div>
-                                            <span>{user.address}</span>
+                                            <span>{loggedInUser.address}</span>
                                         </>
                                     ) : null}
 
                                     {type == 1 ? (
                                         <>
-                                            <span>{user.phone}</span>
-                                            <span>{user.profession}</span>
+                                            <span>{loggedInUser.phone}</span>
+                                            <span>{loggedInUser.profession}</span>
                                         </>
                                     ) : null}
 
                                     {type == 2 ? (
                                         <>
-                                            <span>{user.address}</span>
+                                            <span>{loggedInUser.address}</span>
                                         </>
                                     ) : null}
                                     <div className="Userboard_edit">

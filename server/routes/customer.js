@@ -145,6 +145,19 @@ router.post("/register", async (req, res) => {
 
   })
 
+  router.patch("/updateUser/:id", async (req, res) => {
+    const _id = req.params.id;
+    try {
+      const updateCustomer = await Customer.findByIdAndUpdate(_id, req.body, {
+        new: true,
+      });
+      res.status(200).json({ updateCustomer, success: true });
+    } catch (e) {
+      res.status(500);
+      res.json({ message: `Could not update Customer --> ${e}` });
+    }
+  });
+
   router.post("/logout", async (req, res) => {
     try{
    const authToken = req.body.token;

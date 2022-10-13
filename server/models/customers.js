@@ -41,6 +41,12 @@ const customerSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  profileImg : {
+    type: String
+  },
+  coverImg : {
+    type: String
+  },
   tokens: [
     {
       token: {
