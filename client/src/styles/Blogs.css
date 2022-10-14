@@ -32,7 +32,7 @@
 }
 
 .blogs_card {
-  width: 300px;
+  width: 20rem;
   border: 1px solid #000000;
   border-radius: 12px;
 }
@@ -75,4 +75,13 @@
 .modal-header-title {
   font-family: "Jost", sans-serif;
   font-size: 25px;
+}
+
+@media screen and (max-width: 430px) {
+  .blogs_head {
+    flex-direction: column;
+  }
+  .blogs_card {
+    width: 100%;
+  }
 }

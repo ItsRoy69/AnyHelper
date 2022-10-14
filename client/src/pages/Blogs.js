@@ -74,7 +74,7 @@ const Blogs = () => {
 
           <div className="blogs_lists">
             <div className="row">
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
@@ -91,7 +91,7 @@ const Blogs = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
@@ -108,7 +108,7 @@ const Blogs = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
@@ -125,7 +125,7 @@ const Blogs = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
@@ -142,7 +142,7 @@ const Blogs = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
@@ -159,7 +159,7 @@ const Blogs = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
@@ -176,7 +176,7 @@ const Blogs = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
@@ -193,7 +193,7 @@ const Blogs = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-3 mb-3">
+              <div className="col-lg-4 mb-5">
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
