@@ -35,7 +35,7 @@ const EditUserDashboard = (props) => {
             alert("Profile Picture Changed Successfully!");
             getDownloadURL(ref(storage, `profileImages/${profileImg.name}`)).then(
               (url) => {
-                Axios.patch(`http://localhost:8000/customers/updateUser/${user._id}`, {
+                Axios.patch(`https://anyhelper.herokuapp.com/customers/updateUser/${user._id}`, {
                   profileImg: url,
                 })
                   .then((res) => {
@@ -59,7 +59,7 @@ const EditUserDashboard = (props) => {
             alert("Cover Picture Changed Successfully!");
             getDownloadURL(ref(storage, `coverImages/${coverImg.name}`)).then(
               (url) => {
-                Axios.patch(`http://localhost:8000/customers/updateUser/${user._id}`, {
+                Axios.patch(`https://anyhelper.herokuapp.com/customers/updateUser/${user._id}`, {
                   coverImg: url,
                 })
                   .then((res) => {
@@ -77,7 +77,7 @@ const EditUserDashboard = (props) => {
 
     const submitChanges = async (e) => {
         e.preventDefault();
-        await Axios.patch(`http://localhost:8000/customers/updateUser/${user._id}`,editUser)
+        await Axios.patch(`https://anyhelper.herokuapp.com/customers/updateUser/${user._id}`,editUser)
         .then((res) => {
             console.log(res);
             if(profileImg === "" && coverImg=== ""){
