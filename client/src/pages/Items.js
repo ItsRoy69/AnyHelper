@@ -27,7 +27,7 @@ const Items = () => {
   console.log(searchParams.get('id')); 
 
   const getStore = async () => {
-    await Axios.post('https://anyhelper.herokuapp.com/stores/get-store',{id : searchParams.get('id')}
+    await Axios.post('https://anyhelper-production.up.railway.app/stores/get-store',{id : searchParams.get('id')}
     ).then((res) => {
       console.log(res);
       setStore(res.data);

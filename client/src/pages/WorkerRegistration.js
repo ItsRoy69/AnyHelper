@@ -63,7 +63,7 @@ const submitHandler = async (e) => {
       password : worker.password
     };
     await axios
-      .post("https://anyhelper.herokuapp.com/workers/register", data, {
+      .post("https://anyhelper-production.up.railway.app/workers/register", data, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {

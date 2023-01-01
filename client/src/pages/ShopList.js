@@ -54,7 +54,7 @@ const ShopList = ({ customer }) => {
 
   const handleConnect = async(store) => {
     await axios.post(
-      `https://anyhelper.herokuapp.com/chat/create-space`, {
+      `https://anyhelper-production.up.railway.app/chat/create-space`, {
         admin : user.email,
         members : [user.admin|| user.name, store.admin],
         spaceName : store.email,
@@ -73,7 +73,7 @@ const ShopList = ({ customer }) => {
   const type = localStorage.getItem("type");
 
   const getAllStores = async () => {
-    await Axios.get(`https://anyhelper.herokuapp.com/stores/get-all-stores`).then((res) => {
+    await Axios.get(`https://anyhelper-production.up.railway.app/stores/get-all-stores`).then((res) => {
       setAllStores(res.data);
     }).catch((e) => {
       console.log(e);

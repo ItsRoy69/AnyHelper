@@ -38,7 +38,7 @@ const ShopLogin = () => {
     const data = { email, password };
 
     await axios
-      .post("https://anyhelper.herokuapp.com/stores/login", data, {
+      .post("https://anyhelper-production.up.railway.app/stores/login", data, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {

@@ -18,7 +18,7 @@ const Navbar = () => {
   const signOut = async () => { 
     if(type==0){
     await axios
-    .post("https://anyhelper.herokuapp.com/stores/logout", {
+    .post("https://anyhelper-production.up.railway.app/stores/logout", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const Navbar = () => {
   }
   else if(type==1){
     await axios
-    .post("https://anyhelper.herokuapp.com/workers/logout", {
+    .post("https://anyhelper-production.up.railway.app/workers/logout", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const Navbar = () => {
   }
   else{
     await axios
-    .post("https://anyhelper.herokuapp.com/customers/logout", {
+    .post("https://anyhelper-production.up.railway.app/customers/logout", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

@@ -24,10 +24,10 @@ const ChatBox = () => {
   const [search, setSearch] = useState("");
   const [searchRes, setSearchRes] = useState([]);
   const [selectedSpace, setSelectedSpace] = useState("");
-  const ENDPOINT = `https://anyhelper.herokuapp.com`;
+  const ENDPOINT = `https://anyhelper-production.up.railway.app`;
 
   const getUserSpaces = async () => {
-    const res = await Axios.post(`https://anyhelper.herokuapp.com/chat/get-users-spaces`, {
+    const res = await Axios.post(`https://anyhelper-production.up.railway.app/chat/get-users-spaces`, {
       name: user.name || user.admin,
     });
     localStorage.setItem("user_spaces", JSON.stringify(res.data));
@@ -64,7 +64,7 @@ const ChatBox = () => {
     const data = { username, id, message };
     console.log(data);
     if (message) {
-      await Axios.post("https://anyhelper.herokuapp.com/chat/send-message", data, {
+      await Axios.post("https://anyhelper-production.up.railway.app/chat/send-message", data, {
         headers: { "Content-Type": "application/json" },
       })
         .then((response) => {

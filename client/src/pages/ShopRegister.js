@@ -87,7 +87,7 @@ const ShopRegister = () => {
         items: arr
       };
       await axios
-        .post("https://anyhelper.herokuapp.com/stores/register", data, {
+        .post("https://anyhelper-production.up.railway.app/stores/register", data, {
           headers: { "Content-Type": "application/json" },
         })
         .then((response) => {
