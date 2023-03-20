@@ -42,7 +42,7 @@ const ServiceLogin = () => {
     const data = { email, password };
 
     await axios
-      .post("https://anyhelper-production.up.railway.app/customers/login", data, { headers: { "Content-Type": "application/json" } })
+      .post("https://anyhelper-server.onrender.com/customers/login", data, { headers: { "Content-Type": "application/json" } })
       .then((response) => {
         console.log(response);
           localStorage.setItem("token", response.data.token);

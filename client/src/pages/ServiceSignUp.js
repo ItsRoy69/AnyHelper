@@ -63,7 +63,7 @@ const ServiceSignUp = () => {
         password: customer.password,
       };
       await axios
-        .post("https://anyhelper-production.up.railway.app/customers/register", data, {
+        .post("https://anyhelper-server.onrender.com/customers/register", data, {
           headers: { "Content-Type": "application/json" },
         })
         .then((response) => {
