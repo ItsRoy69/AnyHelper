@@ -86,10 +86,9 @@ const Home = () => {
               <div className="banner_slider">
                 <div className="banner_container">
                   <div className="banner_para">
-                    <h1>SERVICES AT YOUR DOORSTEP</h1>
+                    <h1>SERVICES AT YOUR DOORSTEP AT ANY TIME</h1>
                     <p className="banner_about">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      Get your required services at your home whenever you want
                     </p>
 
                     <Link to="/servicesignup" className="banner-btnlink">
@@ -113,8 +112,7 @@ const Home = () => {
                   <div className="banner_para">
                     <h1>GET JOBS BY PROVIDING SERVICES</h1>
                     <p className="banner_about">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                    Get your required services at your home whenever you want
                     </p>
                     <Link to="/workerregistration" className="banner-btnlink">
                       <button className="banner_btn">GET JOBS</button>
@@ -136,8 +134,7 @@ const Home = () => {
                   <div className="banner_para">
                     <h1>BUY ITEMS FROM SHOPS AROUND YOU</h1>
                     <p className="banner_about">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      Lorem Ipsum is simply dummy text of the printing .
                     </p>
 
                     <Link to="/shoplist" className="banner-btnlink">
@@ -187,12 +184,9 @@ const Home = () => {
         <div className="container-fluid about_right">
           <h1>About</h1>
           <h4>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+         We provide a lot of services within an affordable price - be it selling stuffs, to hair spa, we love to keep varieties.
+         In building your web presence, you always need to ensure that our design will be user-friendly, easy-to-navigate, readable, comprehensive.
+
           </h4>
         </div>
       </div>
@@ -203,7 +197,7 @@ const Home = () => {
         <div className="blogs_boxes">
           <div className="blog_box">
             <div className="blog_para">
-              <h2>One tap services</h2>
+              <h2>24 hours services</h2>
               <Link to="/blogs" className="blog_link" type="p">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry ...
@@ -213,7 +207,7 @@ const Home = () => {
 
           <div className="blog_box">
             <div className="blog_para">
-              <h2>One tap services</h2>
+              <h2>Door step services </h2>
               <Link to="/blogs" className="blog_link" type="p">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry ...
@@ -223,7 +217,7 @@ const Home = () => {
 
           <div className="blog_box">
             <div className="blog_para">
-              <h2>One tap services</h2>
+              <h2>Faster and safe services</h2>
               <Link to="/blogs" className="blog_link" type="p">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry ...
