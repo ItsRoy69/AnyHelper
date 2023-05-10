@@ -78,16 +78,11 @@ const Blogs = () => {
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  Home Salon vision is to Save your time and effort by booking
+                   home Beauty services at home in Bangalore. Our beauty professional 
+                   will visit at your home, so that have hygienic and mess-free home 
+                   salon service in Mumbai. Home Salon services in kolkata as easy, 
+                   reliable and delightful as online booking. We connect you with best beauty stylist in Darjeeling near your home
                   </p>
                 </div>
               </div>
@@ -95,16 +90,24 @@ const Blogs = () => {
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  Home cleaning Services thoroughly clean every little portion of 
+                  your house and incorporates various methods of discarding wastes,
+                   cleaning grimy surfaces, tidying and vacuuming, expelling leaves
+                    from the garden, Clean drainage, clearing doormats, disinfecting 
+                    surface and air, and washing windows. It is necessary for us to deep 
+                    clean our home at least twice in a year to maintain it as fresh . 
+                    </p>
+                </div>
+              </div>
+              <div className="col-lg-4 mb-5">
+                <div className="blogs_card">
+                  <img src={blogs} alt="" className="blogs_image" />
+                  <p className="blogs_para">
+                  Online medical delivery service provides its customer products of
+                   regular/standard medicine, generic medicines, surgical items, cosmetic
+                    items and other supplementary products. This will also provide
+                     door-to-door delivery service and quick delivery service for urgent requirements.
+                      The range of brands and products available at this portal will be larger than local medical shop.
                   </p>
                 </div>
               </div>
@@ -112,16 +115,12 @@ const Blogs = () => {
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  Are you concerned that your hair is losing its shine? 
+                  Are you concerned about the effect unruly hair has on your appearance?
+                   You should be familiar with the concept of the haircare sessions.
+                    The best thing is that Swagmee provides the most convenient ways 
+                    to enjoy haircare services at home. We'll put you in touch with the most 
+                    knowledgeable professionals who can provide you with a variety of hair care services for men.
                   </p>
                 </div>
               </div>
@@ -129,16 +128,12 @@ const Blogs = () => {
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  The first and foremost purpose of online therapy is to 
+                  give you a safe space for disclosure. In your online therapy 
+                  journey, you will know what an uninterrupted conversation feels like. 
+                  It's easier to open up because you feel not judged but understood. 
+                  Further, online counselling helps identify triggers for your emotions and
+                   allows you to discover your deep-rooted concerns. With trusted counselor guidance and practical tools.
                   </p>
                 </div>
               </div>
@@ -146,16 +141,12 @@ const Blogs = () => {
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  A sofa is one of the most-used furniture in our homes and is
+                   bound to get dirty with accumulation of dust, dirt, and sweat.
+                    Sofa cleaning is not easy, but dont fret because there are professional
+                     sofa cleaning services at Pepperfry that conduct sofa cleaning with ease and expertise.
+                    The sofa dry cleaning services at Pepperfry can be availed online by 
+                   visiting the website. But before you venture there, you may want to assess your needs.
                   </p>
                 </div>
               </div>
@@ -163,16 +154,14 @@ const Blogs = () => {
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  Online grocery shopping is a way of buying food and other household necessities using a
+                   web-based shopping service.
+                   There are two basic methods that people can use to purchase these items online.
+                    One is to order them from a local grocery store 
+                   that participates in online shopping. A customer can then arrange for a 
+                   home delivery directly from the store, or he can pick up his order
+                   at the store once an employee has assembled it. Another common practice is to 
+                   order groceries from a large company.
                   </p>
                 </div>
               </div>
@@ -180,33 +169,13 @@ const Blogs = () => {
                 <div className="blogs_card">
                   <img src={blogs} alt="" className="blogs_image" />
                   <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-4 mb-5">
-                <div className="blogs_card">
-                  <img src={blogs} alt="" className="blogs_image" />
-                  <p className="blogs_para">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  Food delivery refers to food pickup and delivery services of prepared meals to consumers 
+                  from diners, bars, restaurants, kitchens, catering, and other meal prep businesses.Typically, 
+                  customers used to do this over the phone, by calling or texting restaurants.Today, online
+                   food delivery is booming.
+                   It’s common for people to place orders using apps, websites, and dedicated food delivery platforms.
+                   Deliveries include cooked dishes as well as groceries from supermarkets. 
+                   Other methods of food deliery.
                   </p>
                 </div>
               </div>
